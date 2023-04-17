@@ -1,3 +1,4 @@
+import HeaderDesktop from '@app/components/molecules/HeaderDesktop'
 import './globals.css'
 
 export const metadata = {
@@ -12,7 +13,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+      <main className="flex min-h-screen flex-col items-center">
+        <HeaderDesktop />
+
+        {children}
+      </main>
+      </body>
     </html>
   )
 }
