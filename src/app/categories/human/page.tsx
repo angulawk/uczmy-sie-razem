@@ -1,7 +1,7 @@
-import HumanPage from "@app/components/pages/HumanPage";
+import Human from "@app/components/molecules/Human/Human";
 
-const Human = () => (
-  <HumanPage />
+const HumanPage = () => (
+  <Human />
 );
 
-export default Human;
+export default HumanPage;

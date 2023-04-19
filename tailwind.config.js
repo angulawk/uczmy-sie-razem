@@ -33,6 +33,7 @@ const spacing = {
   248: "24.8rem",
   356: "35.6rem",
   1056: "105.6rem",
+  1400: "140rem",
   auto: "auto",
   full: "100%",
   inherit: "inherit",
