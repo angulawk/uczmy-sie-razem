@@ -1,22 +1,23 @@
-import HeaderDesktop from '@app/components/molecules/HeaderDesktop/HeaderDesktop'
-import './globals.css'
+import { IRootLayoutProps } from '@app/app/@types/RootLayout';
+import { links } from '@app/app/config';
+import { HeaderDesktop } from '@app/components/molecules/HeaderDesktop/HeaderDesktop';
+import { PageTemplate } from '@app/components/templates/PageTemplate/PageTemplate';
+import '@styles/globals.css'
 
 export const metadata = {
   title: 'Uczmy się razem',
   description: 'Strona do wspólnej nauki języka hiszpańskiego',
 }
 
-const RootLayout = ({
-  children,
-}: {
-  children: React.ReactNode
+const RootLayout: React.FC<IRootLayoutProps> = ({
+  children
 }) => (
   <html lang="en">
     <body>
-      <HeaderDesktop />
-      <main className="flex flex-col min-h-screen max-w-screen-xl mx-auto my-16 w-full">
+      <HeaderDesktop links={links} />
+      <PageTemplate>
         {children}
-      </main>
+      </PageTemplate>
     </body>
   </html>
 );

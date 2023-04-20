@@ -1,4 +1,4 @@
-const AboutPage = () => (
+const AboutPage: React.FC = () => (
   <p>O stronie</p>
 );
 

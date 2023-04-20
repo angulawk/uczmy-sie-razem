@@ -1,7 +1,8 @@
-import Human from "@app/components/molecules/Human/Human";
+import { humanCategory } from "@app/app/config";
+import { Categories } from "@app/components/molecules/Categories/Categories";
 
-const HumanPage = () => (
-  <Human />
+const HumanPage: React.FC = () => (
+  <Categories categories={humanCategory} title="Człowiek" />
 );
 
 export default HumanPage;

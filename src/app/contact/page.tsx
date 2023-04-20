@@ -1,4 +1,4 @@
-const ContactPage = () => (
+const ContactPage: React.FC = () => (
   <p>Kontakt</p>
 );
 
