@@ -1,4 +1,4 @@
-const Character = () => (
+const Character: React.FC = () => (
   <h1>Charakter</h1>
 );
 

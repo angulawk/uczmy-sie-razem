@@ -1,10 +1,8 @@
-import { Inter } from 'next/font/google'
-import MainCategories from '@app/components/molecules/MainCategories';
+import { mainCategories } from '@app/app/config';
+import { Categories } from '@app/components/molecules/Categories/Categories';
 
-const inter = Inter({ subsets: ['latin'] })
-
-const Home = () => (
-  <MainCategories />
+const Home: React.FC = () => (
+  <Categories categories={mainCategories} />
 )
 
 export default Home;

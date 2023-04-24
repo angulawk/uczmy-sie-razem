@@ -1,6 +1,4 @@
-"use client"; // this is a client component
-
-const Weather = () => (
+const Weather: React.FC = () => (
   <h1>Weather</h1>
 );
 
