@@ -1,6 +1,8 @@
+import { Path } from "@app/app/config";
+
 export interface ICategoryProps {
-  name: string;
-  href: string;
+  path: Path;
+  title: string;
 }
 
 export interface ICategoriesProps {

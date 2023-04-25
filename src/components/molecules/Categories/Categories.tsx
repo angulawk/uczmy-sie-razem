@@ -12,10 +12,10 @@ const Categories: React.FC<ICategoriesProps> = ({
 
     <div className="flex items-center justify-center">
       {categories.map(({
-        name,
-        href
+        title,
+        path
       }) => (
-        <Tile content={name} key={name} link={href} />
+        <Tile content={title} key={title} link={path} />
       ))}
     </div>
   </>

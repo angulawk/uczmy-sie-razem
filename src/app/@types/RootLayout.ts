@@ -10,6 +10,4 @@ export type TChildren =
 
   export interface IRootLayoutProps {
     children: TChildren;
-    description?: string;
-    title?: string;
   }

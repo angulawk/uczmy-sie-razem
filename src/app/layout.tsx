@@ -8,7 +8,7 @@ import '@styles/globals.css'
 const RootLayout: React.FC<IRootLayoutProps> = ({
   children
 }) => {
-  const { description, title } = getPageMetadata()
+  const { description, title } = getPageMetadata();
   
   return (
     <html lang="en">

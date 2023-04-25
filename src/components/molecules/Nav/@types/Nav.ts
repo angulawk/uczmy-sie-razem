@@ -1,6 +1,8 @@
+import { Path } from "@app/app/config";
+
 export interface ILinkProps {
-  href: string;
-  label: string;
+  path: Path;
+  title: string;
 }
 
 export interface INavProps {

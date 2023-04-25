@@ -11,63 +11,72 @@ export enum Path {
   Root = "/",
   About = "/about",
   Contact = "/contact",
-  Human = "/categories/human"
+  Human = "/categories/human",
+  Weather = "/categories/weather",
+  Profession = "/categories/profession",
+  Body = "/categories/human/body",
+  Character = "/categories/human/character"
 }
 
-export const pagesMetadata: IPageMetadata[] = [
-  {
-    description: "Strona poswięcona jest nauce słownictwa języka hiszpańskiego",
-    path: Path.Root,
-    title: "Uczmy się hiszpańskiego razem"
-  },
-  {
-    path: Path.About,
-    title: "O stronie"
-  },
-  {
-    path: Path.Contact,
-    title: "Kontakt"
-  },
-  {
-    path: Path.Human,
-    title: "Człowiek"
-  },
-]
-
+export enum Title {
+  Root = "Uczmy się hiszpańskiego razem",
+  About = "O stronie",
+  Contact = "Kontakt",
+  Human = "Człowiek",
+  Weather = "Pogoda",
+  Profession = "Zawody",
+  Body = "Ciało",
+  Character = "Cechy charakteru"
+}
 
 export const links: ILinkProps[] = [
   {
-    href: Path.About,
-    label: "O stronie"
+    path: Path.About,
+    title: Title.About
   },
   {
-    href: Path.Contact,
-    label: "Kontakt"
+    path: Path.Contact,
+    title: Title.Contact
   }
-]
+];
 
 export const mainCategories: ICategoryProps[] = [
   {
-    name: "Człowiek",
-    href: "/categories/human"
+    path: Path.Human,
+    title: Title.Human
   },
   {
-    name: "Pogoda",
-    href: "/categories/weather"
+    path: Path.Weather,
+    title: Title.Weather
   },
   {
-    name: "Zawody",
-    href: "/categories/job"
+    path: Path.Profession,
+    title: Title.Profession
   }
 ];
 
 export const humanCategory: ICategoryProps[] = [
   {
-    name: "Ciało",
-    href: "/categories/human/body"
+    path: Path.Body,
+    title: Title.Body
   },
   {
-    name: "Cechy charakteru",
-    href: "/categories/human/character"
+    path: Path.Character,
+    title: Title.Character
   }
 ];
+
+export const pagesMetadata: IPageMetadata[] = [
+  {
+    description: "Strona poswięcona jest nauce słownictwa języka hiszpańskiego",
+    path: Path.Root,
+    title: Title.Root
+  },
+  ...links,
+  ...mainCategories,
+  ...humanCategory
+];
+
+
+
+

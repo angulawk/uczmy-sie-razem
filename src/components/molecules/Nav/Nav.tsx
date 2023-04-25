@@ -4,8 +4,8 @@ const Nav: React.FC<INavProps> = ({
   links
 }) => (
   <nav className="flex gap-4 text-white">
-    {links?.map(({ href, label }) => (
-        <a className="cursor-pointer" href={href} key={href + label}>{label}</a>
+    {links?.map(({ path, title }) => (
+      <a className="cursor-pointer" href={path} key={path + title}>{title}</a>
     ))}
   </nav>
 );
