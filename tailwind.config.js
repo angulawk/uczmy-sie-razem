@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 const spacing = {
+  0: "0",
   4: "0.4rem",
   8: "0.8rem",
   12: "1.2rem",
@@ -9,7 +10,11 @@ const spacing = {
   24: "2.4rem",
   28: "2.8rem",
   48: "4.8rem",
-  "50%": "50%",};
+  72: "7.2rem",
+  96: "9.6rem",
+  200: "20rem",
+  344: "34.4rem",
+};
 
 module.exports = {
   content: [
@@ -20,6 +25,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
+        'students': "url('/images/students.png')",
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
@@ -30,7 +36,7 @@ module.exports = {
       black: "#000",
 
       // Orange
-      orange100: "#ffbe76",
+      orange100: "#CB784C",
       orange200: "#f0932b",
 
       // Transparent
@@ -40,7 +46,9 @@ module.exports = {
       white: "#FFFFFF"
     },
     fontSize: {
-      24: "24px"
+      16: "16px",
+      24: "24px",
+      36: "36px"
     },
     spacing
   },

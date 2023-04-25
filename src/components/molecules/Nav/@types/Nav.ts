@@ -3,6 +3,6 @@ export interface ILinkProps {
   label: string;
 }
 
-export interface IHeaderDesktopProps {
-  links: ILinkProps[];
+export interface INavProps {
+  links?: ILinkProps[];
 }
