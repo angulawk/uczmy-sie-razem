@@ -1,15 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 
 const spacing = {
-  0: "0",
+  0: "0rem",
+  2: "0.2rem",
   4: "0.4rem",
   8: "0.8rem",
+  9: "0.9rem",
   12: "1.2rem",
   16: "1.6rem",
+  18: "1.8rem",
   20: "2rem",
   24: "2.4rem",
   28: "2.8rem",
+  36: "3.6rem",
+  45: "4.5rem",
   48: "4.8rem",
+  60: "6rem",
   72: "7.2rem",
   96: "9.6rem",
   200: "20rem",
@@ -18,17 +24,17 @@ const spacing = {
 
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx}',
-    './src/components/**/*.{js,ts,jsx,tsx}',
-    './src/app/**/*.{js,ts,jsx,tsx}',
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+    "./src/app/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       backgroundImage: {
-        'students': "url('/images/students.png')",
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        "students": "url('/images/students.png')",
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
     colors: {
@@ -53,4 +59,4 @@ module.exports = {
     spacing
   },
   plugins: [],
-}
+};

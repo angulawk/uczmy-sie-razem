@@ -1,6 +1,8 @@
 "use client";
 
+import { Hamburger } from "@app/components/molecules/Hamburger/Hamburger";
 import { IHeaderMobileProps } from "@app/components/molecules/Header/HeaderMobile/@types/HeaderMobile";
+import { NavDirection } from "@app/components/molecules/Nav/@types/Nav";
 import { Nav } from "@app/components/molecules/Nav/Nav";
 import { useState } from "react";
 
@@ -11,17 +13,23 @@ const HeaderMobile: React.FC<IHeaderMobileProps> = ({
 
   const onMenuButtonClick = () => {
     setIsMenuVisible(!isMenuVisible);
-  }
+  };
 
   return (
     <>
-      <button onClick={onMenuButtonClick}>Open</button>
+      <Hamburger
+        isMenuVisible={isMenuVisible} onToggle={onMenuButtonClick}
+      />
+      {/* <button onClick={onMenuButtonClick}>Open</button> */}
 
       {isMenuVisible && (
-        <Nav links={links} />
+        <Nav
+          direction={NavDirection.Vertical}
+          links={links}
+        />
       )}
     </>
-  )
-}
+  );
+};
 
 export { HeaderMobile };

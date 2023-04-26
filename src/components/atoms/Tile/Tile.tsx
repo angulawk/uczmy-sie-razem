@@ -1,4 +1,4 @@
-import { ITileProps } from '@app/components/atoms/Tile/@types/Tile';
+import { ITileProps } from "@app/components/atoms/Tile/@types/Tile";
 
 const Tile: React.FC<ITileProps> = ({
   content,

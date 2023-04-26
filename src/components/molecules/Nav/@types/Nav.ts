@@ -5,6 +5,12 @@ export interface ILinkProps {
   title: string;
 }
 
+export enum NavDirection {
+  Vertical,
+  Horizontal
+}
+
 export interface INavProps {
+  direction?: NavDirection;
   links?: ILinkProps[];
 }
