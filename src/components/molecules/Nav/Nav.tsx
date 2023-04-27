@@ -1,5 +1,5 @@
 import { INavProps, NavDirection } from "@app/components/molecules/Nav/@types/Nav";
-import { mapNavDirectionToStyles } from "@app/components/molecules/Nav/config";
+import { mapNavDirectionToStyles } from "@app/components/molecules/Nav/styles";
 
 const Nav: React.FC<INavProps> = ({
   direction = NavDirection.Horizontal,

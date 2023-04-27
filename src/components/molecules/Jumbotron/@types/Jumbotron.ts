@@ -1,7 +1,7 @@
-import { ILinkProps } from "@app/components/molecules/Header/HeaderDesktop/@types/HeaderDesktop";
+import { ILinkProps } from "@app/components/molecules/Nav/@types/Nav";
 
 export interface IJumbotronProps {
   description?: string;
-  links?: ILinkProps[];
+  links: ILinkProps[];
   title?: string;
 }

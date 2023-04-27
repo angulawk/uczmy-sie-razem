@@ -18,6 +18,7 @@ const spacing = {
   60: "6rem",
   72: "7.2rem",
   96: "9.6rem",
+  160: "16rem",
   200: "20rem",
   344: "34.4rem",
 };
@@ -45,6 +46,9 @@ module.exports = {
       orange100: "#CB784C",
       orange200: "#f0932b",
 
+      //Green
+      green400: "#1D5C4D",
+
       // Transparent
       transparent: "transparent",
 
@@ -56,7 +60,22 @@ module.exports = {
       24: "24px",
       36: "36px"
     },
-    spacing
+    screens: {
+      screenLg: "1680px",
+      screenMaxSm: {
+        raw: "(max-width: 799px)"
+      },
+      screenMdLg: {
+        raw: "(min-width: 1280px) and (max-width: 1679px)"
+      },
+      screenSmMd: {
+        raw: "(min-width: 800px) and (max-width: 1279px)"
+      }
+    },
+    spacing,
+    zIndex: {
+      100: "100"
+    }
   },
   plugins: [],
 };

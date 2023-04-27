@@ -16,11 +16,12 @@ const HeaderMobile: React.FC<IHeaderMobileProps> = ({
   };
 
   return (
-    <>
+    <div className={`w-160 h-full relative z-100 px-16 py-48 flex
+      ${isMenuVisible ? "bg-green400" : "bg-none"}
+    `}>
       <Hamburger
         isMenuVisible={isMenuVisible} onToggle={onMenuButtonClick}
       />
-      {/* <button onClick={onMenuButtonClick}>Open</button> */}
 
       {isMenuVisible && (
         <Nav
@@ -28,7 +29,7 @@ const HeaderMobile: React.FC<IHeaderMobileProps> = ({
           links={links}
         />
       )}
-    </>
+    </div>
   );
 };
 

@@ -9,7 +9,7 @@ const RootLayout: React.FC<IRootLayoutProps> = ({
   children
 }) => {
   const { description, title } = getPageMetadata();
-  
+
   return (
     <html lang="en">
       <body>

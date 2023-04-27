@@ -20,6 +20,7 @@ export enum Path {
 
 export enum Title {
   Root = "Uczmy się hiszpańskiego razem",
+  Home = "Strona główna",
   About = "O stronie",
   Contact = "Kontakt",
   Human = "Człowiek",
@@ -30,6 +31,10 @@ export enum Title {
 }
 
 export const links: ILinkProps[] = [
+  {
+    path: Path.Root,
+    title: Title.Home
+  },
   {
     path: Path.About,
     title: Title.About
