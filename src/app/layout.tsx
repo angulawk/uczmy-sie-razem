@@ -3,6 +3,7 @@ import { links } from "@app/app/config";
 import { Jumbotron } from "@app/components/molecules/Jumbotron/Jumbotron";
 import { PageTemplate } from "@app/components/templates/PageTemplate/PageTemplate";
 import { getPageMetadata } from "@app/helpers/server/getPageMetadata";
+import "@styles/fonts.css";
 import "@styles/globals.css";
 
 const RootLayout: React.FC<IRootLayoutProps> = ({

@@ -1,4 +1,4 @@
-import { TChildren } from "types/props";
+import { TChildren } from "@app/app/@types/RootLayout";
 
 export enum Device {
   Desktop = "desktop",

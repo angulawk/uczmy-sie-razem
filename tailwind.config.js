@@ -20,7 +20,7 @@ const spacing = {
   96: "9.6rem",
   160: "16rem",
   200: "20rem",
-  344: "34.4rem",
+  344: "34.4rem"
 };
 
 module.exports = {
@@ -55,10 +55,20 @@ module.exports = {
       // White
       white: "#FFFFFF"
     },
+    fontFamily: {
+      roboto: ["'Roboto'", "sans-serif"]
+    },
     fontSize: {
       16: "16px",
+      18: "18px",
+      20: "20px",
       24: "24px",
       36: "36px"
+    },
+    fontWeight: {
+      bold: 500,
+      normal: 400,
+      thin: 300
     },
     screens: {
       screenLg: "1680px",

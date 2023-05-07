@@ -8,13 +8,20 @@ const Jumbotron: React.FC<IJumbotronProps> = ({
   links,
   title
 }) => (
-  <div className="flex justify-end bg-[url('/images/students.png')] bg-cover bg-no-repeat bg-center w-full h-344 relative">
-    <Header links={links} />
+  <div className="flex justify-end bg-[url('/images/students.png')] bg-cover bg-no-repeat bg-center w-full h-344 relative min-w-full">
+    <div
+      className="w-full mx-auto flex justify-end"
+      style={{ maxWidth: "1400px" }}
+    >
+      <Header links={links} />
 
-    <PageDescription
-      description={description}
-      title={title}
-    />
+      {(title || description) && (
+        <PageDescription
+          description={description}
+          title={title}
+        />
+      )}
+    </div>
   </div>
 );
 
