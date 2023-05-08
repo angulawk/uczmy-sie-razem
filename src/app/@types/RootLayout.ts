@@ -8,6 +8,6 @@ export type TChildren =
   | ReactNodeArray
   | null;
 
-  export interface IRootLayoutProps {
-    children: TChildren;
-  }
+export interface IRootLayoutProps {
+  children: TChildren;
+}

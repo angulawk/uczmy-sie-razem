@@ -1,5 +1,3 @@
-const ContactPage: React.FC = () => (
-  <p>Kontakt</p>
-);
+const ContactPage: React.FC = () => <p>Kontakt</p>;
 
 export default ContactPage;

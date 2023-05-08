@@ -1,5 +1,7 @@
-
-import { Device, IResponsiveProps } from "@app/components/layout/Responsive/@types/Responsive";
+import {
+  Device,
+  IResponsiveProps
+} from "@app/components/layout/Responsive/@types/Responsive";
 
 const Responsive: React.FC<IResponsiveProps> = ({ children, devices }) => {
   const responsiveClassNames = `
@@ -10,11 +12,7 @@ const Responsive: React.FC<IResponsiveProps> = ({ children, devices }) => {
     ${devices.includes(Device.Mobile) ? "screenMaxSm:block" : ""}
   `;
 
-  return (
-    <div className={responsiveClassNames}>
-      {children}
-    </div>
-  );
+  return <div className={responsiveClassNames}>{children}</div>;
 };
 
 export { Responsive };

@@ -4,9 +4,7 @@ import { IHeaderProps } from "@app/components/molecules/Header/@types/Header";
 import { HeaderDesktop } from "@app/components/molecules/Header/HeaderDesktop/HeaderDesktop";
 import { HeaderMobile } from "@app/components/molecules/Header/HeaderMobile/HeaderMobile";
 
-const Header: React.FC<IHeaderProps> = ({
-  links
-}) => (
+const Header: React.FC<IHeaderProps> = ({ links }) => (
   <>
     <Responsive devices={[Device.Mobile]}>
       <HeaderMobile links={links} />

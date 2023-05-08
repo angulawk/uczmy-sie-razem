@@ -1,4 +1,4 @@
-import { Path } from "@app/app/config";
+import { Path } from "@app/routing/paths";
 
 export interface ICategoryProps {
   path: Path;

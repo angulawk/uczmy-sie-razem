@@ -1,27 +1,19 @@
+import "@styles/globals.css";
+import "@styles/fonts.css";
 import { IRootLayoutProps } from "@app/app/@types/RootLayout";
-import { links } from "@app/app/config";
 import { Jumbotron } from "@app/components/molecules/Jumbotron/Jumbotron";
 import { PageTemplate } from "@app/components/templates/PageTemplate/PageTemplate";
+import { navLinks } from "@app/config/navLinks";
 import { getPageMetadata } from "@app/helpers/server/getPageMetadata";
-import "@styles/fonts.css";
-import "@styles/globals.css";
 
-const RootLayout: React.FC<IRootLayoutProps> = ({
-  children
-}) => {
+const RootLayout: React.FC<IRootLayoutProps> = ({ children }) => {
   const { description, title } = getPageMetadata();
 
   return (
-    <html lang="en">
+    <html lang="pl">
       <body>
-        <Jumbotron
-          description={description}
-          links={links}
-          title={title}
-        />
-        <PageTemplate>
-          {children}
-        </PageTemplate>
+        <Jumbotron description={description} links={navLinks} title={title} />
+        <PageTemplate>{children}</PageTemplate>
       </body>
     </html>
   );

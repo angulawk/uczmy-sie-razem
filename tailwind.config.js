@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import plugin from "tailwindcss/plugin";
 
 const spacing = {
   0: "0rem",
@@ -20,46 +21,44 @@ const spacing = {
   96: "9.6rem",
   160: "16rem",
   200: "20rem",
-  344: "34.4rem"
+  440: "44rem"
 };
 
 module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
-    "./src/app/**/*.{js,ts,jsx,tsx}",
+    "./src/app/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {
       backgroundImage: {
-        "students": "url('/images/students.png')",
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        students: "url('/images/students.png')"
       },
+      textShadow: {
+        sm: "0 1px 8px #000000"
+      }
     },
     colors: {
       // Black
-      black: "#000",
+      black: "#000000",
 
       // Orange
       orange100: "#CB784C",
-      orange200: "#f0932b",
 
       //Green
       green400: "#1D5C4D",
 
-      // Transparent
-      transparent: "transparent",
-
       // White
-      white: "#FFFFFF"
+      white: "#FFFFFF",
+
+      //Blue
+      blue400: "#5D767C"
     },
     fontFamily: {
-      roboto: ["'Roboto'", "sans-serif"]
+      roboto: ["'Roboto'", "sans-serif"],
+      alata: ["'Alata'", "sans-serif"]
     },
     fontSize: {
-      16: "16px",
       18: "18px",
       20: "20px",
       24: "24px",
@@ -87,5 +86,16 @@ module.exports = {
       100: "100"
     }
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          "text-shadow": (value) => ({
+            textShadow: value
+          })
+        },
+        { values: theme("textShadow") }
+      );
+    })
+  ]
 };

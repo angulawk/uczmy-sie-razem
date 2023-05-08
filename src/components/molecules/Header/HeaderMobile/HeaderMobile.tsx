@@ -6,29 +6,22 @@ import { NavDirection } from "@app/components/molecules/Nav/@types/Nav";
 import { Nav } from "@app/components/molecules/Nav/Nav";
 import { useState } from "react";
 
-const HeaderMobile: React.FC<IHeaderMobileProps> = ({
-  links
-}) => {
+const HeaderMobile: React.FC<IHeaderMobileProps> = ({ links }) => {
   const [isMenuVisible, setIsMenuVisible] = useState<boolean>(false);
 
   const onMenuButtonClick = () => {
-    setIsMenuVisible(!isMenuVisible);
+    setIsMenuVisible((_isMenuVisible) => !_isMenuVisible);
   };
 
   return (
-    <div className={`w-160 h-full relative z-100 px-16 py-48 flex
-      ${isMenuVisible ? "bg-green400" : "bg-none"}
-    `}>
-      <Hamburger
-        isMenuVisible={isMenuVisible} onToggle={onMenuButtonClick}
-      />
+    <div
+      className={`w-160 h-full relative z-100 px-16 py-48 flex
+      ${isMenuVisible ? "bg-black" : "bg-none"}
+    `}
+    >
+      <Hamburger isMenuVisible={isMenuVisible} onToggle={onMenuButtonClick} />
 
-      {isMenuVisible && (
-        <Nav
-          direction={NavDirection.Vertical}
-          links={links}
-        />
-      )}
+      {isMenuVisible && <Nav direction={NavDirection.Vertical} links={links} />}
     </div>
   );
 };
