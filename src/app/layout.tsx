@@ -1,25 +1,22 @@
-import { IRootLayoutProps } from '@app/app/@types/RootLayout';
-import { links } from '@app/app/config';
-import { HeaderDesktop } from '@app/components/molecules/HeaderDesktop/HeaderDesktop';
-import { PageTemplate } from '@app/components/templates/PageTemplate/PageTemplate';
-import '@styles/globals.css'
+import "@styles/globals.css";
+import "@styles/fonts.css";
+import { IRootLayoutProps } from "@app/app/@types/RootLayout";
+import { Jumbotron } from "@app/components/molecules/Jumbotron/Jumbotron";
+import { PageTemplate } from "@app/components/templates/PageTemplate/PageTemplate";
+import { navLinks } from "@app/config/navLinks";
+import { getPageMetadata } from "@app/helpers/server/getPageMetadata";
 
-export const metadata = {
-  title: 'Uczmy się razem',
-  description: 'Strona do wspólnej nauki języka hiszpańskiego',
-}
+const RootLayout: React.FC<IRootLayoutProps> = ({ children }) => {
+  const { description, title } = getPageMetadata();
 
-const RootLayout: React.FC<IRootLayoutProps> = ({
-  children
-}) => (
-  <html lang="en">
-    <body>
-      <HeaderDesktop links={links} />
-      <PageTemplate>
-        {children}
-      </PageTemplate>
-    </body>
-  </html>
-);
+  return (
+    <html lang="pl">
+      <body>
+        <Jumbotron description={description} links={navLinks} title={title} />
+        <PageTemplate>{children}</PageTemplate>
+      </body>
+    </html>
+  );
+};
 
 export default RootLayout;
