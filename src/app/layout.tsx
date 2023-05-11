@@ -4,26 +4,25 @@ import { Jumbotron } from "@app/components/molecules/Jumbotron/Jumbotron";
 import { PageTemplate } from "@app/components/templates/PageTemplate/PageTemplate";
 import { navLinks } from "@app/config/navLinks";
 import { getPageMetadata } from "@app/helpers/server/getPageMetadata";
-import { Inter, Roboto } from "next/font/google";
+import { Alata, Barlow, Roboto } from "next/font/google";
 
-const inter = Inter({
+const barlow = Barlow({
   subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter"
+  variable: "--font-barlow",
+  weight: "400"
 });
 
 const roboto = Roboto({
   subsets: ["latin"],
-  display: "swap",
   variable: "--font-roboto",
-  weight: "400"
+  weight: ["300", "400", "500"]
 });
 
 const RootLayout: React.FC<IRootLayoutProps> = ({ children }) => {
   const { description, title } = getPageMetadata();
 
   return (
-    <html lang="pl" className={`${inter.variable} ${roboto.variable}`}>
+    <html lang="pl" className={`${barlow.variable} ${roboto.variable}`}>
       <body>
         <Jumbotron description={description} links={navLinks} title={title} />
         <PageTemplate>{children}</PageTemplate>
