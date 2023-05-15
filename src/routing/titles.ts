@@ -6,6 +6,7 @@ export enum Title {
   Human = "Człowiek",
   Weather = "Pogoda",
   Profession = "Zawody",
+  Animals = "Zwierzęta",
   Body = "Ciało",
   Character = "Cechy charakteru"
 }

@@ -3,11 +3,17 @@ import { ICategoriesProps } from "@app/components/molecules/Categories/@types/Ca
 
 const Categories: React.FC<ICategoriesProps> = ({ categories, title }) => (
   <>
-    {title && <h1>{title}</h1>}
+    {title && <h1 className="text-36 mx-auto my-36">{title}</h1>}
 
-    <div className="flex items-center justify-center">
-      {categories.map(({ title, path }) => (
-        <Tile content={title} key={title} link={path} />
+    <div className="flex flex-wrap items-center justify-between">
+      {categories.map(({ title, path, src, description }) => (
+        <Tile
+          content={title}
+          key={title}
+          link={path}
+          iconSrc={src}
+          iconDescription={description}
+        />
       ))}
     </div>
   </>
