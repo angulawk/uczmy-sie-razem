@@ -55,8 +55,8 @@ module.exports = {
       blue400: "#5D767C"
     },
     fontFamily: {
-      roboto: ["'Roboto'", "sans-serif"],
-      alata: ["'Alata'", "sans-serif"]
+      barlow: ["var(--font-barlow)", "sans-serif"],
+      roboto: ["var(--font-roboto)", "sans-serif"]
     },
     fontSize: {
       18: "18px",
