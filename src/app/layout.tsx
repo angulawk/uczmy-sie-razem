@@ -4,7 +4,7 @@ import { Jumbotron } from "@app/components/molecules/Jumbotron/Jumbotron";
 import { PageTemplate } from "@app/components/templates/PageTemplate/PageTemplate";
 import { navLinks } from "@app/config/navLinks";
 import { getPageMetadata } from "@app/helpers/server/getPageMetadata";
-import { Alata, Barlow, Roboto } from "next/font/google";
+import { Barlow, Roboto } from "next/font/google";
 
 const barlow = Barlow({
   subsets: ["latin"],
