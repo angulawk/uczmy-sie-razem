@@ -1,24 +1,20 @@
-"use client";
-
 import { IIconProps } from "@app/components/atoms/Icon/@types/Icon";
-import { useIconStaticState } from "@app/components/atoms/Icon/hooks/useIconStaticState";
 import Image from "next/image";
 
 const Icon: React.FC<IIconProps> = ({
   iconSrc,
   iconDescription,
   iconStyle
-}) => {
-  const { iconStaticDimensions, src } = useIconStaticState({ iconSrc });
-
-  return (
-    <Image
-      src={src}
-      alt={iconDescription}
-      style={iconStyle}
-      {...iconStaticDimensions}
-    />
-  );
-};
+}) => (
+  <Image
+    src={iconSrc}
+    alt={iconDescription}
+    style={{
+      transition: "all 150ms ease-in-out",
+      ...iconStyle
+    }}
+    placeholder="blur"
+  />
+);
 
 export { Icon };
