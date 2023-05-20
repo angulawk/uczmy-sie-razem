@@ -17,7 +17,7 @@
 }
 
 * {
-  font-family: var(--font-barlow);
+  font-family: "Barlow", sans-serif;
 }
 
 html {

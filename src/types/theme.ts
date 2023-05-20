@@ -2,8 +2,6 @@ import tailwindConfig from "@app/../tailwind.config";
 
 const theme = tailwindConfig.theme;
 
-// type TBorderWidthValues = keyof typeof theme.borderWidth;
-// type TBoxShadowValues = keyof typeof theme.boxShadow;
 type TColorValues = keyof typeof theme.colors;
 type TFontFamilyValues = keyof typeof theme.fontFamily;
 type TFontSizeValues = keyof typeof theme.fontSize;
@@ -105,8 +103,6 @@ type TMaxHeight = TUtilityWithArbitraryValues<"max-h", TSpacingValues>;
 type TWidth = TUtilityWithArbitraryValues<"w", TSpacingValues | "full">;
 type TMaxWidth = TUtilityWithArbitraryValues<"max-w", TSpacingValues>;
 
-// type TBoxShadow = TUtility<"shadow", TBoxShadowValues>;
-
 type TBorderRadius = "rounded-md";
 
 type TBorderStyle = TUtility<
@@ -182,35 +178,12 @@ type TLetterSpacing = TUtility<"tracking", TLetterSpacingValues>;
 type TTextShadow = TUtility<"text-shadow", TTextShadowValues>;
 type TBackgroundOpacity = TUtility<"bg-opacity", TBackgroundOpacityValues>;
 
-// type THover = TUtility<
-//   "hover",
-//   TColorProperties | TBoxShadow | TDropShadow,
-//   ":"
-// >;
-
-// type TActive = TUtility<
-//   "active",
-//   TColorProperties | TBoxShadow | TDropShadow,
-//   ":"
-// >;
-
-// type TFocus = TUtility<
-//   "focus",
-//   TColorProperties | TBoxShadow | TDropShadow,
-//   ":"
-// >;
-
 type TTransform = "transform" | "transform-gpu" | "transform-none";
 
 type TTranslate = TUtilityWithArbitraryValues<
   `translate-${"x" | "y" | "z"}`,
   TSpacingValues
 >;
-
-// type TRotate =
-//   | `rotate-${number}`
-//   | `-rotate-${number}`
-//   | `rotate-[${number}deg]`;
 
 type TCursor = TUtility<
   "cursor",
@@ -226,7 +199,7 @@ type TCursor = TUtility<
 
 type TListStyleType = TUtility<"list", "none" | "disc" | "decimal">;
 
-type TFlexDirection = "flex-col";
+type TFlexDirection = "flex-col" | "flex-row";
 
 type TFlexFlowValues =
   | "flex-row-wrap"
@@ -262,7 +235,6 @@ export type TPseudoClasses = `${string}:${string}`[] | string[];
 export type TClassStyleUtility = `${string}-${string}` | string;
 
 export interface IThemeClasses extends Record<string, unknown> {
-  // active?: TActive | TActive[];
   after?: TAfter | TAfter[];
   alignItems?: TAlignItems;
   alignSelf?: TAlignSelf;
@@ -271,22 +243,17 @@ export interface IThemeClasses extends Record<string, unknown> {
   backgroundOpacity?: TBackgroundOpacity;
   backgroundSize?: TBgSize;
   backgroundPosition?: TBgPosition;
-  // borderColor?: TBorderColor;
   borderRadius?: TBorderRadius;
   borderStyle?: TBorderStyle;
-  // borderWidth?: TBorderWidth | TBorderWidth[];
   bottom?: TBottom;
-  // boxShadow?: TBoxShadow;
   color?: TTextColor;
   columns?: TColumns;
   cursor?: TCursor;
   display?: TDisplay;
-  // dropShadow?: TDropShadow;
   flex?: TFlex;
   flexDirection?: TFlexDirection;
   flexFlow?: TFlexFlowValues;
   flexWrap?: TFlexWrap;
-  // focus?: TFocus | TFocus[];
   fontFamily?: TTextFontFamily;
   fontSize?: TTextFontSize;
   fontWeight?: TTextFontWeight;
@@ -294,7 +261,6 @@ export interface IThemeClasses extends Record<string, unknown> {
   group?: "group";
   groupHover?: TGroupHover | TGroupHover[];
   height?: THeight;
-  // hover?: THover | THover[];
   justifyContent?: TJustifyContent;
   left?: TLeft;
   lineHeight?: TLeading;
@@ -324,7 +290,6 @@ export interface IThemeClasses extends Record<string, unknown> {
   position?: TPosition;
   pseudoClasses?: TPseudoClasses;
   right?: TRight;
-  // rotate?: TRotate;
   textAlign?: TTextAlign;
   textOverflow?: TTextOverflow;
   textShadow?: TTextShadow;

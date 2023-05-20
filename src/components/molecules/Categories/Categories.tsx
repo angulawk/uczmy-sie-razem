@@ -1,22 +1,12 @@
 import { Tile } from "@app/components/atoms/Tile/Tile";
+import { Title } from "@app/components/atoms/Title/Title";
 import { ICategoriesProps } from "@app/components/molecules/Categories/@types/Categories";
-import {
-  categoriesDefaultThemeClasses,
-  categoriesTitleDefaultThemeClasses
-} from "@app/components/molecules/Categories/styles";
+import { categoriesDefaultThemeClasses } from "@app/components/molecules/Categories/styles";
 import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectValuesToString";
 
 const Categories: React.FC<ICategoriesProps> = ({ categories, title }) => (
   <>
-    {title && (
-      <h1
-        className={convertObjectValuesToString(
-          categoriesTitleDefaultThemeClasses
-        )}
-      >
-        {title}
-      </h1>
-    )}
+    {title && <Title title={title} />}
 
     <div className={convertObjectValuesToString(categoriesDefaultThemeClasses)}>
       {categories.map(({ title, path, src, description }) => (

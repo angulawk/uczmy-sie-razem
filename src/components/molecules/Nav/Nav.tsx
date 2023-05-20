@@ -13,24 +13,30 @@ import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectV
 const Nav: React.FC<INavProps> = ({
   direction = NavDirection.Horizontal,
   links
-}) => (
-  <nav
-    className={`${convertObjectValuesToString(navDefaultThemeClasses)} ${
-      mapNavDirectionToStyles[direction]
-    }`}
-  >
-    {links?.map(({ path, title }) => (
-      <a
-        className={`${convertObjectValuesToString(
-          navLinkDefaultThemeClasses
-        )} ${mapNavDirectionToLinkStyles[direction]}`}
-        href={path}
-        key={path + title}
-      >
-        {title}
-      </a>
-    ))}
-  </nav>
-);
+}) => {
+  const navClasses = {
+    ...navDefaultThemeClasses,
+    ...mapNavDirectionToStyles[direction]
+  };
+
+  const linkClasses = {
+    ...navLinkDefaultThemeClasses,
+    ...mapNavDirectionToLinkStyles[direction]
+  };
+
+  return (
+    <nav className={convertObjectValuesToString(navClasses)}>
+      {links?.map(({ path, title }) => (
+        <a
+          className={`${convertObjectValuesToString(linkClasses)}`}
+          href={path}
+          key={path + title}
+        >
+          {title}
+        </a>
+      ))}
+    </nav>
+  );
+};
 
 export { Nav };

@@ -1,8 +1,8 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const plugin = require("tailwindcss/plugin");
+import plugin from "tailwindcss/plugin";
 
 const spacing = {
   0: "0rem",
+  "1/2": "50%",
   2: "0.2rem",
   4: "0.4rem",
   8: "0.8rem",
@@ -62,7 +62,10 @@ module.exports = {
       blue400: "#5D767C",
 
       //pinkgray
-      pink100: "#e8d3d3"
+      pink100: "#e8d3d3",
+
+      //none
+      none: "none"
     },
     fontFamily: {
       barlow: ["var(--font-barlow)", "sans-serif"],
@@ -108,16 +111,16 @@ module.exports = {
       }
     },
     spacing,
-    transitionDuration: { default: "300ms" },
+    transitionDuration: { fast: "100ms", default: "300ms" },
     zIndex: {
       100: "100"
     }
   },
   plugins: [
-    plugin(function ({ matchUtilities, theme }) {
+    plugin(({ matchUtilities, theme }) => {
       matchUtilities(
         {
-          "text-shadow": (value) => ({
+          "text-shadow": (value: string) => ({
             textShadow: value
           })
         },

@@ -1,5 +1,7 @@
 import { IIconProps } from "@app/components/atoms/Icon/@types/Icon";
-import Image from "next/image";
+import { iconDefaultClasses } from "@app/components/atoms/Icon/styles";
+import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectValuesToString";
+import Image from "next/legacy/image";
 
 const Icon: React.FC<IIconProps> = ({
   iconSrc,
@@ -7,12 +9,10 @@ const Icon: React.FC<IIconProps> = ({
   iconStyle
 }) => (
   <Image
+    className={convertObjectValuesToString(iconDefaultClasses)}
     src={iconSrc}
     alt={iconDescription}
-    style={{
-      transition: "all 150ms ease-in-out",
-      ...iconStyle
-    }}
+    style={iconStyle}
     placeholder="blur"
   />
 );

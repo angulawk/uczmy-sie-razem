@@ -1,8 +1,8 @@
 import { CSSProperties } from "react";
-import { ImageProps } from "next/image";
+import { StaticImageData } from "next/image";
 
 export interface IIconProps {
-  iconSrc: ImageProps["src"];
+  iconSrc: StaticImageData;
   iconDescription: string;
   iconStyle?: CSSProperties;
 }
