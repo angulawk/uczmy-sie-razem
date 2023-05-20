@@ -19,3 +19,7 @@
 * {
   font-family: var(--font-barlow);
 }
+
+@page { margin: 0; padding: 20px; }
+
+

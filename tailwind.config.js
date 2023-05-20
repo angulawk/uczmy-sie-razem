@@ -79,7 +79,8 @@ module.exports = {
       },
       screenSmMd: {
         raw: "(min-width: 800px) and (max-width: 1279px)"
-      }
+      },
+      print: { raw: "print" }
     },
     spacing,
     zIndex: {

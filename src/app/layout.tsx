@@ -9,7 +9,7 @@ import { Barlow, Roboto } from "next/font/google";
 const barlow = Barlow({
   subsets: ["latin"],
   variable: "--font-barlow",
-  weight: "400"
+  weight: ["400", "500"]
 });
 
 const roboto = Roboto({
