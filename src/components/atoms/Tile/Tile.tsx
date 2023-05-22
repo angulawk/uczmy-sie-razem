@@ -23,7 +23,7 @@ const Tile: React.FC<ITileProps> = ({
     >
       <Icon iconSrc={iconSrc} iconDescription={iconDescription} />
     </div>
-    <p>{content}</p>
+    <p className="text-black">{content}</p>
   </a>
 );
 

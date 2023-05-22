@@ -1,20 +1,27 @@
+"use client";
+
 import { IIconProps } from "@app/components/atoms/Icon/@types/Icon";
+import { iconDynamicComponents } from "@app/components/atoms/Icon/config";
 import { iconDefaultClasses } from "@app/components/atoms/Icon/styles";
 import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectValuesToString";
-import Image from "next/legacy/image";
+import { forwardRef } from "react";
 
-const Icon: React.FC<IIconProps> = ({
-  iconSrc,
-  iconDescription,
-  iconStyle
-}) => (
-  <Image
-    className={convertObjectValuesToString(iconDefaultClasses)}
-    src={iconSrc}
-    alt={iconDescription}
-    style={iconStyle}
-    placeholder="blur"
-  />
-);
+const _Icon: React.ForwardRefRenderFunction<HTMLDivElement, IIconProps> = (
+  { iconSrc, iconDescription },
+  ref
+) => {
+  const IconComponent = iconDynamicComponents[iconSrc];
+
+  return (
+    <div ref={ref}>
+      <IconComponent
+        className={convertObjectValuesToString(iconDefaultClasses)}
+        alt={iconDescription}
+      />
+    </div>
+  );
+};
+
+const Icon = forwardRef(_Icon);
 
 export { Icon };

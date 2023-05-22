@@ -47,12 +47,11 @@ module.exports = {
     },
     colors: {
       // Black
-      black: "#000000",
-
-      // Orange
-      orange100: "#CB784C",
+      black: "#150a13",
 
       //Green
+      green100: "#98cda0",
+      green200: "#54ab61",
       green400: "#1D5C4D",
 
       // White
@@ -65,7 +64,12 @@ module.exports = {
       pink100: "#e8d3d3",
 
       //none
-      none: "none"
+      none: "none",
+
+      // Gray
+      gray100: "#f7eef5",
+      gray200: "#f2e4ef",
+      gray300: "#EDE5EB"
     },
     fontFamily: {
       barlow: ["var(--font-barlow)", "sans-serif"],

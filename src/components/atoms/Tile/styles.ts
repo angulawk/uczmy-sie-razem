@@ -10,7 +10,7 @@ export const tileDefaultThemeClasses: IThemeClasses = {
     "screenMaxSm:basis-full"
   ],
   alignItems: "items-center",
-  backgroundColor: "bg-pink100",
+  backgroundColor: "bg-gray300",
   color: "text-black",
   fontSize: "text-24",
   marginBottom: "mb-20",

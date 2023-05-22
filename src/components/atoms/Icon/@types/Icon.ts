@@ -1,8 +1,17 @@
-import { CSSProperties } from "react";
-import { StaticImageData } from "next/image";
+import { TSVGIcon } from "@app/types/svg";
+
+export enum IconDynamicName {
+  Human = "human",
+  Weather = "weather",
+  Job = "job",
+  Animals = "animals",
+  Body = "body",
+  Character = "character"
+}
 
 export interface IIconProps {
-  iconSrc: StaticImageData;
+  iconSrc: IconDynamicName;
   iconDescription: string;
-  iconStyle?: CSSProperties;
 }
+
+export type TIconDynamicComponents = Record<IIconProps["iconSrc"], TSVGIcon>;
