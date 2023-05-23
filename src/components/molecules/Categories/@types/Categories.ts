@@ -5,7 +5,7 @@ export interface ICategoryProps {
   path: Path;
   title: string;
   src: IIconProps["iconSrc"];
-  description: IIconProps["iconDescription"];
+  iconTitle: IIconProps["iconTitle"];
 }
 
 export interface ICategoriesProps {

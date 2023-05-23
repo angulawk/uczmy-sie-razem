@@ -28,7 +28,7 @@ const spacing = {
   720: "72rem"
 };
 
-module.exports = {
+const tailwindConfig = {
   content: [
     "./src/components/**/*.{js,ts,jsx,tsx}",
     "./src/app/**/*.{js,ts,jsx,tsx}"
@@ -59,9 +59,6 @@ module.exports = {
 
       //Blue
       blue400: "#5D767C",
-
-      //pinkgray
-      pink100: "#e8d3d3",
 
       //none
       none: "none",
@@ -101,6 +98,9 @@ module.exports = {
       screenMaxSm: {
         raw: "(max-width: 799px)"
       },
+      screenMinMd: {
+        raw: "(min-width: 1280px)"
+      },
       screenMaxMd: {
         raw: "(max-width: 1279px)"
       },
@@ -133,3 +133,5 @@ module.exports = {
     })
   ]
 };
+
+export default tailwindConfig;

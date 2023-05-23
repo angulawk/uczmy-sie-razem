@@ -19,6 +19,6 @@ export const jumbotronWrapperDefaultThemeClasses: IThemeClasses = {
   mediaQuery: [
     "screenLg:max-w-[1400px]",
     "screenMdLg:max-w-[1200px]",
-    "screenSmMd:max-w-[800px]"
+    "screenSmMd:max-w-[1000px]"
   ]
 };

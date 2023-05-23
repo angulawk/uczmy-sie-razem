@@ -5,5 +5,5 @@ export const categoriesDefaultThemeClasses: IThemeClasses = {
   flexWrap: "flex-wrap",
   alignItems: "items-center",
   justifyContent: "justify-between",
-  gap: "gap-20"
+  mediaQuery: ["screenMinMd:gap-32", "screenMaxMd:gap-12"]
 };

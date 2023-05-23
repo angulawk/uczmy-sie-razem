@@ -11,7 +11,8 @@ export const pageDescriptionThemeClasses: IThemeClasses = {
   position: "absolute",
   bottom: "bottom-0",
   left: "left-0",
-  width: "w-full"
+  width: "w-full",
+  mediaQuery: ["screenSmMd:px-0", "screenSmXs:px-0"]
 };
 
 export const pageDescriptionWrapperThemeClasses: IThemeClasses = {
@@ -20,7 +21,7 @@ export const pageDescriptionWrapperThemeClasses: IThemeClasses = {
   mediaQuery: [
     "screenLg:max-w-[1400px]",
     "screenMdLg:max-w-[1200px]",
-    "screenSmMd:max-w-[800px]",
+    "screenSmMd:max-w-[1000px]",
     "screenSmMd:px-40",
     "screenSmXs:max-w-[600px]",
     "screenSmXs:px-40",

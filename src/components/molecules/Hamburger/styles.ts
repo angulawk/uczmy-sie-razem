@@ -13,16 +13,3 @@ export const hamburgerDefaultStyles: IThemeClasses = {
   transitionTiming: "ease-in-out",
   cursor: "cursor-pointer"
 };
-
-export const hamburgerLineDefaultStyles: IThemeClasses = {
-  position: "absolute",
-  display: "block",
-  height: "h-2",
-  borderRadius: "rounded-md",
-  backgroundColor: "bg-white",
-  opacity: "opacity-100",
-  transform: "transform",
-  transition: "transition-all",
-  transitionDuration: "duration-default",
-  transitionTiming: "ease-in-out"
-};

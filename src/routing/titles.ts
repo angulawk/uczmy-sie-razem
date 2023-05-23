@@ -8,5 +8,5 @@ export enum Title {
   Profession = "Zawody",
   Animals = "Zwierzęta",
   Body = "Ciało",
-  Character = "Cechy charakteru"
+  Character = "Charakter"
 }

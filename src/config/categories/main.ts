@@ -1,36 +1,32 @@
 import { ICategoryProps } from "@app/components/molecules/Categories/@types/Categories";
-import { IconDescription } from "@app/config/iconDescriptions";
 import { Path } from "@app/routing/paths";
 import { Title } from "@app/routing/titles";
-import Human from "@app/../public/icons/human.svg";
-import Weather from "@app/../public/icons/weather.svg";
-import Job from "@app/../public/icons/job.svg";
-import Animals from "@app/../public/icons/paws.svg";
-import { IconDynamicName } from "@app/components/atoms/Icon/@types/Icon";
+import { IconName } from "@app/components/atoms/Icon/@types/Icon";
+import { IconTitle } from "@app/config/iconTitles";
 
 export const mainCategories: ICategoryProps[] = [
   {
     path: Path.CategoriesHuman,
     title: Title.Human,
-    src: IconDynamicName.Human,
-    description: IconDescription.Human
+    src: IconName.Human,
+    iconTitle: IconTitle.Human
   },
   {
     path: Path.CategoriesWeather,
     title: Title.Weather,
-    src: IconDynamicName.Weather,
-    description: IconDescription.Weather
+    src: IconName.Weather,
+    iconTitle: IconTitle.Weather
   },
   {
     path: Path.CategoriesProfession,
     title: Title.Profession,
-    src: IconDynamicName.Job,
-    description: IconDescription.Profession
+    src: IconName.Job,
+    iconTitle: IconTitle.Profession
   },
   {
     path: Path.CategoriesAnimals,
     title: Title.Animals,
-    src: IconDynamicName.Animals,
-    description: IconDescription.Animals
+    src: IconName.Animals,
+    iconTitle: IconTitle.Animals
   }
 ];

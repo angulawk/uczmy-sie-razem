@@ -4,10 +4,11 @@ export const tileDefaultThemeClasses: IThemeClasses = {
   display: "flex",
   flexDirection: "flex-col",
   mediaQuery: [
-    "screenLg:basis-[calc(33.3%-2rem)]",
-    "screenMdLg:basis-[calc(33.3%-2rem)]",
-    "screenSmMd:basis-[calc(50%-2rem)]",
-    "screenMaxSm:basis-full"
+    "screenLg:basis-[calc(25%-3.2rem)]",
+    "screenMdLg:basis-[calc(25%-3.2rem)]",
+    "screenSmMd:basis-[calc(33%-1.2rem)]",
+    "screenSmXs:basis-[calc(50%-1.2rem)]",
+    "screenMaxXs:basis-full"
   ],
   alignItems: "items-center",
   backgroundColor: "bg-gray300",

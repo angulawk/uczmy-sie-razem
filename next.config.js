@@ -7,9 +7,15 @@ const nextConfig = {
   webpack: (config) => {
     config.module.rules.push({
       test: /\.svg$/,
-      use: ["@svgr/webpack"]
+      use: [
+        {
+          options: {
+            titleProp: true
+          },
+          loader: "@svgr/webpack"
+        }
+      ]
     });
-    config.experiments = { layers: true, topLevelAwait: true };
 
     return config;
   }

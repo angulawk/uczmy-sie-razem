@@ -1,6 +1,6 @@
 import { TSVGIcon } from "@app/types/svg";
 
-export enum IconDynamicName {
+export enum IconName {
   Human = "human",
   Weather = "weather",
   Job = "job",
@@ -10,8 +10,8 @@ export enum IconDynamicName {
 }
 
 export interface IIconProps {
-  iconSrc: IconDynamicName;
-  iconDescription: string;
+  iconSrc: IconName;
+  iconTitle: string;
 }
 
-export type TIconDynamicComponents = Record<IIconProps["iconSrc"], TSVGIcon>;
+export type TIconComponents = Record<IIconProps["iconSrc"], TSVGIcon>;

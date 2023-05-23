@@ -1,4 +1,4 @@
-export enum IconDescription {
+export enum IconTitle {
   Human = "Słownictwo związane z człowiekiem po hiszpańsku",
   Weather = "Słownictwo związane z pogodą po hiszpańsku",
   Profession = "Słownictwo związane z zawodami po hiszpańsku",

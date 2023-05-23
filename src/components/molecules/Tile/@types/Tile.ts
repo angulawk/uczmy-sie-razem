@@ -4,5 +4,5 @@ export interface ITileProps {
   content: string;
   link: string;
   iconSrc: IIconProps["iconSrc"];
-  iconDescription: IIconProps["iconDescription"];
+  iconTitle: IIconProps["iconTitle"];
 }

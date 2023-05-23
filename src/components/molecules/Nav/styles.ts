@@ -7,7 +7,7 @@ export const mapNavDirectionToStyles: Record<NavDirection, IThemeClasses> = {
   },
   [NavDirection.Vertical]: {
     flexDirection: "flex-col",
-    margingBottom: "mb-20"
+    marginBottom: "mb-20"
   }
 };
 

@@ -6,8 +6,7 @@
   "rules": {
     "indent": [0],
     "quotes": ["error", "double"],
-    "semi": ["error", "always"],
-    "@typescript-eslint/no-var-requires": "off"
+    "semi": ["error", "always"]
   },
   "plugins": [
     "prettier"

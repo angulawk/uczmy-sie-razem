@@ -1,5 +1,5 @@
 import "@styles/globals.css";
-import { barlow, roboto } from "@app/styles/fonts";
+import { barlow } from "@app/styles/fonts";
 import { IRootLayoutProps } from "@app/app/@types/RootLayout";
 import { Jumbotron } from "@app/components/molecules/Jumbotron/Jumbotron";
 import { PageTemplate } from "@app/components/templates/PageTemplate/PageTemplate";
@@ -10,7 +10,7 @@ const RootLayout: React.FC<IRootLayoutProps> = ({ children }) => {
   const { description, title } = getPageMetadata();
 
   return (
-    <html lang="pl" className={`${barlow.variable} ${roboto.variable}`}>
+    <html lang="pl" className={barlow.variable}>
       <body>
         <Jumbotron description={description} links={navLinks} title={title} />
         <PageTemplate>{children}</PageTemplate>

@@ -28,7 +28,7 @@ const Nav: React.FC<INavProps> = ({
     <nav className={convertObjectValuesToString(navClasses)}>
       {links?.map(({ path, title }) => (
         <a
-          className={`${convertObjectValuesToString(linkClasses)}`}
+          className={convertObjectValuesToString(linkClasses)}
           href={path}
           key={path + title}
         >

@@ -1,3 +1,5 @@
+import { TChildren } from "@app/app/@types/RootLayout";
+
 export interface ITitleProps {
-  title: string;
+  children: TChildren;
 }

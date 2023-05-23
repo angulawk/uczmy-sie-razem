@@ -153,7 +153,7 @@ type TOrder =
   | "order-last"
   | "order-none";
 
-export type TGap = TUtilityWithArbitraryValues<"gap", TSpacingValues>;
+type TGap = TUtilityWithArbitraryValues<"gap", TSpacingValues>;
 
 type TOverflow = TUtility<"overflow", "auto" | "hidden" | "visible" | "scroll">;
 
@@ -184,6 +184,11 @@ type TTranslate = TUtilityWithArbitraryValues<
   `translate-${"x" | "y" | "z"}`,
   TSpacingValues
 >;
+
+type TRotate =
+  | `rotate-${number}`
+  | `-rotate-${number}`
+  | `rotate-[${number}deg]`;
 
 type TCursor = TUtility<
   "cursor",
@@ -224,17 +229,9 @@ type TColumns = `columns-${number}`;
 
 type TOutline = `outline-${number}`;
 
-export type TMediaQuery = TUtilityWithArbitraryValues<
-  TScreensValues,
-  string,
-  ":"
->;
+type TMediaQuery = TUtilityWithArbitraryValues<TScreensValues, string, ":">;
 
-export type TPseudoClasses = `${string}:${string}`[] | string[];
-
-export type TClassStyleUtility = `${string}-${string}` | string;
-
-export interface IThemeClasses extends Record<string, unknown> {
+export interface IThemeClasses {
   after?: TAfter | TAfter[];
   alignItems?: TAlignItems;
   alignSelf?: TAlignSelf;
@@ -288,8 +285,8 @@ export interface IThemeClasses extends Record<string, unknown> {
   paddingX?: TPaddingX;
   paddingY?: TPaddingY;
   position?: TPosition;
-  pseudoClasses?: TPseudoClasses;
   right?: TRight;
+  rotate?: TRotate;
   textAlign?: TTextAlign;
   textOverflow?: TTextOverflow;
   textShadow?: TTextShadow;
