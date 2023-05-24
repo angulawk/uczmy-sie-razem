@@ -38,6 +38,9 @@ module.exports = {
         sm: "0 1px 8px #000000"
       }
     },
+    borderRadius: {
+      sm: "4px"
+    },
     colors: {
       // Black
       black: "#000000",
@@ -46,6 +49,7 @@ module.exports = {
       orange100: "#CB784C",
 
       //Green
+      green200: "#54ab61",
       green400: "#1D5C4D",
 
       // White
@@ -62,6 +66,7 @@ module.exports = {
       18: "18px",
       20: "20px",
       24: "24px",
+      28: "28px",
       36: "36px"
     },
     fontWeight: {
