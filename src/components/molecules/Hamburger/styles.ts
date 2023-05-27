@@ -1,5 +1,15 @@
-export const hamburgerMenuContainerStyles =
-  "absolute top-20 right-20 w-24 h-20 mx-auto transform transition-all duration-500 ease-in-out cursor-pointer";
+import { IThemeClasses } from "@app/types/theme";
 
-export const hambutgermenuLineStyles =
-  "absolute block h-2 rounded-2 bg-white opacity-100 transition-all duration-250 ease-in-out transform";
+export const hamburgerDefaultStyles: IThemeClasses = {
+  position: "absolute",
+  top: "top-32",
+  right: "right-32",
+  width: "w-36",
+  height: "h-28",
+  marginX: "mx-auto",
+  transform: "transform",
+  transition: "transition-all",
+  transitionDuration: "duration-default",
+  transitionTiming: "ease-in-out",
+  cursor: "cursor-pointer"
+};
