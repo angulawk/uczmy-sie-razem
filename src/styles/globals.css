@@ -17,9 +17,16 @@
 }
 
 * {
-  font-family: var(--font-barlow);
+  font-family: "Barlow", sans-serif;
 }
 
 @page { margin: 0; padding: 20px; }
 
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #f7eef5;
+}

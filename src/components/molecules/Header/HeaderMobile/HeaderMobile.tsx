@@ -1,9 +1,18 @@
 "use client";
 
 import { Hamburger } from "@app/components/molecules/Hamburger/Hamburger";
-import { IHeaderMobileProps } from "@app/components/molecules/Header/HeaderMobile/@types/HeaderMobile";
+import {
+  HeaderMobileVisibility,
+  IHeaderMobileProps
+} from "@app/components/molecules/Header/HeaderMobile/@types/HeaderMobile";
+import {
+  headerMobileDefaultThemeClasses,
+  mapHeaderMobileVisibilityToStyles
+} from "@app/components/molecules/Header/HeaderMobile/styles";
 import { NavDirection } from "@app/components/molecules/Nav/@types/Nav";
 import { Nav } from "@app/components/molecules/Nav/Nav";
+import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectValuesToString";
+import { IThemeClasses } from "@app/types/theme";
 import { useState } from "react";
 
 const HeaderMobile: React.FC<IHeaderMobileProps> = ({ links }) => {
@@ -13,12 +22,17 @@ const HeaderMobile: React.FC<IHeaderMobileProps> = ({ links }) => {
     setIsMenuVisible((_isMenuVisible) => !_isMenuVisible);
   };
 
+  const headerMobileVisibility = isMenuVisible
+    ? HeaderMobileVisibility.Visible
+    : HeaderMobileVisibility.Hidden;
+
+  const headerMobileClasses: IThemeClasses = {
+    ...headerMobileDefaultThemeClasses,
+    ...mapHeaderMobileVisibilityToStyles[headerMobileVisibility]
+  };
+
   return (
-    <div
-      className={`w-160 h-full relative z-100 px-16 py-48 flex
-      ${isMenuVisible ? "bg-black" : "bg-none"}
-    `}
-    >
+    <div className={convertObjectValuesToString(headerMobileClasses)}>
       <Hamburger isMenuVisible={isMenuVisible} onToggle={onMenuButtonClick} />
 
       {isMenuVisible && <Nav direction={NavDirection.Vertical} links={links} />}

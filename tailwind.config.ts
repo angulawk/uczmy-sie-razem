@@ -1,8 +1,8 @@
-/** @type {import('tailwindcss').Config} */
 import plugin from "tailwindcss/plugin";
 
 const spacing = {
   0: "0rem",
+  "1/2": "50%",
   2: "0.2rem",
   4: "0.4rem",
   8: "0.8rem",
@@ -13,18 +13,22 @@ const spacing = {
   20: "2rem",
   24: "2.4rem",
   28: "2.8rem",
+  32: "3.2rem",
   36: "3.6rem",
+  40: "4rem",
   45: "4.5rem",
   48: "4.8rem",
   60: "6rem",
   72: "7.2rem",
+  88: "8.8rem",
   96: "9.6rem",
   160: "16rem",
   200: "20rem",
-  440: "44rem"
+  240: "24rem",
+  720: "72rem"
 };
 
-module.exports = {
+const tailwindConfig = {
   content: [
     "./src/components/**/*.{js,ts,jsx,tsx}",
     "./src/app/**/*.{js,ts,jsx,tsx}"
@@ -35,7 +39,10 @@ module.exports = {
         students: "url('/images/students.png')"
       },
       textShadow: {
-        sm: "0 1px 8px #000000"
+        sm: "0 1px 16px #000000"
+      },
+      backgroundOpacity: {
+        60: "0.6"
       }
     },
     borderRadius: {
@@ -43,12 +50,10 @@ module.exports = {
     },
     colors: {
       // Black
-      black: "#000000",
-
-      // Orange
-      orange100: "#CB784C",
+      black: "#150a13",
 
       //Green
+      green100: "#98cda0",
       green200: "#54ab61",
       green400: "#1D5C4D",
 
@@ -56,7 +61,15 @@ module.exports = {
       white: "#FFFFFF",
 
       //Blue
-      blue400: "#5D767C"
+      blue400: "#5D767C",
+
+      //none
+      none: "none",
+
+      // Gray
+      gray100: "#f7eef5",
+      gray200: "#f2e4ef",
+      gray300: "#EDE5EB"
     },
     fontFamily: {
       barlow: ["var(--font-barlow)", "sans-serif"],
@@ -67,6 +80,7 @@ module.exports = {
       20: "20px",
       24: "24px",
       28: "28px",
+      34: "34px",
       36: "36px"
     },
     fontWeight: {
@@ -74,29 +88,48 @@ module.exports = {
       normal: 400,
       thin: 300
     },
+    lineHeight: {
+      ...spacing
+    },
+    letterSpacing: {
+      wider: ".05em"
+    },
     screens: {
       screenLg: "1680px",
+      screenMaxXs: {
+        raw: "(max-width: 479px)"
+      },
       screenMaxSm: {
         raw: "(max-width: 799px)"
       },
-      screenMdLg: {
-        raw: "(min-width: 1280px) and (max-width: 1679px)"
+      screenMinMd: {
+        raw: "(min-width: 1280px)"
+      },
+      screenMaxMd: {
+        raw: "(max-width: 1279px)"
+      },
+      screenSmXs: {
+        raw: "(min-width: 480px) and (max-width: 799px)"
       },
       screenSmMd: {
         raw: "(min-width: 800px) and (max-width: 1279px)"
       },
+      screenMdLg: {
+        raw: "(min-width: 1280px) and (max-width: 1679px)"
+      },
       print: { raw: "print" }
     },
     spacing,
+    transitionDuration: { fast: "100ms", default: "300ms" },
     zIndex: {
       100: "100"
     }
   },
   plugins: [
-    plugin(function ({ matchUtilities, theme }) {
+    plugin(({ matchUtilities, theme }) => {
       matchUtilities(
         {
-          "text-shadow": (value) => ({
+          "text-shadow": (value: string) => ({
             textShadow: value
           })
         },
@@ -105,3 +138,5 @@ module.exports = {
     })
   ]
 };
+
+export default tailwindConfig;

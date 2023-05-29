@@ -2,7 +2,22 @@
 
 const nextConfig = {
   experimental: {
-    appDir: true,
+    appDir: true
+  },
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: [
+        {
+          options: {
+            titleProp: true
+          },
+          loader: "@svgr/webpack"
+        }
+      ]
+    });
+
+    return config;
   }
 };
 

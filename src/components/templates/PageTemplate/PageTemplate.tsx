@@ -1,7 +1,11 @@
 import { IPageTemplateProps } from "@app/components/templates/PageTemplate/@types/PageTemplate";
+import { pageTemplateDefaultThemeClasses } from "@app/components/templates/PageTemplate/styles";
+import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectValuesToString";
 
 const PageTemplate: React.FC<IPageTemplateProps> = ({ children }) => (
-  <main className="flex flex-col min-h-screen max-w-screen-xl mx-auto my-16 w-full p-20">
+  <main
+    className={convertObjectValuesToString(pageTemplateDefaultThemeClasses)}
+  >
     {children}
   </main>
 );
