@@ -5,5 +5,4 @@ export interface ICategoryDetailProps {
   sentence: string;
   sentenceAudio: string;
   sentenceTranslation: string;
-  shouldDisplaySeparator?: boolean;
 }

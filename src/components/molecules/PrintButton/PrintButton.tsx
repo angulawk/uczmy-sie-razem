@@ -1,12 +1,22 @@
+import {
+  printButtonContainerDefaultThemeClasses,
+  printButtonDefaultThemeClasses
+} from "@app/components/molecules/PrintButton/styles";
+import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectValuesToString";
+
 const PrintButton: React.FC = () => {
   const handlePrint = () => {
     window.print();
   };
 
   return (
-    <div className="print:hidden flex justify-end">
+    <div
+      className={convertObjectValuesToString(
+        printButtonContainerDefaultThemeClasses
+      )}
+    >
       <button
-        className="bg-green200 text-white text-18 px-12 py-4 rounded-sm"
+        className={convertObjectValuesToString(printButtonDefaultThemeClasses)}
         onClick={handlePrint}
       >
         Drukuj

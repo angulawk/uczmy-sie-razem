@@ -1,5 +1,7 @@
 import { ICategoryDetailProps } from "@app/components/molecules/CategoryDetail/@types/CategoryDetail";
+import { categoryDetailWrapperDefaultThemeClasses } from "@app/components/molecules/CategoryDetail/styles";
 import { Translation } from "@app/components/molecules/Translation/Translation";
+import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectValuesToString";
 
 const CategoryDetail: React.FC<ICategoryDetailProps> = ({
   word,
@@ -7,10 +9,13 @@ const CategoryDetail: React.FC<ICategoryDetailProps> = ({
   wordTranslaion,
   sentence,
   sentenceAudio,
-  sentenceTranslation,
-  shouldDisplaySeparator
+  sentenceTranslation
 }) => (
-  <>
+  <div
+    className={convertObjectValuesToString(
+      categoryDetailWrapperDefaultThemeClasses
+    )}
+  >
     <Translation
       word={word}
       wordAudio={wordAudio}
@@ -21,10 +26,7 @@ const CategoryDetail: React.FC<ICategoryDetailProps> = ({
       wordAudio={sentenceAudio}
       wordTranslaion={sentenceTranslation}
     />
-    {shouldDisplaySeparator && (
-      <hr className="border-thin border-solid border-black w-48 my-8" />
-    )}
-  </>
+  </div>
 );
 
 export { CategoryDetail };

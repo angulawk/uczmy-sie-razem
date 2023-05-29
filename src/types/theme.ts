@@ -2,6 +2,11 @@ import tailwindConfig from "@app/../tailwind.config";
 
 const theme = tailwindConfig.theme;
 
+type TBackgroundOpacityValues = keyof typeof theme.extend.backgroundOpacity;
+type TBorderRadiusValues = keyof typeof theme.borderRadius;
+type TBorderWidthValues = keyof typeof theme.borderWidth;
+type TBoxShadowValues = keyof typeof theme.boxShadow;
+type TBackgroundValues = keyof typeof theme.extend.backgroundImage;
 type TColorValues = keyof typeof theme.colors;
 type TFontFamilyValues = keyof typeof theme.fontFamily;
 type TFontSizeValues = keyof typeof theme.fontSize;
@@ -11,10 +16,8 @@ type TScreensValues = keyof typeof theme.screens;
 type TSpacingValues = keyof typeof theme.spacing;
 type TTransitionDurationValues = keyof typeof theme.transitionDuration;
 type TZIndexValues = keyof typeof theme.zIndex;
-type TBackgroundValues = keyof typeof theme.extend.backgroundImage;
 type TLetterSpacingValues = keyof typeof theme.letterSpacing;
 type TTextShadowValues = keyof typeof theme.extend.textShadow;
-type TBackgroundOpacityValues = keyof typeof theme.extend.backgroundOpacity;
 
 type TUtility<
   TPrefix extends string,
@@ -103,11 +106,32 @@ type TMaxHeight = TUtilityWithArbitraryValues<"max-h", TSpacingValues>;
 type TWidth = TUtilityWithArbitraryValues<"w", TSpacingValues | "full">;
 type TMaxWidth = TUtilityWithArbitraryValues<"max-w", TSpacingValues>;
 
-type TBorderRadius = "rounded-md";
+type TUtilityWithTransparency<TPrefix extends string, TSuffix> =
+  | TUtility<TPrefix, TSuffix>
+  | TUtility<
+      TPrefix,
+      TSuffix extends string | number
+        ? `${TSuffix}/${number | `[${number}]`}`
+        : string
+    >;
+
+type TBorderRadius = TUtilityWithArbitraryValues<
+  "rounded",
+  TBorderRadiusValues
+>;
+
+type TBorderColor =
+  | TUtilityWithArbitraryValues<"border", TColorValues>
+  | TUtilityWithTransparency<"border", TColorValues>;
 
 type TBorderStyle = TUtility<
   "border",
   "solid" | "dashed" | "dotted" | "double" | "none"
+>;
+
+type TBorderWidth = TUtilityWithArbitraryValues<
+  "border" | "border-l" | "border-r" | "border-t" | "border-b",
+  TBorderWidthValues
 >;
 
 type TZIndex = TUtilityWithArbitraryValues<"z", TZIndexValues>;
@@ -220,7 +244,7 @@ type TFlexFlowValues =
   | "flex-col-nowrap"
   | "flex-col-reverse-nowrap";
 
-type TFlexWrap = "flex-wrap";
+type TFlexWrap = "flex-wrap" | "flex-nowrap";
 type TAfter = TUtilityWithArbitraryValues<"after", string, ":">;
 
 type TOpacity = `opacity-${number}`;
@@ -230,6 +254,7 @@ type TColumns = `columns-${number}`;
 type TOutline = `outline-${number}`;
 
 type TMediaQuery = TUtilityWithArbitraryValues<TScreensValues, string, ":">;
+type TBoxShadow = TUtility<"shadow", TBoxShadowValues>;
 
 export interface IThemeClasses {
   after?: TAfter | TAfter[];
@@ -240,9 +265,12 @@ export interface IThemeClasses {
   backgroundOpacity?: TBackgroundOpacity;
   backgroundSize?: TBgSize;
   backgroundPosition?: TBgPosition;
+  borderColor?: TBorderColor;
   borderRadius?: TBorderRadius;
   borderStyle?: TBorderStyle;
+  borderWidth?: TBorderWidth | TBorderWidth[];
   bottom?: TBottom;
+  boxShadow?: TBoxShadow;
   color?: TTextColor;
   columns?: TColumns;
   cursor?: TCursor;

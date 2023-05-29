@@ -46,7 +46,15 @@ const tailwindConfig = {
       }
     },
     borderRadius: {
-      sm: "4px"
+      sm: "4px",
+      lg: "8px"
+    },
+    borderWidth: {
+      1: "1px",
+      thin: "thin"
+    },
+    boxShadow: {
+      button: "0px 0px 8px -1px #150a13"
     },
     colors: {
       // Black
@@ -76,6 +84,7 @@ const tailwindConfig = {
       roboto: ["var(--font-roboto)", "sans-serif"]
     },
     fontSize: {
+      14: "14px",
       18: "18px",
       20: "20px",
       24: "24px",

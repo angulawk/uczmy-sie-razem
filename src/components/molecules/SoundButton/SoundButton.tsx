@@ -1,6 +1,10 @@
 "use client";
 
+import { IconName } from "@app/components/atoms/Icon/@types/Icon";
+import { Icon } from "@app/components/atoms/Icon/Icon";
 import { ISoundButtonProps } from "@app/components/molecules/SoundButton/@types/SoundButton";
+import { soundButtonDefaultThemeClasses } from "@app/components/molecules/SoundButton/styles";
+import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectValuesToString";
 import { useState } from "react";
 
 const SoundButton: React.FC<ISoundButtonProps> = ({ audioSrc }) => {
@@ -16,10 +20,13 @@ const SoundButton: React.FC<ISoundButtonProps> = ({ audioSrc }) => {
 
   return (
     <>
-      <button onClick={play} className="w-12 h-12 ml-8 print:hidden">
-        <img
-          src="/icons/volume-on.png"
-          alt="Posłuchaj tłumaczenia po hiszpańsku"
+      <button
+        onClick={play}
+        className={convertObjectValuesToString(soundButtonDefaultThemeClasses)}
+      >
+        <Icon
+          iconSrc={IconName.VolumeOn}
+          iconTitle="Posłuchaj tłumaczenia po hiszpańsku"
         />
       </button>
       {isPlaying && (

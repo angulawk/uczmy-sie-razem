@@ -20,7 +20,7 @@
   font-family: "Barlow", sans-serif;
 }
 
-@page { margin: 0; padding: 20px; }
+@page { margin: 0; padding-top: 20px; padding-bottom: 20px; }
 
 
 html {
