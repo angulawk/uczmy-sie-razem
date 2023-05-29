@@ -1,5 +1,5 @@
 export interface ITranslationProps {
-  word: string;
+  phrase: string;
+  translation: string;
   wordAudio: string;
-  wordTranslaion: string;
 }

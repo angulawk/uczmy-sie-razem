@@ -106,23 +106,12 @@ type TMaxHeight = TUtilityWithArbitraryValues<"max-h", TSpacingValues>;
 type TWidth = TUtilityWithArbitraryValues<"w", TSpacingValues | "full">;
 type TMaxWidth = TUtilityWithArbitraryValues<"max-w", TSpacingValues>;
 
-type TUtilityWithTransparency<TPrefix extends string, TSuffix> =
-  | TUtility<TPrefix, TSuffix>
-  | TUtility<
-      TPrefix,
-      TSuffix extends string | number
-        ? `${TSuffix}/${number | `[${number}]`}`
-        : string
-    >;
-
 type TBorderRadius = TUtilityWithArbitraryValues<
   "rounded",
   TBorderRadiusValues
 >;
 
-type TBorderColor =
-  | TUtilityWithArbitraryValues<"border", TColorValues>
-  | TUtilityWithTransparency<"border", TColorValues>;
+type TBorderColor = TUtilityWithArbitraryValues<"border", TColorValues>;
 
 type TBorderStyle = TUtility<
   "border",
@@ -195,9 +184,6 @@ type TTransition =
 type TTransitionDuration = TUtility<"duration", TTransitionDurationValues>;
 type TTransitionTiming = TUtility<"ease", "linear" | "in" | "out" | "in-out">;
 
-type TColorProperties = TBgColor | TTextColor | TFill;
-
-type TGroupHover = TUtility<"group-hover", TColorProperties, ":">;
 type TLetterSpacing = TUtility<"tracking", TLetterSpacingValues>;
 type TTextShadow = TUtility<"text-shadow", TTextShadowValues>;
 type TBackgroundOpacity = TUtility<"bg-opacity", TBackgroundOpacityValues>;
@@ -283,8 +269,6 @@ export interface IThemeClasses {
   fontSize?: TTextFontSize;
   fontWeight?: TTextFontWeight;
   gap?: TGap;
-  group?: "group";
-  groupHover?: TGroupHover | TGroupHover[];
   height?: THeight;
   justifyContent?: TJustifyContent;
   left?: TLeft;

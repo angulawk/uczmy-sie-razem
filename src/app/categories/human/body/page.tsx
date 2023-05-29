@@ -1,6 +1,5 @@
 import { CategoryDetails } from "@app/components/molecules/CategoryDetails/CategoryDetails";
 import { bodyCategory } from "@app/config/categoryDetails/body";
-import React from "react";
 
 const Body: React.FC = () => {
   return <CategoryDetails title="Ciało" categoryDetails={bodyCategory} />;

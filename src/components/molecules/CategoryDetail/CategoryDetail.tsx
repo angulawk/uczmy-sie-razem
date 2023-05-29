@@ -1,5 +1,5 @@
 import { ICategoryDetailProps } from "@app/components/molecules/CategoryDetail/@types/CategoryDetail";
-import { categoryDetailWrapperDefaultThemeClasses } from "@app/components/molecules/CategoryDetail/styles";
+import { categoryDetailDefaultThemeClasses } from "@app/components/molecules/CategoryDetail/styles";
 import { Translation } from "@app/components/molecules/Translation/Translation";
 import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectValuesToString";
 
@@ -12,19 +12,17 @@ const CategoryDetail: React.FC<ICategoryDetailProps> = ({
   sentenceTranslation
 }) => (
   <div
-    className={convertObjectValuesToString(
-      categoryDetailWrapperDefaultThemeClasses
-    )}
+    className={convertObjectValuesToString(categoryDetailDefaultThemeClasses)}
   >
     <Translation
-      word={word}
+      phrase={word}
+      translation={wordTranslaion}
       wordAudio={wordAudio}
-      wordTranslaion={wordTranslaion}
     />
     <Translation
-      word={sentence}
+      phrase={sentence}
+      translation={sentenceTranslation}
       wordAudio={sentenceAudio}
-      wordTranslaion={sentenceTranslation}
     />
   </div>
 );

@@ -7,9 +7,9 @@ import {
 import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectValuesToString";
 
 const Translation: React.FC<ITranslationProps> = ({
-  word,
-  wordAudio,
-  wordTranslaion
+  phrase,
+  translation,
+  wordAudio
 }) => (
   <div
     className={convertObjectValuesToString(
@@ -17,10 +17,9 @@ const Translation: React.FC<ITranslationProps> = ({
     )}
   >
     <p className={convertObjectValuesToString(translationDefaultThemeClasses)}>
-      {" "}
-      {word}
+      {phrase}
       {" - "}
-      {wordTranslaion}
+      {translation}
     </p>
     <SoundButton audioSrc={wordAudio} />
   </div>
