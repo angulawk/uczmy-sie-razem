@@ -73,6 +73,7 @@ const tailwindConfig = {
       roboto: ["var(--font-roboto)", "sans-serif"]
     },
     fontSize: {
+      14: "14px",
       18: "18px",
       20: "20px",
       24: "24px",

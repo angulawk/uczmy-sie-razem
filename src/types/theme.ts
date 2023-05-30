@@ -100,7 +100,10 @@ type TTop = TUtilityWithArbitraryValues<"top", TSpacingValues>;
 type THeight = TUtilityWithArbitraryValues<"h", TSpacingValues | "full">;
 type TMinHeight = TUtilityWithArbitraryValues<"min-h", TSpacingValues>;
 type TMaxHeight = TUtilityWithArbitraryValues<"max-h", TSpacingValues>;
-type TWidth = TUtilityWithArbitraryValues<"w", TSpacingValues | "full">;
+type TWidth = TUtilityWithArbitraryValues<
+  "w",
+  TSpacingValues | "full" | "auto"
+>;
 type TMaxWidth = TUtilityWithArbitraryValues<"max-w", TSpacingValues>;
 
 type TBorderRadius = "rounded-md";

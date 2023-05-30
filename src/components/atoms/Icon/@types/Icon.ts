@@ -1,4 +1,5 @@
 import { TSVGIcon } from "@app/types/svg";
+import { IThemeClasses } from "@app/types/theme";
 
 export enum IconName {
   Human = "human",
@@ -6,12 +7,16 @@ export enum IconName {
   Job = "job",
   Animals = "animals",
   Body = "body",
-  Character = "character"
+  Character = "character",
+  Logo = "logo",
+  Instagram = "instagram",
+  Youtube = "youtube"
 }
 
 export interface IIconProps {
   iconSrc: IconName;
   iconTitle: string;
+  themeClasses?: Pick<IThemeClasses, "height" | "overflow" | "width">;
 }
 
 export type TIconComponents = Record<IIconProps["iconSrc"], TSVGIcon>;

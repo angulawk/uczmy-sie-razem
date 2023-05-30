@@ -5,6 +5,8 @@ import { Jumbotron } from "@app/components/molecules/Jumbotron/Jumbotron";
 import { PageTemplate } from "@app/components/templates/PageTemplate/PageTemplate";
 import { navLinks } from "@app/config/navLinks";
 import { getPageMetadata } from "@app/helpers/server/getPageMetadata";
+import { Footer } from "@app/components/molecules/Footer/Footer";
+import { Path } from "@app/routing/paths";
 
 const RootLayout: React.FC<IRootLayoutProps> = ({ children }) => {
   const { description, title } = getPageMetadata();
@@ -14,6 +16,7 @@ const RootLayout: React.FC<IRootLayoutProps> = ({ children }) => {
       <body>
         <Jumbotron description={description} links={navLinks} title={title} />
         <PageTemplate>{children}</PageTemplate>
+        <Footer navLinks={navLinks} logoHref={Path.Root} />
       </body>
     </html>
   );

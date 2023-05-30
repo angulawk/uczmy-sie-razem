@@ -1,12 +1,11 @@
+import { NavItem } from "@app/components/atoms/NavItem/NavItem";
 import {
   INavProps,
   NavDirection
 } from "@app/components/molecules/Nav/@types/Nav";
 import {
-  mapNavDirectionToLinkStyles,
   mapNavDirectionToStyles,
-  navDefaultThemeClasses,
-  navLinkDefaultThemeClasses
+  navDefaultThemeClasses
 } from "@app/components/molecules/Nav/styles";
 import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectValuesToString";
 
@@ -19,21 +18,15 @@ const Nav: React.FC<INavProps> = ({
     ...mapNavDirectionToStyles[direction]
   };
 
-  const linkClasses = {
-    ...navLinkDefaultThemeClasses,
-    ...mapNavDirectionToLinkStyles[direction]
-  };
-
   return (
     <nav className={convertObjectValuesToString(navClasses)}>
       {links?.map(({ path, title }) => (
-        <a
-          className={convertObjectValuesToString(linkClasses)}
-          href={path}
+        <NavItem
           key={path + title}
-        >
-          {title}
-        </a>
+          direction={direction}
+          path={path}
+          title={title}
+        />
       ))}
     </nav>
   );
