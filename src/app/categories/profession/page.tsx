@@ -1,3 +1,3 @@
-const Jobs: React.FC = () => <h1>Jobs</h1>;
+const JobsPage: React.FC = () => <h1>Jobs</h1>;
 
-export default Jobs;
+export default JobsPage;

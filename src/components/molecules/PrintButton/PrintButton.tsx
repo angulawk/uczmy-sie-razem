@@ -6,7 +6,9 @@ import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectV
 
 const PrintButton: React.FC = () => {
   const handlePrint = () => {
-    window.print();
+    if (typeof window !== "undefined") {
+      window.print();
+    }
   };
 
   return (

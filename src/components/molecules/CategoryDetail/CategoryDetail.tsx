@@ -1,5 +1,6 @@
 import { ICategoryDetailProps } from "@app/components/molecules/CategoryDetail/@types/CategoryDetail";
 import { categoryDetailDefaultThemeClasses } from "@app/components/molecules/CategoryDetail/styles";
+import { Variant } from "@app/components/molecules/Translation/@types/Translation";
 import { Translation } from "@app/components/molecules/Translation/Translation";
 import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectValuesToString";
 
@@ -23,6 +24,7 @@ const CategoryDetail: React.FC<ICategoryDetailProps> = ({
       phrase={sentence}
       translation={sentenceTranslation}
       wordAudio={sentenceAudio}
+      variant={Variant.Sentence}
     />
   </div>
 );

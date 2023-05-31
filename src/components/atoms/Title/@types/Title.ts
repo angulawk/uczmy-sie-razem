@@ -1,11 +1,11 @@
 import { TChildren } from "@app/app/@types/RootLayout";
 
-export enum Placement {
+export enum TitlePlacement {
   Main,
   Details
 }
 
 export interface ITitleProps {
   children: TChildren;
-  placement?: Placement;
+  placement?: TitlePlacement;
 }

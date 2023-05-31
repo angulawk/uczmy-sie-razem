@@ -88,14 +88,14 @@ const tailwindConfig = {
       18: "18px",
       20: "20px",
       24: "24px",
-      28: "28px",
       34: "34px",
       36: "36px"
     },
     fontWeight: {
       bold: 500,
       normal: 400,
-      thin: 300
+      thin: 300,
+      superThin: 200
     },
     lineHeight: {
       ...spacing

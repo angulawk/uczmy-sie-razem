@@ -25,7 +25,7 @@ const SoundButton: React.FC<ISoundButtonProps> = ({ audioSrc }) => {
         className={convertObjectValuesToString(soundButtonDefaultThemeClasses)}
       >
         <Icon
-          iconSrc={IconName.VolumeOn}
+          iconSrc={isPlaying ? IconName.VolumeOn : IconName.VolumeOff}
           iconTitle="Posłuchaj tłumaczenia po hiszpańsku"
         />
       </button>

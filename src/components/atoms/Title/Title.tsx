@@ -1,6 +1,6 @@
 import {
   ITitleProps,
-  Placement
+  TitlePlacement
 } from "@app/components/atoms/Title/@types/Title";
 import {
   mapTitlePlacementToStyles,
@@ -10,7 +10,7 @@ import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectV
 
 const Title: React.FC<ITitleProps> = ({
   children,
-  placement = Placement.Main
+  placement = TitlePlacement.Main
 }) => {
   const titleClasses = {
     ...mapTitlePlacementToStyles[placement],

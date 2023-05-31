@@ -1,6 +1,6 @@
 "use client";
 
-import { Placement } from "@app/components/atoms/Title/@types/Title";
+import { TitlePlacement } from "@app/components/atoms/Title/@types/Title";
 import { Title } from "@app/components/atoms/Title/Title";
 import { CategoryDetail } from "@app/components/molecules/CategoryDetail/CategoryDetail";
 import { ICategoryDetailsProps } from "@app/components/molecules/CategoryDetails/@types/CategoryDetails";
@@ -19,7 +19,7 @@ const CategoryDetails: React.FC<ICategoryDetailsProps> = ({
     className={convertObjectValuesToString(categoryDetailsDefaultThemeClasses)}
   >
     <PrintButton />
-    <Title placement={Placement.Details}>{title}</Title>
+    <Title placement={TitlePlacement.Details}>{title}</Title>
 
     <div
       className={convertObjectValuesToString(

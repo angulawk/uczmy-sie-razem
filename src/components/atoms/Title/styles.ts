@@ -1,14 +1,15 @@
-import { Placement } from "@app/components/atoms/Title/@types/Title";
+import { TitlePlacement } from "@app/components/atoms/Title/@types/Title";
 import { IThemeClasses } from "@app/types/theme";
 
-export const mapTitlePlacementToStyles: Record<Placement, IThemeClasses> = {
-  [Placement.Main]: {
-    marginY: "my-48"
-  },
-  [Placement.Details]: {
-    marginY: "my-24"
-  }
-};
+export const mapTitlePlacementToStyles: Record<TitlePlacement, IThemeClasses> =
+  {
+    [TitlePlacement.Main]: {
+      marginY: "my-48"
+    },
+    [TitlePlacement.Details]: {
+      marginY: "my-24"
+    }
+  };
 
 export const titleDefaultThemeClasses: IThemeClasses = {
   fontSize: "text-36",
