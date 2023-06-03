@@ -80,8 +80,7 @@ const tailwindConfig = {
       gray300: "#EDE5EB"
     },
     fontFamily: {
-      barlow: ["var(--font-barlow)", "sans-serif"],
-      roboto: ["var(--font-roboto)", "sans-serif"]
+      barlow: ["var(--font-barlow)", "sans-serif"]
     },
     fontSize: {
       14: "14px",
