@@ -1,27 +1,31 @@
-import { Variant } from "@app/components/molecules/Translation/@types/Translation";
+import { TranslationVariant } from "@app/components/molecules/Translation/@types/Translation";
 import { IThemeClasses } from "@app/types/theme";
 
-export const mapVariantToTranslationStyles: Record<Variant, IThemeClasses> = {
-  [Variant.Word]: {
-    fontSize: "text-20"
+export const mapVariantToTranslationStyles: Record<
+  TranslationVariant,
+  IThemeClasses
+> = {
+  [TranslationVariant.Word]: {
+    fontSize: "text-24"
   },
-  [Variant.Sentence]: {
+  [TranslationVariant.Sentence]: {
     fontSize: "text-18"
   }
 };
 
-export const mapVariantToTranslationWordStyles: Record<Variant, IThemeClasses> =
-  {
-    [Variant.Word]: {
-      fontWeight: "font-normal"
-    },
-    [Variant.Sentence]: {
-      fontWeight: "font-thin"
-    }
-  };
+export const mapVariantToTranslationWordStyles: Record<
+  TranslationVariant,
+  IThemeClasses
+> = {
+  [TranslationVariant.Word]: {
+    fontWeight: "font-normal"
+  },
+  [TranslationVariant.Sentence]: {
+    fontWeight: "font-thin"
+  }
+};
 
 export const translationDefaultThemeClasses: IThemeClasses = {
-  fontSize: "text-20",
   marginBottom: "mb-2",
   mediaQuery: ["print:text-14"]
 };

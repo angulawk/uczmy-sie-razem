@@ -1,7 +1,7 @@
 import { SoundButton } from "@app/components/molecules/SoundButton/SoundButton";
 import {
   ITranslationProps,
-  Variant
+  TranslationVariant
 } from "@app/components/molecules/Translation/@types/Translation";
 import {
   mapVariantToTranslationStyles,
@@ -15,7 +15,7 @@ const Translation: React.FC<ITranslationProps> = ({
   phrase,
   translation,
   wordAudio,
-  variant = Variant.Word
+  variant = TranslationVariant.Word
 }) => {
   const translationStyles = {
     ...translationDefaultThemeClasses,
