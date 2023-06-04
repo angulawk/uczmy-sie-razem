@@ -10,7 +10,8 @@ export const pageTemplateDefaultThemeClasses: IThemeClasses = {
     "screenSmMd:px-40",
     "screenSmXs:max-w-[600px]",
     "screenSmXs:px-40",
-    "screenMaxMd:px-24"
+    "screenMaxMd:px-24",
+    "print:max-w-full"
   ],
   marginX: "mx-auto",
   width: "w-full"

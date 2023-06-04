@@ -8,7 +8,8 @@ export const jumbotronDefaultThemeClasses: IThemeClasses = {
   backgroundPosition: "bg-center",
   width: "w-full",
   height: "h-720",
-  position: "relative"
+  position: "relative",
+  mediaQuery: ["print:hidden"]
 };
 
 export const jumbotronWrapperDefaultThemeClasses: IThemeClasses = {

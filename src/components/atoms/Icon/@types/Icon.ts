@@ -6,7 +6,9 @@ export enum IconName {
   Job = "job",
   Animals = "animals",
   Body = "body",
-  Character = "character"
+  Character = "character",
+  VolumeOn = "volume-on",
+  VolumeOff = "volume-off"
 }
 
 export interface IIconProps {

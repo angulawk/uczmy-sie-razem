@@ -4,6 +4,9 @@ import Job from "@app/../public/icons/job.svg";
 import Animals from "@app/../public/icons/koala.svg";
 import Character from "@app/../public/icons/character.svg";
 import Body from "@app/../public/icons/body.svg";
+import VolumeOn from "@app/../public/icons/volume-on.svg";
+import VolumeOff from "@app/../public/icons/volume-off.svg";
+
 import {
   IconName,
   TIconComponents
@@ -15,7 +18,9 @@ const iconComponents: TIconComponents = {
   [IconName.Job]: Job,
   [IconName.Animals]: Animals,
   [IconName.Body]: Body,
-  [IconName.Character]: Character
+  [IconName.Character]: Character,
+  [IconName.VolumeOn]: VolumeOn,
+  [IconName.VolumeOff]: VolumeOff
 };
 
 export { iconComponents };
