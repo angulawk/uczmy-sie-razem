@@ -1,3 +1,3 @@
-const Weather: React.FC = () => <h1>Weather</h1>;
+const WeatherPage: React.FC = () => <h1>Weather</h1>;
 
-export default Weather;
+export default WeatherPage;

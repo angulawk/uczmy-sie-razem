@@ -10,7 +10,9 @@ export enum IconName {
   Character = "character",
   Logo = "logo",
   Instagram = "instagram",
-  Youtube = "youtube"
+  Youtube = "youtube",
+  VolumeOn = "volume-on",
+  VolumeOff = "volume-off"
 }
 
 export interface IIconProps {

@@ -45,6 +45,17 @@ const tailwindConfig = {
         60: "0.6"
       }
     },
+    borderRadius: {
+      sm: "4px",
+      lg: "8px"
+    },
+    borderWidth: {
+      1: "1px",
+      thin: "thin"
+    },
+    boxShadow: {
+      button: "0px 0px 8px -1px #150a13"
+    },
     colors: {
       // Black
       black: "#150a13",
@@ -69,8 +80,7 @@ const tailwindConfig = {
       gray300: "#EDE5EB"
     },
     fontFamily: {
-      barlow: ["var(--font-barlow)", "sans-serif"],
-      roboto: ["var(--font-roboto)", "sans-serif"]
+      barlow: ["var(--font-barlow)", "sans-serif"]
     },
     fontSize: {
       14: "14px",
@@ -81,7 +91,6 @@ const tailwindConfig = {
       36: "36px"
     },
     fontWeight: {
-      bold: 500,
       normal: 400,
       thin: 300
     },
@@ -113,7 +122,8 @@ const tailwindConfig = {
       },
       screenMdLg: {
         raw: "(min-width: 1280px) and (max-width: 1679px)"
-      }
+      },
+      print: { raw: "print" }
     },
     spacing,
     transitionDuration: { fast: "100ms", default: "300ms" },

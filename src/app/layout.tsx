@@ -12,7 +12,7 @@ const RootLayout: React.FC<IRootLayoutProps> = ({ children }) => {
   const { description, title } = getPageMetadata();
 
   return (
-    <html lang="pl" className={barlow.variable}>
+    <html lang="pl" className={`${barlow.variable} font-barlow`}>
       <body>
         <Jumbotron description={description} links={navLinks} title={title} />
         <PageTemplate>{children}</PageTemplate>

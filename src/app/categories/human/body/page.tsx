@@ -1,3 +1,8 @@
-const Body: React.FC = () => <h1>Ciało</h1>;
+import { CategoryDetails } from "@app/components/molecules/CategoryDetails/CategoryDetails";
+import { bodyCategory } from "@app/config/categoryDetails/body";
 
-export default Body;
+const BodyPage: React.FC = () => (
+  <CategoryDetails title="Ciało" categoryDetails={bodyCategory} />
+);
+
+export default BodyPage;

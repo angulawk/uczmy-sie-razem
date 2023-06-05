@@ -7,6 +7,8 @@ import Body from "@app/../public/icons/body.svg";
 import Logo from "@app/../public/icons/logo.svg";
 import Instagram from "@app/../public/icons/instagram.svg";
 import Youtube from "@app/../public/icons/youtube.svg";
+import VolumeOn from "@app/../public/icons/volume-on.svg";
+import VolumeOff from "@app/../public/icons/volume-off.svg";
 
 import {
   IconName,
@@ -22,7 +24,9 @@ const iconComponents: TIconComponents = {
   [IconName.Character]: Character,
   [IconName.Logo]: Logo,
   [IconName.Instagram]: Instagram,
-  [IconName.Youtube]: Youtube
+  [IconName.Youtube]: Youtube,
+  [IconName.VolumeOn]: VolumeOn,
+  [IconName.VolumeOff]: VolumeOff
 };
 
 export { iconComponents };

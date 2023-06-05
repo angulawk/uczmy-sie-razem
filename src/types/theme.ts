@@ -2,6 +2,11 @@ import tailwindConfig from "@app/../tailwind.config";
 
 const theme = tailwindConfig.theme;
 
+type TBackgroundOpacityValues = keyof typeof theme.extend.backgroundOpacity;
+type TBorderRadiusValues = keyof typeof theme.borderRadius;
+type TBorderWidthValues = keyof typeof theme.borderWidth;
+type TBoxShadowValues = keyof typeof theme.boxShadow;
+type TBackgroundValues = keyof typeof theme.extend.backgroundImage;
 type TColorValues = keyof typeof theme.colors;
 type TFontFamilyValues = keyof typeof theme.fontFamily;
 type TFontSizeValues = keyof typeof theme.fontSize;
@@ -11,10 +16,8 @@ type TScreensValues = keyof typeof theme.screens;
 type TSpacingValues = keyof typeof theme.spacing;
 type TTransitionDurationValues = keyof typeof theme.transitionDuration;
 type TZIndexValues = keyof typeof theme.zIndex;
-type TBackgroundValues = keyof typeof theme.extend.backgroundImage;
 type TLetterSpacingValues = keyof typeof theme.letterSpacing;
 type TTextShadowValues = keyof typeof theme.extend.textShadow;
-type TBackgroundOpacityValues = keyof typeof theme.extend.backgroundOpacity;
 
 type TUtility<
   TPrefix extends string,
@@ -106,11 +109,21 @@ type TWidth = TUtilityWithArbitraryValues<
 >;
 type TMaxWidth = TUtilityWithArbitraryValues<"max-w", TSpacingValues>;
 
-type TBorderRadius = "rounded-md";
+type TBorderRadius = TUtilityWithArbitraryValues<
+  "rounded",
+  TBorderRadiusValues
+>;
+
+type TBorderColor = TUtilityWithArbitraryValues<"border", TColorValues>;
 
 type TBorderStyle = TUtility<
   "border",
   "solid" | "dashed" | "dotted" | "double" | "none"
+>;
+
+type TBorderWidth = TUtilityWithArbitraryValues<
+  "border" | "border-l" | "border-r" | "border-t" | "border-b",
+  TBorderWidthValues
 >;
 
 type TZIndex = TUtilityWithArbitraryValues<"z", TZIndexValues>;
@@ -174,9 +187,6 @@ type TTransition =
 type TTransitionDuration = TUtility<"duration", TTransitionDurationValues>;
 type TTransitionTiming = TUtility<"ease", "linear" | "in" | "out" | "in-out">;
 
-type TColorProperties = TBgColor | TTextColor | TFill;
-
-type TGroupHover = TUtility<"group-hover", TColorProperties, ":">;
 type TLetterSpacing = TUtility<"tracking", TLetterSpacingValues>;
 type TTextShadow = TUtility<"text-shadow", TTextShadowValues>;
 type TBackgroundOpacity = TUtility<"bg-opacity", TBackgroundOpacityValues>;
@@ -223,7 +233,7 @@ type TFlexFlowValues =
   | "flex-col-nowrap"
   | "flex-col-reverse-nowrap";
 
-type TFlexWrap = "flex-wrap";
+type TFlexWrap = "flex-wrap" | "flex-nowrap";
 type TAfter = TUtilityWithArbitraryValues<"after", string, ":">;
 
 type TOpacity = `opacity-${number}`;
@@ -233,6 +243,7 @@ type TColumns = `columns-${number}`;
 type TOutline = `outline-${number}`;
 
 type TMediaQuery = TUtilityWithArbitraryValues<TScreensValues, string, ":">;
+type TBoxShadow = TUtility<"shadow", TBoxShadowValues>;
 
 export interface IThemeClasses {
   after?: TAfter | TAfter[];
@@ -243,9 +254,12 @@ export interface IThemeClasses {
   backgroundOpacity?: TBackgroundOpacity;
   backgroundSize?: TBgSize;
   backgroundPosition?: TBgPosition;
+  borderColor?: TBorderColor;
   borderRadius?: TBorderRadius;
   borderStyle?: TBorderStyle;
+  borderWidth?: TBorderWidth | TBorderWidth[];
   bottom?: TBottom;
+  boxShadow?: TBoxShadow;
   color?: TTextColor;
   columns?: TColumns;
   cursor?: TCursor;
@@ -258,8 +272,6 @@ export interface IThemeClasses {
   fontSize?: TTextFontSize;
   fontWeight?: TTextFontWeight;
   gap?: TGap;
-  group?: "group";
-  groupHover?: TGroupHover | TGroupHover[];
   height?: THeight;
   justifyContent?: TJustifyContent;
   left?: TLeft;
