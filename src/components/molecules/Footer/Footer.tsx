@@ -1,10 +1,14 @@
 import { IconName } from "@app/components/atoms/Icon/@types/Icon";
 import { Location } from "@app/components/atoms/NavItem/@types/NavItem";
 import { NavItem } from "@app/components/atoms/NavItem/NavItem";
+import { Button } from "@app/components/molecules/Button/Button";
 import {
+  footerButtonDefaultStyles,
   footerContainerDefaultStyles,
   footerDefaultStyles,
   footerLinksWrapperDefaultStyles,
+  footerRightsDefaultStyles,
+  footerSeparatorDefaultStyles,
   footerSocialMediaLinksDefaultStyles,
   footerWrapperDefaultStyles
 } from "@app/components/molecules/Footer/styles";
@@ -18,11 +22,10 @@ const Footer: React.FC<IFooterProps> = ({ navLinks, logoHref }) => (
   <div className={convertObjectValuesToString(footerDefaultStyles)}>
     <div className={convertObjectValuesToString(footerContainerDefaultStyles)}>
       <div className={convertObjectValuesToString(footerWrapperDefaultStyles)}>
-        <LinkWithIcon
-          href={logoHref}
-          iconSrc={IconName.Logo}
-          iconTitle={IconTitle.Logo}
-        />
+        <Button type="secondary" themeClasses={footerButtonDefaultStyles}>
+          {/* TODO should be replaced with correct email address */}
+          <a href="mailto:agnieszka.weronika.wojcik@gmail.com">Napisz do nas</a>
+        </Button>
         <div
           className={convertObjectValuesToString(
             footerLinksWrapperDefaultStyles
@@ -57,8 +60,12 @@ const Footer: React.FC<IFooterProps> = ({ navLinks, logoHref }) => (
           />
         </div>
       </div>
-      <hr />
-      <p>All rights reserved</p>
+      <hr
+        className={convertObjectValuesToString(footerSeparatorDefaultStyles)}
+      />
+      <p className={convertObjectValuesToString(footerRightsDefaultStyles)}>
+        Copyright &copy; 2023 All rights reserved
+      </p>
     </div>
   </div>
 );

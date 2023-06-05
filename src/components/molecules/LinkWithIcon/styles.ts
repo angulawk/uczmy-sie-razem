@@ -1,10 +1,22 @@
+import { LinkWithIconVariant } from "@app/components/molecules/LinkWithIcon/@types/LinkWithIcon";
 import { IThemeClasses } from "@app/types/theme";
 
+export const mapVariantToLinkWithIconStyles: Record<
+  LinkWithIconVariant,
+  IThemeClasses
+> = {
+  [LinkWithIconVariant.Link]: {
+    height: "h-28"
+  },
+  [LinkWithIconVariant.Logo]: {
+    height: "h-48"
+  }
+};
+
 export const linkWithIconDefaultThemeClasses: IThemeClasses = {
-  // display: "block",
-  height: "h-48",
   display: "flex",
-  alignItems: "items-center"
+  alignItems: "items-center",
+  marginBottom: "mb-16"
 };
 
 export const linkWithIconDynamicIconDefaultThemeClasses: IThemeClasses = {

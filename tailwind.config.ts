@@ -18,6 +18,7 @@ const spacing = {
   40: "4rem",
   45: "4.5rem",
   48: "4.8rem",
+  56: "5.6rem",
   60: "6rem",
   72: "7.2rem",
   88: "8.8rem",
@@ -77,13 +78,16 @@ const tailwindConfig = {
       // Gray
       gray100: "#f7eef5",
       gray200: "#f2e4ef",
-      gray300: "#EDE5EB"
+      gray300: "#EDE5EB",
+
+      transparent: "transparent"
     },
     fontFamily: {
       barlow: ["var(--font-barlow)", "sans-serif"]
     },
     fontSize: {
       14: "14px",
+      16: "16px",
       18: "18px",
       20: "20px",
       24: "24px",

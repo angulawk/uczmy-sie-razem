@@ -1,10 +1,14 @@
 import { Icon } from "@app/components/atoms/Icon/Icon";
 import { Link } from "@app/components/molecules/Link/Link";
-import { ILinkWithIconProps } from "@app/components/molecules/LinkWithIcon/@types/LinkWithIcon";
+import {
+  ILinkWithIconProps,
+  LinkWithIconVariant
+} from "@app/components/molecules/LinkWithIcon/@types/LinkWithIcon";
 import {
   linkWithIconDefaultThemeClasses,
   linkWithIconDynamicIconDefaultThemeClasses,
-  linkWithIconTextDefaultThemeClasses
+  linkWithIconTextDefaultThemeClasses,
+  mapVariantToLinkWithIconStyles
 } from "@app/components/molecules/LinkWithIcon/styles";
 import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectValuesToString";
 import { IThemeClasses } from "@app/types/theme";
@@ -15,7 +19,8 @@ const LinkWithIcon: React.FC<ILinkWithIconProps> = ({
   iconTitle,
   isExternal = false,
   themeClasses,
-  text
+  text,
+  variant = LinkWithIconVariant.Link
 }) => {
   const linkWithIconThemeClasses: IThemeClasses = {
     ...linkWithIconDefaultThemeClasses,
@@ -24,6 +29,7 @@ const LinkWithIcon: React.FC<ILinkWithIconProps> = ({
 
   const linkWithIconWrapperIconThemeClasses: IThemeClasses = {
     ...linkWithIconDynamicIconDefaultThemeClasses,
+    ...mapVariantToLinkWithIconStyles[variant],
     ...themeClasses
   };
 

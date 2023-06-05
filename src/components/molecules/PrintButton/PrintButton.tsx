@@ -1,3 +1,4 @@
+import { Button } from "@app/components/molecules/Button/Button";
 import {
   printButtonContainerDefaultThemeClasses,
   printButtonDefaultThemeClasses
@@ -17,12 +18,13 @@ const PrintButton: React.FC = () => {
         printButtonContainerDefaultThemeClasses
       )}
     >
-      <button
+      <Button onClick={handlePrint}>Drukuj</Button>
+      {/* <button
         className={convertObjectValuesToString(printButtonDefaultThemeClasses)}
         onClick={handlePrint}
       >
         Drukuj
-      </button>
+      </button> */}
     </div>
   );
 };
