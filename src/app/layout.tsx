@@ -16,7 +16,7 @@ const RootLayout: React.FC<IRootLayoutProps> = ({ children }) => {
       <body>
         <Jumbotron description={description} links={navLinks} title={title} />
         <PageTemplate>{children}</PageTemplate>
-        <Footer navLinks={navLinks} logoHref={Path.Root} />
+        <Footer navLinks={navLinks} />
       </body>
     </html>
   );

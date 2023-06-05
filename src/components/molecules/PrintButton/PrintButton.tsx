@@ -1,8 +1,5 @@
 import { Button } from "@app/components/molecules/Button/Button";
-import {
-  printButtonContainerDefaultThemeClasses,
-  printButtonDefaultThemeClasses
-} from "@app/components/molecules/PrintButton/styles";
+import { printButtonContainerDefaultThemeClasses } from "@app/components/molecules/PrintButton/styles";
 import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectValuesToString";
 
 const PrintButton: React.FC = () => {
@@ -19,12 +16,6 @@ const PrintButton: React.FC = () => {
       )}
     >
       <Button onClick={handlePrint}>Drukuj</Button>
-      {/* <button
-        className={convertObjectValuesToString(printButtonDefaultThemeClasses)}
-        onClick={handlePrint}
-      >
-        Drukuj
-      </button> */}
     </div>
   );
 };

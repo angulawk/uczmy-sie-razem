@@ -18,7 +18,7 @@ import { NavDirection } from "@app/components/molecules/Nav/@types/Nav";
 import { IconTitle } from "@app/config/iconTitles";
 import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectValuesToString";
 
-const Footer: React.FC<IFooterProps> = ({ navLinks, logoHref }) => (
+const Footer: React.FC<IFooterProps> = ({ navLinks }) => (
   <div className={convertObjectValuesToString(footerDefaultStyles)}>
     <div className={convertObjectValuesToString(footerContainerDefaultStyles)}>
       <div className={convertObjectValuesToString(footerWrapperDefaultStyles)}>

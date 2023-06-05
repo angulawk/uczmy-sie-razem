@@ -78,9 +78,7 @@ const tailwindConfig = {
       // Gray
       gray100: "#f7eef5",
       gray200: "#f2e4ef",
-      gray300: "#EDE5EB",
-
-      transparent: "transparent"
+      gray300: "#EDE5EB"
     },
     fontFamily: {
       barlow: ["var(--font-barlow)", "sans-serif"]

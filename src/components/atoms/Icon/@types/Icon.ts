@@ -8,7 +8,6 @@ export enum IconName {
   Animals = "animals",
   Body = "body",
   Character = "character",
-  Logo = "logo",
   Instagram = "instagram",
   Youtube = "youtube",
   VolumeOn = "volume-on",
