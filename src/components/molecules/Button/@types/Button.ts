@@ -14,11 +14,11 @@ export enum ButtonType {
 
 export interface IButtonProps {
   children: TChildren;
-  onClick?: () => void;
+  onClick?: (() => void) | any;
   size?: ButtonSize;
   tabIndex?: number;
-  type?: ButtonType;
   themeClasses?: Pick<IThemeClasses, "mediaQuery">;
+  type?: ButtonType;
 }
 
 export type TMapSizeToButtonContainerProps = Record<

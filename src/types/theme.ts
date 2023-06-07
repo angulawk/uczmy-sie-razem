@@ -83,7 +83,7 @@ type TLeading = TUtilityWithArbitraryValues<"leading", TLineHeightValues>;
 type TMarginBottom = TUtilityWithArbitraryValues<"mb", TSpacingValues>;
 type TMarginLeft = TUtilityWithArbitraryValues<"ml", TSpacingValues>;
 type TMarginRight = TUtilityWithArbitraryValues<"mr", TSpacingValues>;
-type TMarginTop = TUtilityWithArbitraryValues<"mt", TSpacingValues>;
+type TMarginTop = TUtilityWithArbitraryValues<"mt", TSpacingValues | "auto">;
 type TMarginX = TUtilityWithArbitraryValues<"mx", TSpacingValues | "auto">;
 type TMarginY = TUtilityWithArbitraryValues<"my", TSpacingValues>;
 
@@ -207,12 +207,6 @@ type TActive = TUtility<
   ":"
 >;
 
-type TFocus = TUtility<
-  "focus",
-  TColorProperties | TBoxShadow | TTranslate,
-  ":"
->;
-
 type THover = TUtility<
   "hover",
   TColorProperties | TBoxShadow | TTranslate,
@@ -290,7 +284,6 @@ export interface IThemeClasses {
   flexDirection?: TFlexDirection;
   flexFlow?: TFlexFlowValues;
   flexWrap?: TFlexWrap;
-  focus?: TFocus | TFocus[];
   fontFamily?: TTextFontFamily;
   fontSize?: TTextFontSize;
   fontWeight?: TTextFontWeight;

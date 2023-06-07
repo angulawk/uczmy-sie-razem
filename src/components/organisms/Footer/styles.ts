@@ -4,6 +4,7 @@ export const footerDefaultStyles: IThemeClasses = {
   backgroundColor: "bg-black",
   width: "w-full",
   paddingY: "py-32",
+  marginTop: "mt-auto",
   mediaQuery: ["print:hidden"]
 };
 
@@ -20,21 +21,6 @@ export const footerContainerDefaultStyles: IThemeClasses = {
   ]
 };
 
-export const footerSocialMediaLinksDefaultStyles: IThemeClasses = {
-  color: "text-white"
-};
-
-export const footerWrapperDefaultStyles: IThemeClasses = {
-  display: "flex",
-  justifyContent: "justify-between",
-  alignItems: "items-center",
-  mediaQuery: [
-    "screenMaxXs:flex-col",
-    "screenMaxXs:gap-32",
-    "screenMaxXs:items-start"
-  ]
-};
-
 export const footerSeparatorDefaultStyles: IThemeClasses = {
   color: "text-gray100",
   opacity: "opacity-20",
@@ -45,8 +31,4 @@ export const footerRightsDefaultStyles: IThemeClasses = {
   color: "text-white",
   fontSize: "text-16",
   textAlign: "text-center"
-};
-
-export const footerButtonDefaultStyles: IThemeClasses = {
-  mediaQuery: ["screenMaxXs:w-full"]
 };

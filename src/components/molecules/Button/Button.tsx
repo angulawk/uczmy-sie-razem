@@ -1,5 +1,3 @@
-import React from "react";
-
 import {
   ButtonSize,
   ButtonType,
@@ -17,8 +15,8 @@ const Button: React.FC<IButtonProps> = ({
   onClick,
   size = ButtonSize.Medium,
   tabIndex,
-  type = ButtonType.Primary,
-  themeClasses
+  themeClasses,
+  type = ButtonType.Primary
 }) => {
   const buttonClasses = {
     ...buttonDefaultThemeClasses,

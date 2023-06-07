@@ -25,12 +25,7 @@ const Nav: React.FC<INavProps> = ({
   return (
     <nav className={convertObjectValuesToString(navClasses)}>
       {links?.map(({ path, title }) => (
-        <NavItem
-          key={path + title}
-          direction={direction}
-          path={path}
-          title={title}
-        />
+        <NavItem key={path + title} path={path} title={title} />
       ))}
     </nav>
   );

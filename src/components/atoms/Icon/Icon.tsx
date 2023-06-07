@@ -6,14 +6,14 @@ import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectV
 const Icon: React.FC<IIconProps> = ({ iconSrc, iconTitle, themeClasses }) => {
   const IconComponent = iconComponents[iconSrc];
 
-  const iconThemeClasses = {
+  const iconClasses = {
     ...iconDefaultClasses,
     ...themeClasses
   };
 
   return (
     <IconComponent
-      className={convertObjectValuesToString(iconThemeClasses)}
+      className={convertObjectValuesToString(iconClasses)}
       title={iconTitle}
     />
   );

@@ -13,9 +13,11 @@ const RootLayout: React.FC<IRootLayoutProps> = ({ children }) => {
   return (
     <html lang="pl" className={`${barlow.variable} font-barlow`}>
       <body>
-        <Jumbotron description={description} links={navLinks} title={title} />
-        <PageTemplate>{children}</PageTemplate>
-        <Footer navLinks={navLinks} />
+        <div className="flex flex-col min-h-[100vh]">
+          <Jumbotron description={description} links={navLinks} title={title} />
+          <PageTemplate>{children}</PageTemplate>
+          <Footer navLinks={navLinks} />
+        </div>
       </body>
     </html>
   );

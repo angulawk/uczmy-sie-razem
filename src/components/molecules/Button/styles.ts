@@ -42,5 +42,4 @@ export const buttonDefaultThemeClasses: IThemeClasses = {
   transitionTiming: "ease-in-out",
   hover: ["hover:translate-y-sm", "hover:shadow-buttonHover"],
   active: ["active:translate-y-md", "active:shadow-buttonHover"]
-  // focus: ["focus:translate-y-md", "focus:shadow-buttonHover"]
 };
