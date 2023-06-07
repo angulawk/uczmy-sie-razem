@@ -13,18 +13,18 @@ const Jumbotron: React.FC<IJumbotronProps> = ({
   links,
   title
 }) => (
-  <div className={convertObjectValuesToString(jumbotronDefaultThemeClasses)}>
-    <div
-      className={convertObjectValuesToString(
-        jumbotronWrapperDefaultThemeClasses
-      )}
-    >
-      <Header links={links} />
+  <div
+    className={convertObjectValuesToString(jumbotronWrapperDefaultThemeClasses)}
+  >
+    <Header links={links} />
 
-      {(title || description) && (
+    {(title || description) && (
+      <div
+        className={convertObjectValuesToString(jumbotronDefaultThemeClasses)}
+      >
         <PageDescription description={description} title={title} />
-      )}
-    </div>
+      </div>
+    )}
   </div>
 );
 

@@ -1,16 +1,12 @@
 import { IThemeClasses } from "@app/types/theme";
 
 export const pageDescriptionThemeClasses: IThemeClasses = {
-  backgroundColor: "bg-black",
-  backgroundOpacity: "bg-opacity-60",
+  color: "text-black",
   display: "flex",
   flexDirection: "flex-col",
   paddingY: "py-48",
   paddingX: "px-24",
   justifyContent: "justify-center",
-  position: "absolute",
-  bottom: "bottom-0",
-  left: "left-0",
   width: "w-full",
   mediaQuery: ["screenSmMd:px-0", "screenSmXs:px-0"]
 };
@@ -31,7 +27,7 @@ export const pageDescriptionWrapperThemeClasses: IThemeClasses = {
 
 export const pageDescriptionTitleThemeClasses: IThemeClasses = {
   fontWeight: "font-normal",
-  color: "text-white",
+  // color: "text-white",
   fontSize: "text-36",
   letterSpacing: "tracking-wider",
   lineHeight: "leading-40",
@@ -40,7 +36,7 @@ export const pageDescriptionTitleThemeClasses: IThemeClasses = {
 
 export const pageDescriptionDescriptionThemeClasses: IThemeClasses = {
   fontWeight: "font-thin",
-  color: "text-white",
+  // color: "text-white",
   fontSize: "text-20",
   marginTop: "mt-8",
   letterSpacing: "tracking-wider"

@@ -39,7 +39,7 @@ const tailwindConfig = {
         students: "url('/images/students.png')"
       },
       textShadow: {
-        sm: "0 1px 16px #000000"
+        sm: "0 1px 16px #FFFFFF"
       },
       backgroundOpacity: {
         60: "0.6"

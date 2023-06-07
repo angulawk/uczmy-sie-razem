@@ -3,31 +3,30 @@ import { IThemeClasses } from "@app/types/theme";
 
 export const mapNavDirectionToStyles: Record<NavDirection, IThemeClasses> = {
   [NavDirection.Horizontal]: {
-    flexDirection: "flex-row"
+    flexDirection: "flex-row",
+    marginTop: "mt-0",
+    color: "text-black"
   },
   [NavDirection.Vertical]: {
     flexDirection: "flex-col",
-    marginBottom: "mb-20"
+    marginTop: "mt-28",
+    color: "text-white"
   }
 };
 
 export const mapNavDirectionToLinkStyles: Record<NavDirection, IThemeClasses> =
   {
     [NavDirection.Horizontal]: {
-      marginRight: "mr-12",
-      marginBottom: "mb-0"
+      marginRight: "mr-12"
     },
     [NavDirection.Vertical]: {
-      marginRight: "mr-0",
-      marginBottom: "mb-8"
+      marginRight: "mr-0"
     }
   };
 
 export const navDefaultThemeClasses: IThemeClasses = {
   display: "flex",
-  gap: "gap-4",
-  color: "text-white",
-  marginTop: "mt-24"
+  gap: "gap-8"
 };
 
 export const navLinkDefaultThemeClasses: IThemeClasses = {

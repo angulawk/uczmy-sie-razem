@@ -2,9 +2,10 @@ import { HeaderMobileVisibility } from "@app/components/molecules/Header/HeaderM
 import { IThemeClasses } from "@app/types/theme";
 
 export const headerMobileDefaultThemeClasses: IThemeClasses = {
-  width: "w-240",
   height: "h-full",
-  position: "relative",
+  position: "absolute",
+  right: "right-0",
+  width: "w-240",
   zIndex: "z-100",
   paddingX: "px-32",
   paddingY: "py-48",
