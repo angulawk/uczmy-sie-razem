@@ -1,16 +1,17 @@
 import {
   ButtonSize,
+  ButtonType,
   IMapTypeToButtonContainerProps,
   TMapSizeToButtonContainerProps
 } from "@app/components/molecules/Button/@types/Button";
 import { IThemeClasses } from "@app/types/theme";
 
 export const mapTypeToButtonContainerProps: IMapTypeToButtonContainerProps = {
-  primary: {
+  [ButtonType.Primary]: {
     backgroundColor: "bg-green200"
   },
-  secondary: {
-    backgroundColor: "bg-gray200",
+  [ButtonType.Secondary]: {
+    backgroundColor: "bg-green100",
     color: "text-black"
   }
 };
@@ -35,5 +36,11 @@ export const buttonDefaultThemeClasses: IThemeClasses = {
   paddingX: "px-24",
   paddingY: "py-8",
   borderRadius: "rounded-sm",
-  boxShadow: "shadow-button"
+  boxShadow: "shadow-button",
+  transitionDuration: "duration-default",
+  transition: "transition-all",
+  transitionTiming: "ease-in-out",
+  hover: ["hover:translate-y-sm", "hover:shadow-buttonHover"],
+  active: ["active:translate-y-md", "active:shadow-buttonHover"]
+  // focus: ["focus:translate-y-md", "focus:shadow-buttonHover"]
 };

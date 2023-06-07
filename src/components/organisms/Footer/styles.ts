@@ -28,13 +28,11 @@ export const footerWrapperDefaultStyles: IThemeClasses = {
   display: "flex",
   justifyContent: "justify-between",
   alignItems: "items-center",
-  mediaQuery: ["screenMaxXs:flex-col", "screenMaxXs:items-start"]
-};
-
-export const footerLinksWrapperDefaultStyles: IThemeClasses = {
-  display: "flex",
-  flexDirection: "flex-col",
-  mediaQuery: ["screenMaxXs:my-24"]
+  mediaQuery: [
+    "screenMaxXs:flex-col",
+    "screenMaxXs:gap-32",
+    "screenMaxXs:items-start"
+  ]
 };
 
 export const footerSeparatorDefaultStyles: IThemeClasses = {

@@ -1,26 +1,25 @@
-import { LinkWithIconVariant } from "@app/components/molecules/LinkWithIcon/@types/LinkWithIcon";
+import { LinkWithIconSize } from "@app/components/molecules/LinkWithIcon/@types/LinkWithIcon";
 import { IThemeClasses } from "@app/types/theme";
 
-export const mapVariantToLinkWithIconStyles: Record<
-  LinkWithIconVariant,
+export const mapSizeToLinkWithIconStyles: Record<
+  LinkWithIconSize,
   IThemeClasses
 > = {
-  [LinkWithIconVariant.Link]: {
+  [LinkWithIconSize.Small]: {
     height: "h-28"
   },
-  [LinkWithIconVariant.Logo]: {
+  [LinkWithIconSize.Medium]: {
     height: "h-48"
   }
 };
 
-export const linkWithIconDefaultThemeClasses: IThemeClasses = {
+export const linkWithIconDefaultLinkThemeClasses: IThemeClasses = {
   display: "flex",
   alignItems: "items-center",
   marginBottom: "mb-16"
 };
 
-export const linkWithIconDynamicIconDefaultThemeClasses: IThemeClasses = {
-  height: "h-48",
+export const linkWithIconDefaultIconThemeClasses: IThemeClasses = {
   width: "w-auto"
 };
 

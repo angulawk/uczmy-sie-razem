@@ -2,6 +2,7 @@ import React from "react";
 
 import {
   ButtonSize,
+  ButtonType,
   IButtonProps
 } from "@app/components/molecules/Button/@types/Button";
 import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectValuesToString";
@@ -16,7 +17,7 @@ const Button: React.FC<IButtonProps> = ({
   onClick,
   size = ButtonSize.Medium,
   tabIndex,
-  type = "primary",
+  type = ButtonType.Primary,
   themeClasses
 }) => {
   const buttonClasses = {

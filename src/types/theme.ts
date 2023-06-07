@@ -18,6 +18,7 @@ type TTransitionDurationValues = keyof typeof theme.transitionDuration;
 type TZIndexValues = keyof typeof theme.zIndex;
 type TLetterSpacingValues = keyof typeof theme.letterSpacing;
 type TTextShadowValues = keyof typeof theme.extend.textShadow;
+type TTranslateValues = keyof typeof theme.extend.translate;
 
 type TUtility<
   TPrefix extends string,
@@ -195,7 +196,27 @@ type TTransform = "transform" | "transform-gpu" | "transform-none";
 
 type TTranslate = TUtilityWithArbitraryValues<
   `translate-${"x" | "y" | "z"}`,
-  TSpacingValues
+  TTranslateValues
+>;
+
+type TColorProperties = TBgColor | TBorderColor | TTextColor;
+
+type TActive = TUtility<
+  "active",
+  TColorProperties | TBoxShadow | TTranslate,
+  ":"
+>;
+
+type TFocus = TUtility<
+  "focus",
+  TColorProperties | TBoxShadow | TTranslate,
+  ":"
+>;
+
+type THover = TUtility<
+  "hover",
+  TColorProperties | TBoxShadow | TTranslate,
+  ":"
 >;
 
 type TRotate =
@@ -246,6 +267,7 @@ type TMediaQuery = TUtilityWithArbitraryValues<TScreensValues, string, ":">;
 type TBoxShadow = TUtility<"shadow", TBoxShadowValues>;
 
 export interface IThemeClasses {
+  active?: TActive | TActive[];
   after?: TAfter | TAfter[];
   alignItems?: TAlignItems;
   alignSelf?: TAlignSelf;
@@ -268,11 +290,13 @@ export interface IThemeClasses {
   flexDirection?: TFlexDirection;
   flexFlow?: TFlexFlowValues;
   flexWrap?: TFlexWrap;
+  focus?: TFocus | TFocus[];
   fontFamily?: TTextFontFamily;
   fontSize?: TTextFontSize;
   fontWeight?: TTextFontWeight;
   gap?: TGap;
   height?: THeight;
+  hover?: THover | THover[];
   justifyContent?: TJustifyContent;
   left?: TLeft;
   lineHeight?: TLeading;

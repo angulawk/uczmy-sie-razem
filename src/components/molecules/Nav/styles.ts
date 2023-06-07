@@ -1,19 +1,34 @@
-import { NavDirection } from "@app/components/molecules/Nav/@types/Nav";
+import {
+  NavDirection,
+  NavLocation
+} from "@app/components/molecules/Nav/@types/Nav";
 import { IThemeClasses } from "@app/types/theme";
 
-export const mapNavDirectionToStyles: Record<NavDirection, IThemeClasses> = {
+export const mapDirectionToNavStyles: Record<NavDirection, IThemeClasses> = {
   [NavDirection.Horizontal]: {
-    flexDirection: "flex-row"
+    flexDirection: "flex-row",
+    gap: "gap-12"
   },
   [NavDirection.Vertical]: {
     flexDirection: "flex-col",
-    marginBottom: "mb-20"
+    gap: "gap-20"
+  }
+};
+
+export const mapLocationToNavStyles: Record<NavDirection, IThemeClasses> = {
+  [NavLocation.Header]: {
+    fontSize: "text-18",
+    textShadow: "text-shadow-sm"
+  },
+  [NavLocation.Footer]: {
+    fontSize: "text-14",
+    gap: "gap-12",
+    marginTop: "mt-0"
   }
 };
 
 export const navDefaultThemeClasses: IThemeClasses = {
   display: "flex",
-  gap: "gap-4",
   color: "text-white",
   marginTop: "mt-24"
 };

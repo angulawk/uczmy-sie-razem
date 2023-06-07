@@ -1,9 +1,9 @@
 import { IIconProps } from "@app/components/atoms/Icon/@types/Icon";
 import { IThemeClasses } from "@app/types/theme";
 
-export enum LinkWithIconVariant {
-  Link,
-  Logo
+export enum LinkWithIconSize {
+  Small,
+  Medium
 }
 
 export interface ILinkWithIconProps {
@@ -13,5 +13,5 @@ export interface ILinkWithIconProps {
   isExternal?: boolean;
   themeClasses?: Pick<IThemeClasses, "height" | "width">;
   text?: string;
-  variant?: LinkWithIconVariant;
+  size?: LinkWithIconSize;
 }

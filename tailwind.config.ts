@@ -44,6 +44,10 @@ const tailwindConfig = {
       },
       backgroundOpacity: {
         60: "0.6"
+      },
+      translate: {
+        sm: "-0.5rem",
+        md: "0"
       }
     },
     borderRadius: {
@@ -55,7 +59,8 @@ const tailwindConfig = {
       thin: "thin"
     },
     boxShadow: {
-      button: "0px 0px 8px -1px #150a13"
+      button: "0px 0px 8px -1px #150a13",
+      buttonHover: "1px 1px 8px -1px #ffffff"
     },
     colors: {
       // Black

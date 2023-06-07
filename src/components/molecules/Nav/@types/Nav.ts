@@ -10,7 +10,13 @@ export enum NavDirection {
   Horizontal
 }
 
+export enum NavLocation {
+  Header,
+  Footer
+}
+
 export interface INavProps {
   direction?: NavDirection;
   links?: ILinkProps[];
+  variant?: NavLocation;
 }

@@ -1,21 +1,25 @@
 import { NavItem } from "@app/components/atoms/NavItem/NavItem";
 import {
   INavProps,
-  NavDirection
+  NavDirection,
+  NavLocation
 } from "@app/components/molecules/Nav/@types/Nav";
 import {
-  mapNavDirectionToStyles,
+  mapLocationToNavStyles,
+  mapDirectionToNavStyles,
   navDefaultThemeClasses
 } from "@app/components/molecules/Nav/styles";
 import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectValuesToString";
 
 const Nav: React.FC<INavProps> = ({
   direction = NavDirection.Horizontal,
-  links
+  links,
+  variant = NavLocation.Header
 }) => {
   const navClasses = {
     ...navDefaultThemeClasses,
-    ...mapNavDirectionToStyles[direction]
+    ...mapDirectionToNavStyles[direction],
+    ...mapLocationToNavStyles[variant]
   };
 
   return (

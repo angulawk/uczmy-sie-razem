@@ -7,12 +7,17 @@ export enum ButtonSize {
   Large
 }
 
+export enum ButtonType {
+  Primary,
+  Secondary
+}
+
 export interface IButtonProps {
   children: TChildren;
   onClick?: () => void;
   size?: ButtonSize;
   tabIndex?: number;
-  type?: "primary" | "secondary";
+  type?: ButtonType;
   themeClasses?: Pick<IThemeClasses, "mediaQuery">;
 }
 
@@ -22,10 +27,10 @@ export type TMapSizeToButtonContainerProps = Record<
 >;
 
 export interface IMapTypeToButtonContainerProps {
-  primary: {
+  [ButtonType.Primary]: {
     backgroundColor: IThemeClasses["backgroundColor"];
   };
-  secondary: {
+  [ButtonType.Secondary]: {
     backgroundColor: IThemeClasses["backgroundColor"];
     color: IThemeClasses["color"];
   };
