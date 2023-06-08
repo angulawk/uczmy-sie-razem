@@ -25,7 +25,7 @@ const spacing = {
   160: "16rem",
   200: "20rem",
   240: "24rem",
-  720: "72rem"
+  640: "64rem"
 };
 
 const tailwindConfig = {

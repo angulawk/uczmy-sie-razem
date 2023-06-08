@@ -10,34 +10,42 @@ import {
 
 const PageDescription: React.FC<IPageDescriptionProps> = ({
   description,
-  title
-}) => (
-  <div className={convertObjectValuesToString(pageDescriptionThemeClasses)}>
-    <div
-      className={convertObjectValuesToString(
-        pageDescriptionWrapperThemeClasses
-      )}
-    >
-      {title && (
-        <h2
-          className={convertObjectValuesToString(
-            pageDescriptionTitleThemeClasses
-          )}
-        >
-          {title}
-        </h2>
-      )}
-      {description && (
-        <p
-          className={convertObjectValuesToString(
-            pageDescriptionDescriptionThemeClasses
-          )}
-        >
-          {description}
-        </p>
-      )}
+  title,
+  themeClasses
+}) => {
+  const pageDescriptionClasses = {
+    ...pageDescriptionThemeClasses,
+    ...themeClasses
+  };
+
+  return (
+    <div className={convertObjectValuesToString(pageDescriptionClasses)}>
+      <div
+        className={convertObjectValuesToString(
+          pageDescriptionWrapperThemeClasses
+        )}
+      >
+        {title && (
+          <h2
+            className={convertObjectValuesToString(
+              pageDescriptionTitleThemeClasses
+            )}
+          >
+            {title}
+          </h2>
+        )}
+        {description && (
+          <p
+            className={convertObjectValuesToString(
+              pageDescriptionDescriptionThemeClasses
+            )}
+          >
+            {description}
+          </p>
+        )}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export { PageDescription };

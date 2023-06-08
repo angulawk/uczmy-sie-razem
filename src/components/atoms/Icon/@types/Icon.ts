@@ -1,4 +1,5 @@
 import { TSVGIcon } from "@app/types/svg";
+import { IThemeClasses } from "@app/types/theme";
 
 export enum IconName {
   Human = "human",
@@ -8,12 +9,14 @@ export enum IconName {
   Body = "body",
   Character = "character",
   VolumeOn = "volume-on",
-  VolumeOff = "volume-off"
+  VolumeOff = "volume-off",
+  Students = "students"
 }
 
 export interface IIconProps {
   iconSrc: IconName;
   iconTitle: string;
+  themeClasses?: Pick<IThemeClasses, "mediaQuery">;
 }
 
 export type TIconComponents = Record<IIconProps["iconSrc"], TSVGIcon>;

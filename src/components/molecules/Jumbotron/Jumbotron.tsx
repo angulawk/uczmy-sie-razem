@@ -5,8 +5,12 @@ import { Header } from "@app/components/molecules/Header/Header";
 import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectValuesToString";
 import {
   jumbotronDefaultThemeClasses,
+  jumbotronIconThemeClasses,
+  jumbotronPageDescriptionThemeClasses,
   jumbotronWrapperDefaultThemeClasses
 } from "@app/components/molecules/Jumbotron/styles";
+import { Icon } from "@app/components/atoms/Icon/Icon";
+import { IconName } from "@app/components/atoms/Icon/@types/Icon";
 
 const Jumbotron: React.FC<IJumbotronProps> = ({
   description,
@@ -22,7 +26,16 @@ const Jumbotron: React.FC<IJumbotronProps> = ({
       <div
         className={convertObjectValuesToString(jumbotronDefaultThemeClasses)}
       >
-        <PageDescription description={description} title={title} />
+        <PageDescription
+          description={description}
+          title={title}
+          themeClasses={jumbotronPageDescriptionThemeClasses}
+        />
+        <Icon
+          iconSrc={IconName.Students}
+          iconTitle="Grupa studentów przeglądająca stronę do nauki hiszpańskiego"
+          themeClasses={jumbotronIconThemeClasses}
+        />
       </div>
     )}
   </div>

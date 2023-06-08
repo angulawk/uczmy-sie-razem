@@ -27,7 +27,6 @@ export const pageDescriptionWrapperThemeClasses: IThemeClasses = {
 
 export const pageDescriptionTitleThemeClasses: IThemeClasses = {
   fontWeight: "font-normal",
-  // color: "text-white",
   fontSize: "text-36",
   letterSpacing: "tracking-wider",
   lineHeight: "leading-40",
@@ -36,8 +35,7 @@ export const pageDescriptionTitleThemeClasses: IThemeClasses = {
 
 export const pageDescriptionDescriptionThemeClasses: IThemeClasses = {
   fontWeight: "font-thin",
-  // color: "text-white",
-  fontSize: "text-20",
+  fontSize: "text-24",
   marginTop: "mt-8",
   letterSpacing: "tracking-wider"
 };
