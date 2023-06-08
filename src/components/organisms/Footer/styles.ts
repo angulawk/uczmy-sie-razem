@@ -20,15 +20,3 @@ export const footerContainerDefaultStyles: IThemeClasses = {
     "screenMaxMd:px-24"
   ]
 };
-
-export const footerSeparatorDefaultStyles: IThemeClasses = {
-  color: "text-gray100",
-  opacity: "opacity-20",
-  marginY: "my-24"
-};
-
-export const footerRightsDefaultStyles: IThemeClasses = {
-  color: "text-white",
-  fontSize: "text-16",
-  textAlign: "text-center"
-};

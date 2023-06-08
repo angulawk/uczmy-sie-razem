@@ -14,3 +14,7 @@ export const footerWrapperDefaultStyles: IThemeClasses = {
 export const footerSocialMediaLinksDefaultStyles: IThemeClasses = {
   color: "text-white"
 };
+
+export const footerContactButtonDefaultStyles: IThemeClasses = {
+  mediaQuery: ["screenMaxXs:w-full"]
+};

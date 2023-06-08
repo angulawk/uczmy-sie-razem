@@ -1,46 +1,52 @@
-import { IconName } from "@app/components/atoms/Icon/@types/Icon";
-
 import { LinkWithIcon } from "@app/components/molecules/LinkWithIcon/LinkWithIcon";
 import {
   NavDirection,
   NavLocation
 } from "@app/components/molecules/Nav/@types/Nav";
 import { Nav } from "@app/components/molecules/Nav/Nav";
-import { IconTitle } from "@app/config/iconTitles";
 import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectValuesToString";
-import { ContactButton } from "@app/components/molecules/ContactButton/ContactButton";
 import {
+  footerContactButtonDefaultStyles,
   footerSocialMediaLinksDefaultStyles,
   footerWrapperDefaultStyles
 } from "@app/components/molecules/FooterTopRow/styles";
 import { IFooterTopRowProps } from "@app/components/molecules/FooterTopRow/@types/FooterTopRow";
+import { Button } from "@app/components/molecules/Button/Button";
+import { ButtonType } from "@app/components/molecules/Button/@types/Button";
 
-const FooterTopRow: React.FC<IFooterTopRowProps> = ({ navLinks }) => (
+const FooterTopRow: React.FC<IFooterTopRowProps> = ({
+  navLinks,
+  href,
+  linksWithIcons
+}) => (
   <div className={convertObjectValuesToString(footerWrapperDefaultStyles)}>
-    <ContactButton />
+    <Button
+      type={ButtonType.Secondary}
+      themeClasses={footerContactButtonDefaultStyles}
+      href={href}
+    >
+      Napisz do nas
+    </Button>
 
     <Nav
       direction={NavDirection.Vertical}
       links={navLinks}
-      variant={NavLocation.Footer}
+      location={NavLocation.Footer}
     />
     <div
       className={convertObjectValuesToString(
         footerSocialMediaLinksDefaultStyles
       )}
     >
-      <LinkWithIcon
-        href="/"
-        iconSrc={IconName.Instagram}
-        iconTitle={IconTitle.Instagram}
-        text="Instagram"
-      />
-      <LinkWithIcon
-        href="/"
-        iconSrc={IconName.Youtube}
-        iconTitle={IconTitle.Youtube}
-        text="Youtube"
-      />
+      {linksWithIcons.map(({ href, iconSrc, iconTitle, text }) => (
+        <LinkWithIcon
+          key={href}
+          href={href}
+          iconSrc={iconSrc}
+          iconTitle={iconTitle}
+          text={text}
+        />
+      ))}
     </div>
   </div>
 );

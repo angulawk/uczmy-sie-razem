@@ -18,5 +18,5 @@ export enum NavLocation {
 export interface INavProps {
   direction?: NavDirection;
   links?: ILinkProps[];
-  variant?: NavLocation;
+  location?: NavLocation;
 }

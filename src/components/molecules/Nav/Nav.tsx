@@ -1,4 +1,4 @@
-import { NavItem } from "@app/components/atoms/NavItem/NavItem";
+import { NavItem } from "@app/components/molecules/NavItem/NavItem";
 import {
   INavProps,
   NavDirection,
@@ -14,12 +14,12 @@ import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectV
 const Nav: React.FC<INavProps> = ({
   direction = NavDirection.Horizontal,
   links,
-  variant = NavLocation.Header
+  location = NavLocation.Header
 }) => {
   const navClasses = {
     ...navDefaultThemeClasses,
     ...mapDirectionToNavStyles[direction],
-    ...mapLocationToNavStyles[variant]
+    ...mapLocationToNavStyles[location]
   };
 
   return (

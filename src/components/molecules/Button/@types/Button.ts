@@ -14,7 +14,8 @@ export enum ButtonType {
 
 export interface IButtonProps {
   children: TChildren;
-  onClick?: (() => void) | any;
+  href?: string;
+  onClick?: () => void;
   size?: ButtonSize;
   tabIndex?: number;
   themeClasses?: Pick<IThemeClasses, "mediaQuery">;
@@ -27,11 +28,12 @@ export type TMapSizeToButtonContainerProps = Record<
 >;
 
 export interface IMapTypeToButtonContainerProps {
-  [ButtonType.Primary]: {
-    backgroundColor: IThemeClasses["backgroundColor"];
-  };
-  [ButtonType.Secondary]: {
-    backgroundColor: IThemeClasses["backgroundColor"];
-    color: IThemeClasses["color"];
-  };
+  [ButtonType.Primary]: Pick<
+    IThemeClasses,
+    "backgroundColor" | "hover" | "active"
+  >;
+  [ButtonType.Secondary]: Pick<
+    IThemeClasses,
+    "backgroundColor" | "color" | "hover" | "active"
+  >;
 }

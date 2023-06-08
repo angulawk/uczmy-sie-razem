@@ -8,11 +8,15 @@ import { IThemeClasses } from "@app/types/theme";
 
 export const mapTypeToButtonContainerProps: IMapTypeToButtonContainerProps = {
   [ButtonType.Primary]: {
-    backgroundColor: "bg-green200"
+    backgroundColor: "bg-green200",
+    hover: ["hover:translate-y-sm", "hover:shadow-button"],
+    active: ["active:translate-y-md", "active:shadow-button"]
   },
   [ButtonType.Secondary]: {
     backgroundColor: "bg-green100",
-    color: "text-black"
+    color: "text-black",
+    hover: ["hover:translate-y-sm", "hover:shadow-buttonHover"],
+    active: ["active:translate-y-md", "active:shadow-buttonHover"]
   }
 };
 
@@ -30,16 +34,13 @@ export const mapSizeToButtonContainerProps: TMapSizeToButtonContainerProps = {
 
 export const buttonDefaultThemeClasses: IThemeClasses = {
   cursor: "cursor-pointer",
-  backgroundColor: "bg-green200",
   color: "text-white",
   fontSize: "text-18",
   paddingX: "px-24",
   paddingY: "py-8",
   borderRadius: "rounded-sm",
-  boxShadow: "shadow-button",
   transitionDuration: "duration-default",
   transition: "transition-all",
   transitionTiming: "ease-in-out",
-  hover: ["hover:translate-y-sm", "hover:shadow-buttonHover"],
-  active: ["active:translate-y-md", "active:shadow-buttonHover"]
+  textAlign: "text-center"
 };

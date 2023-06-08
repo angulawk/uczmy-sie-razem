@@ -57,8 +57,6 @@ type TBgPosition = TUtilityWithArbitraryValues<
   | "top"
 >;
 
-type TFill = TUtility<"fill", TColorValues>;
-
 type TTextColor = TUtility<"text", TColorValues>;
 type TTextFontSize = TUtilityWithArbitraryValues<"text", TFontSizeValues>;
 type TTextFontFamily = TUtility<"font", TFontFamilyValues>;

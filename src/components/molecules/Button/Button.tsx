@@ -9,9 +9,11 @@ import {
   mapSizeToButtonContainerProps,
   mapTypeToButtonContainerProps
 } from "@app/components/molecules/Button/styles";
+import { Link } from "@app/components/molecules/Link/Link";
 
 const Button: React.FC<IButtonProps> = ({
   children,
+  href,
   onClick,
   size = ButtonSize.Medium,
   tabIndex,
@@ -24,6 +26,14 @@ const Button: React.FC<IButtonProps> = ({
     ...mapTypeToButtonContainerProps[type],
     ...themeClasses
   };
+
+  if (href) {
+    return (
+      <Link themeClasses={buttonClasses} href={href}>
+        {children}
+      </Link>
+    );
+  }
 
   return (
     <button

@@ -1,19 +1,21 @@
 import {
-  footerRightsDefaultStyles,
-  footerSeparatorDefaultStyles
-} from "@app/components/organisms/Footer/styles";
+  footerBottomRowDefaultStyles,
+  footerBottomRowSeparatorDefaultStyles
+} from "@app/components/molecules/FooterBottomRow/styles";
 import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectValuesToString";
 import { getFullYear } from "@app/helpers/time/getFullYear";
 
 const FooterBottomRow: React.FC = () => {
-  var fullYear = getFullYear();
+  const fullYear = getFullYear();
 
   return (
     <>
       <hr
-        className={convertObjectValuesToString(footerSeparatorDefaultStyles)}
+        className={convertObjectValuesToString(
+          footerBottomRowSeparatorDefaultStyles
+        )}
       />
-      <p className={convertObjectValuesToString(footerRightsDefaultStyles)}>
+      <p className={convertObjectValuesToString(footerBottomRowDefaultStyles)}>
         Copyright &copy; {fullYear} All rights reserved
       </p>
     </>

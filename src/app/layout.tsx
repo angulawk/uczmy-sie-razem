@@ -6,6 +6,7 @@ import { PageTemplate } from "@app/components/templates/PageTemplate/PageTemplat
 import { navLinks } from "@app/config/navLinks";
 import { getPageMetadata } from "@app/helpers/server/getPageMetadata";
 import { Footer } from "@app/components/organisms/Footer/Footer";
+import { footerLinksWithIcons } from "@app/config/linksWithIcons/footer";
 
 const RootLayout: React.FC<IRootLayoutProps> = ({ children }) => {
   const { description, title } = getPageMetadata();
@@ -15,8 +16,14 @@ const RootLayout: React.FC<IRootLayoutProps> = ({ children }) => {
       <body>
         <div className="flex flex-col min-h-[100vh]">
           <Jumbotron description={description} links={navLinks} title={title} />
+
           <PageTemplate>{children}</PageTemplate>
-          <Footer navLinks={navLinks} />
+
+          <Footer
+            navLinks={navLinks}
+            href="mailto:agnieszka.weronika.wojcik@gmail.com"
+            linksWithIcons={footerLinksWithIcons}
+          />
         </div>
       </body>
     </html>
