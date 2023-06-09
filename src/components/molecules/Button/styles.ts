@@ -9,14 +9,14 @@ import { IThemeClasses } from "@app/types/theme";
 export const mapTypeToButtonContainerProps: IMapTypeToButtonContainerProps = {
   [ButtonType.Primary]: {
     backgroundColor: "bg-green200",
-    hover: ["hover:translate-y-sm", "hover:shadow-button"],
-    active: ["active:translate-y-md", "active:shadow-button"]
+    hover: ["hover:translate-y-sm", "hover:shadow-primaryButton"],
+    active: ["active:translate-y-md", "active:shadow-none"]
   },
   [ButtonType.Secondary]: {
     backgroundColor: "bg-green100",
     color: "text-black",
-    hover: ["hover:translate-y-sm", "hover:shadow-buttonHover"],
-    active: ["active:translate-y-md", "active:shadow-buttonHover"]
+    hover: ["hover:translate-y-sm", "hover:shadow-secondaryButton"],
+    active: ["active:translate-y-md", "active:shadow-none"]
   }
 };
 
@@ -39,7 +39,7 @@ export const buttonDefaultThemeClasses: IThemeClasses = {
   paddingX: "px-24",
   paddingY: "py-8",
   borderRadius: "rounded-sm",
-  transitionDuration: "duration-default",
+  transitionDuration: "duration-fast",
   transition: "transition-all",
   transitionTiming: "ease-in-out",
   textAlign: "text-center"

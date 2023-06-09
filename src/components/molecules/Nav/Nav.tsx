@@ -14,7 +14,7 @@ import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectV
 const Nav: React.FC<INavProps> = ({
   direction = NavDirection.Horizontal,
   links,
-  location = NavLocation.Header
+  location = NavLocation.HeaderDesktop
 }) => {
   const navClasses = {
     ...navDefaultThemeClasses,

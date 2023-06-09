@@ -6,19 +6,22 @@ import { IThemeClasses } from "@app/types/theme";
 
 export const mapDirectionToNavStyles: Record<NavDirection, IThemeClasses> = {
   [NavDirection.Horizontal]: {
-    flexDirection: "flex-row",
-    gap: "gap-12"
+    flexDirection: "flex-row"
   },
   [NavDirection.Vertical]: {
-    flexDirection: "flex-col",
-    gap: "gap-20"
+    flexDirection: "flex-col"
   }
 };
 
-export const mapLocationToNavStyles: Record<NavDirection, IThemeClasses> = {
-  [NavLocation.Header]: {
+export const mapLocationToNavStyles: Record<NavLocation, IThemeClasses> = {
+  [NavLocation.HeaderDesktop]: {
     fontSize: "text-18",
-    textShadow: "text-shadow-sm"
+    textShadow: "text-shadow-sm",
+    gap: "gap-12"
+  },
+  [NavLocation.HeaderMobile]: {
+    fontSize: "text-18",
+    gap: "gap-20"
   },
   [NavLocation.Footer]: {
     fontSize: "text-14",

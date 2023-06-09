@@ -9,7 +9,10 @@ import {
   headerMobileDefaultThemeClasses,
   mapHeaderMobileVisibilityToStyles
 } from "@app/components/molecules/Header/HeaderMobile/styles";
-import { NavDirection } from "@app/components/molecules/Nav/@types/Nav";
+import {
+  NavDirection,
+  NavLocation
+} from "@app/components/molecules/Nav/@types/Nav";
 import { Nav } from "@app/components/molecules/Nav/Nav";
 import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectValuesToString";
 import { IThemeClasses } from "@app/types/theme";
@@ -35,7 +38,13 @@ const HeaderMobile: React.FC<IHeaderMobileProps> = ({ links }) => {
     <div className={convertObjectValuesToString(headerMobileClasses)}>
       <Hamburger isMenuVisible={isMenuVisible} onToggle={onMenuButtonClick} />
 
-      {isMenuVisible && <Nav direction={NavDirection.Vertical} links={links} />}
+      {isMenuVisible && (
+        <Nav
+          direction={NavDirection.Vertical}
+          location={NavLocation.HeaderMobile}
+          links={links}
+        />
+      )}
     </div>
   );
 };

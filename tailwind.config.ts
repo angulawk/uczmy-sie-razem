@@ -59,8 +59,9 @@ const tailwindConfig = {
       thin: "thin"
     },
     boxShadow: {
-      button: "0px 0px 8px -1px #150a13",
-      buttonHover: "1px 1px 8px -1px #ffffff"
+      primaryButton: "0px 0px 8px -1px #150a13",
+      secondaryButton: "1px 1px 8px -1px #ffffff",
+      none: "none"
     },
     colors: {
       // Black

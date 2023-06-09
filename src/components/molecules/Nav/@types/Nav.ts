@@ -11,7 +11,8 @@ export enum NavDirection {
 }
 
 export enum NavLocation {
-  Header,
+  HeaderDesktop,
+  HeaderMobile,
   Footer
 }
 
