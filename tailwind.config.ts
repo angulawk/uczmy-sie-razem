@@ -18,6 +18,7 @@ const spacing = {
   40: "4rem",
   45: "4.5rem",
   48: "4.8rem",
+  56: "5.6rem",
   60: "6rem",
   72: "7.2rem",
   88: "8.8rem",
@@ -43,6 +44,10 @@ const tailwindConfig = {
       },
       backgroundOpacity: {
         60: "0.6"
+      },
+      translate: {
+        sm: "-0.5rem",
+        md: "0"
       }
     },
     borderRadius: {
@@ -54,7 +59,9 @@ const tailwindConfig = {
       thin: "thin"
     },
     boxShadow: {
-      button: "0px 0px 8px -1px #150a13"
+      primaryButton: "0px 0px 8px -1px #150a13",
+      secondaryButton: "1px 1px 8px -1px #ffffff",
+      none: "none"
     },
     colors: {
       // Black
@@ -84,6 +91,7 @@ const tailwindConfig = {
     },
     fontSize: {
       14: "14px",
+      16: "16px",
       18: "18px",
       20: "20px",
       24: "24px",

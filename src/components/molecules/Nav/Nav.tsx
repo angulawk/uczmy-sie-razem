@@ -1,39 +1,31 @@
+import { NavItem } from "@app/components/molecules/NavItem/NavItem";
 import {
   INavProps,
-  NavDirection
+  NavDirection,
+  NavLocation
 } from "@app/components/molecules/Nav/@types/Nav";
 import {
-  mapNavDirectionToLinkStyles,
-  mapNavDirectionToStyles,
-  navDefaultThemeClasses,
-  navLinkDefaultThemeClasses
+  mapLocationToNavStyles,
+  mapDirectionToNavStyles,
+  navDefaultThemeClasses
 } from "@app/components/molecules/Nav/styles";
 import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectValuesToString";
 
 const Nav: React.FC<INavProps> = ({
   direction = NavDirection.Horizontal,
-  links
+  links,
+  location = NavLocation.HeaderDesktop
 }) => {
   const navClasses = {
     ...navDefaultThemeClasses,
-    ...mapNavDirectionToStyles[direction]
-  };
-
-  const linkClasses = {
-    ...navLinkDefaultThemeClasses,
-    ...mapNavDirectionToLinkStyles[direction]
+    ...mapDirectionToNavStyles[direction],
+    ...mapLocationToNavStyles[location]
   };
 
   return (
     <nav className={convertObjectValuesToString(navClasses)}>
       {links?.map(({ path, title }) => (
-        <a
-          className={convertObjectValuesToString(linkClasses)}
-          href={path}
-          key={path + title}
-        >
-          {title}
-        </a>
+        <NavItem key={path + title} path={path} title={title} />
       ))}
     </nav>
   );

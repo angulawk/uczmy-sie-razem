@@ -1,14 +1,17 @@
 {
   "extends": [
     "next/core-web-vitals",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
   "rules": {
     "indent": [0],
     "quotes": ["error", "double"],
-    "semi": ["error", "always"]
+    "semi": ["error", "always"],
+    "@typescript-eslint/no-unused-vars": ["error"]
   },
   "plugins": [
-    "prettier"
+    "prettier",
+    "@typescript-eslint"
   ]
 }

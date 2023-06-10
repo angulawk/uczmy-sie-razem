@@ -4,5 +4,7 @@ export enum IconTitle {
   Profession = "Słownictwo związane z zawodami po hiszpańsku",
   Animals = "Słownictwo związane ze zwierzętami po hiszpańsku",
   HumanBody = "Słownictwo związane z ciałem człowieka po hiszpańsku",
-  HumanCharacter = "Słownictwo związane z charakterem po hiszpańsku"
+  HumanCharacter = "Słownictwo związane z charakterem po hiszpańsku",
+  Instagram = "Link do instagrama strony ze słownictwem z hiszpańskiego",
+  Youtube = "Link do youtuba strony ze słownictwem z hiszpańskiego"
 }
