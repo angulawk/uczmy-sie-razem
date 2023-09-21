@@ -18,6 +18,7 @@ type TTransitionDurationValues = keyof typeof theme.transitionDuration;
 type TZIndexValues = keyof typeof theme.zIndex;
 type TLetterSpacingValues = keyof typeof theme.letterSpacing;
 type TTextShadowValues = keyof typeof theme.extend.textShadow;
+type TTranslateValues = keyof typeof theme.extend.translate;
 
 type TUtility<
   TPrefix extends string,
@@ -56,8 +57,6 @@ type TBgPosition = TUtilityWithArbitraryValues<
   | "top"
 >;
 
-type TFill = TUtility<"fill", TColorValues>;
-
 type TTextColor = TUtility<"text", TColorValues>;
 type TTextFontSize = TUtilityWithArbitraryValues<"text", TFontSizeValues>;
 type TTextFontFamily = TUtility<"font", TFontFamilyValues>;
@@ -82,7 +81,7 @@ type TLeading = TUtilityWithArbitraryValues<"leading", TLineHeightValues>;
 type TMarginBottom = TUtilityWithArbitraryValues<"mb", TSpacingValues>;
 type TMarginLeft = TUtilityWithArbitraryValues<"ml", TSpacingValues>;
 type TMarginRight = TUtilityWithArbitraryValues<"mr", TSpacingValues>;
-type TMarginTop = TUtilityWithArbitraryValues<"mt", TSpacingValues>;
+type TMarginTop = TUtilityWithArbitraryValues<"mt", TSpacingValues | "auto">;
 type TMarginX = TUtilityWithArbitraryValues<"mx", TSpacingValues | "auto">;
 type TMarginY = TUtilityWithArbitraryValues<"my", TSpacingValues>;
 
@@ -103,7 +102,10 @@ type TTop = TUtilityWithArbitraryValues<"top", TSpacingValues>;
 type THeight = TUtilityWithArbitraryValues<"h", TSpacingValues | "full">;
 type TMinHeight = TUtilityWithArbitraryValues<"min-h", TSpacingValues>;
 type TMaxHeight = TUtilityWithArbitraryValues<"max-h", TSpacingValues>;
-type TWidth = TUtilityWithArbitraryValues<"w", TSpacingValues | "full">;
+type TWidth = TUtilityWithArbitraryValues<
+  "w",
+  TSpacingValues | "full" | "auto"
+>;
 type TMaxWidth = TUtilityWithArbitraryValues<"max-w", TSpacingValues>;
 
 type TBorderRadius = TUtilityWithArbitraryValues<
@@ -192,7 +194,21 @@ type TTransform = "transform" | "transform-gpu" | "transform-none";
 
 type TTranslate = TUtilityWithArbitraryValues<
   `translate-${"x" | "y" | "z"}`,
-  TSpacingValues
+  TTranslateValues
+>;
+
+type TColorProperties = TBgColor | TBorderColor | TTextColor;
+
+type TActive = TUtility<
+  "active",
+  TColorProperties | TBoxShadow | TTranslate,
+  ":"
+>;
+
+type THover = TUtility<
+  "hover",
+  TColorProperties | TBoxShadow | TTranslate,
+  ":"
 >;
 
 type TRotate =
@@ -243,6 +259,7 @@ type TMediaQuery = TUtilityWithArbitraryValues<TScreensValues, string, ":">;
 type TBoxShadow = TUtility<"shadow", TBoxShadowValues>;
 
 export interface IThemeClasses {
+  active?: TActive | TActive[];
   after?: TAfter | TAfter[];
   alignItems?: TAlignItems;
   alignSelf?: TAlignSelf;
@@ -270,6 +287,7 @@ export interface IThemeClasses {
   fontWeight?: TTextFontWeight;
   gap?: TGap;
   height?: THeight;
+  hover?: THover | THover[];
   justifyContent?: TJustifyContent;
   left?: TLeft;
   lineHeight?: TLeading;

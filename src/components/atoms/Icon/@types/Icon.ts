@@ -8,6 +8,8 @@ export enum IconName {
   Animals = "animals",
   Body = "body",
   Character = "character",
+  Instagram = "instagram",
+  Youtube = "youtube",
   VolumeOn = "volume-on",
   VolumeOff = "volume-off",
   Students = "students"
@@ -16,7 +18,10 @@ export enum IconName {
 export interface IIconProps {
   iconSrc: IconName;
   iconTitle: string;
-  themeClasses?: Pick<IThemeClasses, "mediaQuery">;
+  themeClasses?: Pick<
+    IThemeClasses,
+    "mediaQuery" | "height" | "overflow" | "width"
+  >;
 }
 
 export type TIconComponents = Record<IIconProps["iconSrc"], TSVGIcon>;
