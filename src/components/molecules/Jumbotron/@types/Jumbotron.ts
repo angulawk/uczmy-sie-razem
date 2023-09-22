@@ -1,7 +1,13 @@
-import { ILinkProps } from "@app/components/molecules/Nav/@types/Nav";
+import { IconName } from "@app/components/atoms/Icon/@types/Icon";
 
 export interface IJumbotronProps {
   description?: string;
-  links: ILinkProps[];
   title?: string;
+  src: IconName;
+  location?: JumbotronLocation;
+}
+
+export enum JumbotronLocation {
+  Main,
+  Category
 }

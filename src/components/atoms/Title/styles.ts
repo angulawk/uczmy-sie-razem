@@ -4,7 +4,7 @@ import { IThemeClasses } from "@app/types/theme";
 export const mapTitlePlacementToStyles: Record<TitlePlacement, IThemeClasses> =
   {
     [TitlePlacement.Main]: {
-      marginY: "my-48"
+      marginBottom: "mb-48"
     },
     [TitlePlacement.Details]: {
       marginY: "my-24"

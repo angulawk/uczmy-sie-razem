@@ -99,7 +99,10 @@ type TLeft = TUtilityWithArbitraryValues<"left", TSpacingValues>;
 type TRight = TUtilityWithArbitraryValues<"right", TSpacingValues>;
 type TTop = TUtilityWithArbitraryValues<"top", TSpacingValues>;
 
-type THeight = TUtilityWithArbitraryValues<"h", TSpacingValues | "full">;
+type THeight = TUtilityWithArbitraryValues<
+  "h",
+  TSpacingValues | "full" | "screen"
+>;
 type TMinHeight = TUtilityWithArbitraryValues<"min-h", TSpacingValues>;
 type TMaxHeight = TUtilityWithArbitraryValues<"max-h", TSpacingValues>;
 type TWidth = TUtilityWithArbitraryValues<

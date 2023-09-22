@@ -9,7 +9,8 @@ export const getPageMetadata = () => {
     pagesMetadata.find(({ path }) => path === currentPath) ?? {
       description: undefined,
       path: undefined,
-      title: undefined
+      title: undefined,
+      src: undefined
     }
   );
 };

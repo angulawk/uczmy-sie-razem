@@ -35,7 +35,7 @@ export const pageDescriptionTitleThemeClasses: IThemeClasses = {
 
 export const pageDescriptionDescriptionThemeClasses: IThemeClasses = {
   fontWeight: "font-thin",
-  fontSize: "text-24",
+  fontSize: "text-20",
   marginTop: "mt-8",
   letterSpacing: "tracking-wider"
 };

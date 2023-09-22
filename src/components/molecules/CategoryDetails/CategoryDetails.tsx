@@ -12,14 +12,12 @@ import { PrintButton } from "@app/components/molecules/PrintButton/PrintButton";
 import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectValuesToString";
 
 const CategoryDetails: React.FC<ICategoryDetailsProps> = ({
-  title,
   categoryDetails
 }) => (
   <div
     className={convertObjectValuesToString(categoryDetailsDefaultThemeClasses)}
   >
     <PrintButton />
-    <Title placement={TitlePlacement.Details}>{title}</Title>
 
     <div
       className={convertObjectValuesToString(

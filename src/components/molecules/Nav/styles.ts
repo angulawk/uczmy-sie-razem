@@ -48,9 +48,3 @@ export const mapLocationToNavStyles: Record<NavLocation, IThemeClasses> = {
     marginTop: "mt-0"
   }
 };
-
-// export const navDefaultThemeClasses: IThemeClasses = {
-//   display: "flex",
-//   color: "text-white",
-//   marginTop: "mt-24"
-// };

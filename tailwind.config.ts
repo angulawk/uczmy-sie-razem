@@ -26,7 +26,8 @@ const spacing = {
   160: "16rem",
   200: "20rem",
   240: "24rem",
-  640: "64rem"
+  320: "32rem",
+  480: "48rem"
 };
 
 const tailwindConfig = {
@@ -52,7 +53,8 @@ const tailwindConfig = {
     },
     borderRadius: {
       sm: "4px",
-      lg: "8px"
+      md: "8px",
+      lg: "50%"
     },
     borderWidth: {
       1: "1px",
@@ -65,7 +67,7 @@ const tailwindConfig = {
     },
     colors: {
       // Black
-      black: "#150a13",
+      black: "#3F3D56",
 
       //Green
       green100: "#98cda0",

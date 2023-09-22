@@ -1,3 +1,4 @@
+import { JumbotronLocation } from "@app/components/molecules/Jumbotron/@types/Jumbotron";
 import { IThemeClasses } from "@app/types/theme";
 
 export const jumbotronWrapperDefaultThemeClasses: IThemeClasses = {
@@ -17,21 +18,49 @@ export const jumbotronWrapperDefaultThemeClasses: IThemeClasses = {
 export const jumbotronDefaultThemeClasses: IThemeClasses = {
   display: "flex",
   justifyContent: "justify-end",
+  alignItems: "items-center",
   width: "w-full",
-  height: "h-640",
-  mediaQuery: ["screenMaxMd:flex-col", "screenMaxMd:py-36"]
+  height: "h-480",
+  mediaQuery: [
+    "screenMaxMd:flex-col",
+    "screenMaxMd:py-36",
+    "screenMaxXs:h-full"
+  ]
 };
 
 export const jumbotronPageDescriptionThemeClasses: IThemeClasses = {
   flex: "flex-[0_1_50%]",
-  mediaQuery: [
-    "screenMaxSm:flex-[0_1_100%]",
-    "screenMaxMd:text-center",
-    "screenMaxMd:order-1"
-  ]
+  mediaQuery: ["screenMaxSm:flex-[0_1_100%]", "screenMaxMd:text-center"]
+};
+
+export const mapLocationToJumbotronDescriptionStyles: Record<JumbotronLocation, IThemeClasses> = {
+  [JumbotronLocation.Main]: {
+    flex: "flex-[0_1_50%]",
+  },
+  [JumbotronLocation.Category]: {
+    flex: "flex-[0_1_66.65%]",
+    order: "order-last"
+  }
 };
 
 export const jumbotronIconThemeClasses: IThemeClasses = {
-  flex: "flex-[0_1_50%]",
-  mediaQuery: ["screenMaxSm:flex-[0_1_100%]", "screenMaxSm:hidden"]
+  mediaQuery: ["screenMaxSm:flex-[0_1_100%]"]
 };
+
+export const mapLocationToJumbotronIconStyles: Record<JumbotronLocation, IThemeClasses> = {
+  [JumbotronLocation.Main]: {
+    flex: "flex-[0_1_50%]",
+  },
+  [JumbotronLocation.Category]: {
+    flex: "flex-[0_1_33.35%]",
+    order: "order-first",
+    height: "h-240",
+    padding: "p-24"
+  }
+};
+
+export const jumbotronIconWrapperStyles: IThemeClasses = {
+  backgroundColor: "bg-gray300",
+  padding: "p-24",
+  borderRadius: "rounded-lg"
+}
