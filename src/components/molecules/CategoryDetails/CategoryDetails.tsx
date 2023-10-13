@@ -1,7 +1,5 @@
 "use client";
 
-import { TitlePlacement } from "@app/components/atoms/Title/@types/Title";
-import { Title } from "@app/components/atoms/Title/Title";
 import { CategoryDetail } from "@app/components/molecules/CategoryDetail/CategoryDetail";
 import { ICategoryDetailsProps } from "@app/components/molecules/CategoryDetails/@types/CategoryDetails";
 import {

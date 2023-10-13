@@ -2,12 +2,13 @@ import { IconName } from "@app/components/atoms/Icon/@types/Icon";
 
 export interface IJumbotronProps {
   description?: string;
-  title?: string;
-  src: IconName;
-  location?: JumbotronLocation;
+  title: string;
+  iconSrc: IconName;
+  iconTitle: string;
+  variant?: Variant;
 }
 
-export enum JumbotronLocation {
-  Main,
-  Category
+export enum Variant {
+  Primary,
+  Secondary
 }

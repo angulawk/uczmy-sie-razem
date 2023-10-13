@@ -16,7 +16,7 @@ export enum IconName {
 }
 
 export interface IIconProps {
-  iconSrc: IconName | any;
+  iconSrc: IconName;
   iconTitle: string;
   themeClasses?: Pick<
     IThemeClasses,

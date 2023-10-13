@@ -63,7 +63,8 @@ const tailwindConfig = {
     boxShadow: {
       primaryButton: "0px 0px 8px -1px #150a13",
       secondaryButton: "1px 1px 8px -1px #ffffff",
-      none: "none"
+      none: "none",
+      pageDescription: "7px 4px 15px #b3b3b3"
     },
     colors: {
       // Black
@@ -86,7 +87,8 @@ const tailwindConfig = {
       // Gray
       gray100: "#f7eef5",
       gray200: "#f2e4ef",
-      gray300: "#EDE5EB"
+      gray300: "#EDE5EB",
+      gray400: "#b3b3b3"
     },
     fontFamily: {
       barlow: ["var(--font-barlow)", "sans-serif"]
@@ -98,7 +100,8 @@ const tailwindConfig = {
       20: "20px",
       24: "24px",
       34: "34px",
-      36: "36px"
+      36: "36px",
+      40: "40px"
     },
     fontWeight: {
       normal: 400,

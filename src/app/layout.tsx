@@ -6,11 +6,12 @@ import { navLinks } from "@app/config/navLinks";
 import { Footer } from "@app/components/organisms/Footer/Footer";
 import { footerLinksWithIcons } from "@app/config/linksWithIcons/footer";
 import { Header } from "@app/components/molecules/Header/Header";
+import { PageWrapper } from "@app/components/atoms/PageWrapper/PageWrapper";
 
 const RootLayout: React.FC<IRootLayoutProps> = ({ children }) => (
   <html lang="pl" className={`${barlow.variable} font-barlow`}>
     <body>
-      <div className="flex flex-col min-h-[100vh]">
+      <PageWrapper>
         <PageTemplate>
           <Header links={navLinks} />
           {children}
@@ -21,7 +22,7 @@ const RootLayout: React.FC<IRootLayoutProps> = ({ children }) => (
           href="mailto:agnieszka.weronika.wojcik@gmail.com"
           linksWithIcons={footerLinksWithIcons}
         />
-      </div>
+      </PageWrapper>
     </body>
   </html>
 );

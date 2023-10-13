@@ -3,7 +3,7 @@ import { IThemeClasses } from "@app/types/theme";
 
 export const headerMobileDefaultThemeClasses: IThemeClasses = {
   height: "h-screen",
-  position: "absolute",
+  position: "fixed",
   right: "right-0",
   width: "w-240",
   zIndex: "z-100",

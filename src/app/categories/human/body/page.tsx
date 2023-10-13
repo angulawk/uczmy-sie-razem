@@ -1,13 +1,19 @@
 import { IconName } from "@app/components/atoms/Icon/@types/Icon";
 import { CategoryDetails } from "@app/components/molecules/CategoryDetails/CategoryDetails";
-import { JumbotronLocation } from "@app/components/molecules/Jumbotron/@types/Jumbotron";
+import { Variant } from "@app/components/molecules/Jumbotron/@types/Jumbotron";
 import { Jumbotron } from "@app/components/molecules/Jumbotron/Jumbotron";
 import { bodyCategory } from "@app/config/categoryDetails/body";
+import { IconTitle } from "@app/config/iconTitles";
 import { Title } from "@app/routing/titles";
 
 const BodyPage: React.FC = () => (
   <>
-    <Jumbotron title={Title.Body} src={IconName.Body} location={JumbotronLocation.Category} />
+    <Jumbotron
+      title={Title.Body}
+      iconSrc={IconName.Body}
+      iconTitle={IconTitle.HumanBody}
+      variant={Variant.Secondary}
+    />
     <CategoryDetails categoryDetails={bodyCategory} />
   </>
 );

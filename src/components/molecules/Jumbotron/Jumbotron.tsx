@@ -1,5 +1,7 @@
-import React from "react";
-import { IJumbotronProps, JumbotronLocation } from "@app/components/molecules/Jumbotron/@types/Jumbotron";
+import {
+  IJumbotronProps,
+  Variant
+} from "@app/components/molecules/Jumbotron/@types/Jumbotron";
 import { PageDescription } from "@app/components/molecules/PageDescription/PageDescription";
 import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectValuesToString";
 import {
@@ -8,54 +10,63 @@ import {
   jumbotronIconWrapperStyles,
   jumbotronPageDescriptionThemeClasses,
   jumbotronWrapperDefaultThemeClasses,
-  mapLocationToJumbotronDescriptionStyles,
-  mapLocationToJumbotronIconStyles,
+  mapVariantToJumbotronDescriptionStyles,
+  mapVariantToJumbotronIconStyles
 } from "@app/components/molecules/Jumbotron/styles";
+
 import { Icon } from "@app/components/atoms/Icon/Icon";
 
-const Jumbotron: React.FC<IJumbotronProps> = ({ description, title, src, location = JumbotronLocation.Main }) => {
+const Jumbotron: React.FC<IJumbotronProps> = ({
+  description,
+  title,
+  iconSrc,
+  iconTitle,
+  variant = Variant.Primary
+}) => {
   const jumbotronPageDescriptionStyles = {
     ...jumbotronPageDescriptionThemeClasses,
-    ...mapLocationToJumbotronDescriptionStyles[location]
-  }
+    ...mapVariantToJumbotronDescriptionStyles[variant]
+  };
 
   const jumbotronIconStyles = {
     ...jumbotronIconThemeClasses,
-    ...mapLocationToJumbotronIconStyles[location]
-  }
+    ...mapVariantToJumbotronIconStyles[variant]
+  };
 
   return (
     <div
-      className={convertObjectValuesToString(jumbotronWrapperDefaultThemeClasses)}
+      className={convertObjectValuesToString(
+        jumbotronWrapperDefaultThemeClasses
+      )}
     >
-      {(title || description) && (
-        <div
-          className={convertObjectValuesToString(jumbotronDefaultThemeClasses)}
-        >
-          <PageDescription
-            description={description}
-            title={title}
-            themeClasses={jumbotronPageDescriptionStyles}
-          />
-          {location === JumbotronLocation.Category ? (
-            <span className={convertObjectValuesToString(jumbotronIconWrapperStyles)}>
-              <Icon
-                iconSrc={src}
-                iconTitle="Grupa studentów przeglądająca stronę do nauki hiszpańskiego"
-                themeClasses={jumbotronIconStyles}
-              />
-            </span>
-          ) : (
+      <div
+        className={convertObjectValuesToString(jumbotronDefaultThemeClasses)}
+      >
+        <PageDescription
+          description={description}
+          title={title}
+          themeClasses={jumbotronPageDescriptionStyles}
+        />
+        {variant === Variant.Secondary ? (
+          <span
+            className={convertObjectValuesToString(jumbotronIconWrapperStyles)}
+          >
             <Icon
-              iconSrc={src}
-              iconTitle="Grupa studentów przeglądająca stronę do nauki hiszpańskiego"
+              iconSrc={iconSrc}
+              iconTitle={iconTitle}
               themeClasses={jumbotronIconStyles}
             />
-          )}
-        </div>
-      )}
+          </span>
+        ) : (
+          <Icon
+            iconSrc={iconSrc}
+            iconTitle={iconTitle}
+            themeClasses={jumbotronIconStyles}
+          />
+        )}
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export { Jumbotron };
