@@ -11,13 +11,17 @@ export enum IconName {
   Instagram = "instagram",
   Youtube = "youtube",
   VolumeOn = "volume-on",
-  VolumeOff = "volume-off"
+  VolumeOff = "volume-off",
+  Students = "students"
 }
 
 export interface IIconProps {
   iconSrc: IconName;
   iconTitle: string;
-  themeClasses?: Pick<IThemeClasses, "height" | "overflow" | "width">;
+  themeClasses?: Pick<
+    IThemeClasses,
+    "mediaQuery" | "height" | "overflow" | "width"
+  >;
 }
 
 export type TIconComponents = Record<IIconProps["iconSrc"], TSVGIcon>;

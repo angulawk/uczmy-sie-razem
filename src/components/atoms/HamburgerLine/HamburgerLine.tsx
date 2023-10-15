@@ -2,6 +2,7 @@ import { IHamburgerLineProps } from "@app/components/atoms/HamburgerLine/@types/
 import {
   hamburgerLineDefaultStyles,
   mapHamburgerLinePositionToStyles,
+  mapHamburgerLineVisibilityPositionToStyles,
   mapHamburgerLineVisibilityToStyles
 } from "@app/components/atoms/HamburgerLine/styles";
 import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectValuesToString";
@@ -13,8 +14,9 @@ const HamburgerLine: React.FC<IHamburgerLineProps> = ({
 }) => {
   const hamburgerLineClasses: IThemeClasses = {
     ...hamburgerLineDefaultStyles,
+    ...mapHamburgerLineVisibilityToStyles[visibility],
     ...mapHamburgerLinePositionToStyles[position],
-    ...mapHamburgerLineVisibilityToStyles[visibility][position]
+    ...mapHamburgerLineVisibilityPositionToStyles[visibility][position]
   };
 
   return <span className={convertObjectValuesToString(hamburgerLineClasses)} />;

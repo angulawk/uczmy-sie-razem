@@ -3,7 +3,6 @@ import { IThemeClasses } from "@app/types/theme";
 export const pageTemplateDefaultThemeClasses: IThemeClasses = {
   display: "flex",
   flexDirection: "flex-col",
-  marginBottom: "mb-48",
   mediaQuery: [
     "screenLg:max-w-[1400px]",
     "screenMdLg:max-w-[1200px]",
@@ -15,5 +14,6 @@ export const pageTemplateDefaultThemeClasses: IThemeClasses = {
     "print:max-w-full"
   ],
   marginX: "mx-auto",
+  marginBottom: "mb-48",
   width: "w-full"
 };

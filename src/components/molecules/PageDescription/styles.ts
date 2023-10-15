@@ -1,16 +1,10 @@
 import { IThemeClasses } from "@app/types/theme";
 
 export const pageDescriptionThemeClasses: IThemeClasses = {
-  backgroundColor: "bg-black",
-  backgroundOpacity: "bg-opacity-60",
+  color: "text-black",
   display: "flex",
   flexDirection: "flex-col",
-  paddingY: "py-48",
-  paddingX: "px-24",
   justifyContent: "justify-center",
-  position: "absolute",
-  bottom: "bottom-0",
-  left: "left-0",
   width: "w-full",
   mediaQuery: ["screenSmMd:px-0", "screenSmXs:px-0"]
 };
@@ -22,26 +16,22 @@ export const pageDescriptionWrapperThemeClasses: IThemeClasses = {
     "screenLg:max-w-[1400px]",
     "screenMdLg:max-w-[1200px]",
     "screenSmMd:max-w-[1000px]",
-    "screenSmMd:px-40",
-    "screenSmXs:max-w-[600px]",
-    "screenSmXs:px-40",
-    "screenMaxXs:px-0"
+    "screenMaxSm:px-0",
+    "screenSmXs:max-w-[600px]"
   ]
 };
 
 export const pageDescriptionTitleThemeClasses: IThemeClasses = {
   fontWeight: "font-normal",
-  color: "text-white",
-  fontSize: "text-36",
+  fontSize: "text-40",
   letterSpacing: "tracking-wider",
   lineHeight: "leading-40",
-  mediaQuery: ["screenMaxSm:text-34"]
+  mediaQuery: ["screenMdLg:text-36", "screenMaxSm:text-34"]
 };
 
 export const pageDescriptionDescriptionThemeClasses: IThemeClasses = {
   fontWeight: "font-thin",
-  color: "text-white",
-  fontSize: "text-20",
-  marginTop: "mt-8",
+  fontSize: "text-18",
+  marginTop: "mt-16",
   letterSpacing: "tracking-wider"
 };

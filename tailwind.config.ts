@@ -26,7 +26,8 @@ const spacing = {
   160: "16rem",
   200: "20rem",
   240: "24rem",
-  720: "72rem"
+  320: "32rem",
+  480: "48rem"
 };
 
 const tailwindConfig = {
@@ -40,7 +41,7 @@ const tailwindConfig = {
         students: "url('/images/students.png')"
       },
       textShadow: {
-        sm: "0 1px 16px #000000"
+        sm: "0 1px 16px #FFFFFF"
       },
       backgroundOpacity: {
         60: "0.6"
@@ -52,7 +53,8 @@ const tailwindConfig = {
     },
     borderRadius: {
       sm: "4px",
-      lg: "8px"
+      md: "8px",
+      lg: "50%"
     },
     borderWidth: {
       1: "1px",
@@ -61,11 +63,12 @@ const tailwindConfig = {
     boxShadow: {
       primaryButton: "0px 0px 8px -1px #150a13",
       secondaryButton: "1px 1px 8px -1px #ffffff",
-      none: "none"
+      none: "none",
+      pageDescription: "7px 4px 15px #b3b3b3"
     },
     colors: {
       // Black
-      black: "#150a13",
+      black: "#3F3D56",
 
       //Green
       green100: "#98cda0",
@@ -84,7 +87,8 @@ const tailwindConfig = {
       // Gray
       gray100: "#f7eef5",
       gray200: "#f2e4ef",
-      gray300: "#EDE5EB"
+      gray300: "#EDE5EB",
+      gray400: "#b3b3b3"
     },
     fontFamily: {
       barlow: ["var(--font-barlow)", "sans-serif"]
@@ -96,7 +100,8 @@ const tailwindConfig = {
       20: "20px",
       24: "24px",
       34: "34px",
-      36: "36px"
+      36: "36px",
+      40: "40px"
     },
     fontWeight: {
       normal: 400,

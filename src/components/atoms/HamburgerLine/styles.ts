@@ -9,12 +9,23 @@ export const hamburgerLineDefaultStyles: IThemeClasses = {
   display: "block",
   height: "h-2",
   borderRadius: "rounded-md",
-  backgroundColor: "bg-white",
   opacity: "opacity-100",
   transform: "transform",
   transition: "transition-all",
   transitionDuration: "duration-fast",
   transitionTiming: "ease-linear"
+};
+
+export const mapHamburgerLineVisibilityToStyles: Record<
+  HamburgerLineVisibility,
+  IThemeClasses
+> = {
+  [HamburgerLineVisibility.Visible]: {
+    backgroundColor: "bg-white"
+  },
+  [HamburgerLineVisibility.Hidden]: {
+    backgroundColor: "bg-black"
+  }
 };
 
 export const mapHamburgerLinePositionToStyles: Record<
@@ -41,7 +52,7 @@ export const mapHamburgerLinePositionToStyles: Record<
   }
 };
 
-export const mapHamburgerLineVisibilityToStyles: Record<
+export const mapHamburgerLineVisibilityPositionToStyles: Record<
   HamburgerLineVisibility,
   Record<HamburgerLinePosition, IThemeClasses>
 > = {

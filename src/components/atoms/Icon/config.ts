@@ -8,6 +8,7 @@ import Instagram from "@app/../public/icons/instagram.svg";
 import Youtube from "@app/../public/icons/youtube.svg";
 import VolumeOn from "@app/../public/icons/volume-on.svg";
 import VolumeOff from "@app/../public/icons/volume-off.svg";
+import Students from "@app/../public/icons/students.svg";
 
 import {
   IconName,
@@ -24,7 +25,8 @@ const iconComponents: TIconComponents = {
   [IconName.Instagram]: Instagram,
   [IconName.Youtube]: Youtube,
   [IconName.VolumeOn]: VolumeOn,
-  [IconName.VolumeOff]: VolumeOff
+  [IconName.VolumeOff]: VolumeOff,
+  [IconName.Students]: Students
 };
 
 export { iconComponents };

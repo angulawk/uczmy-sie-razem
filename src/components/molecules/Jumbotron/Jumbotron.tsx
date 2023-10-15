@@ -1,31 +1,72 @@
-import React from "react";
-import { IJumbotronProps } from "@app/components/molecules/Jumbotron/@types/Jumbotron";
+import {
+  IJumbotronProps,
+  Variant
+} from "@app/components/molecules/Jumbotron/@types/Jumbotron";
 import { PageDescription } from "@app/components/molecules/PageDescription/PageDescription";
-import { Header } from "@app/components/molecules/Header/Header";
 import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectValuesToString";
 import {
   jumbotronDefaultThemeClasses,
-  jumbotronWrapperDefaultThemeClasses
+  jumbotronIconThemeClasses,
+  jumbotronIconWrapperStyles,
+  jumbotronPageDescriptionThemeClasses,
+  jumbotronWrapperDefaultThemeClasses,
+  mapVariantToJumbotronDescriptionStyles,
+  mapVariantToJumbotronIconStyles
 } from "@app/components/molecules/Jumbotron/styles";
+
+import { Icon } from "@app/components/atoms/Icon/Icon";
 
 const Jumbotron: React.FC<IJumbotronProps> = ({
   description,
-  links,
-  title
-}) => (
-  <div className={convertObjectValuesToString(jumbotronDefaultThemeClasses)}>
+  title,
+  iconSrc,
+  iconTitle,
+  variant = Variant.Primary
+}) => {
+  const jumbotronPageDescriptionStyles = {
+    ...jumbotronPageDescriptionThemeClasses,
+    ...mapVariantToJumbotronDescriptionStyles[variant]
+  };
+
+  const jumbotronIconStyles = {
+    ...jumbotronIconThemeClasses,
+    ...mapVariantToJumbotronIconStyles[variant]
+  };
+
+  return (
     <div
       className={convertObjectValuesToString(
         jumbotronWrapperDefaultThemeClasses
       )}
     >
-      <Header links={links} />
-
-      {(title || description) && (
-        <PageDescription description={description} title={title} />
-      )}
+      <div
+        className={convertObjectValuesToString(jumbotronDefaultThemeClasses)}
+      >
+        <PageDescription
+          description={description}
+          title={title}
+          themeClasses={jumbotronPageDescriptionStyles}
+        />
+        {variant === Variant.Secondary ? (
+          <span
+            className={convertObjectValuesToString(jumbotronIconWrapperStyles)}
+          >
+            <Icon
+              iconSrc={iconSrc}
+              iconTitle={iconTitle}
+              themeClasses={jumbotronIconStyles}
+            />
+          </span>
+        ) : (
+          <Icon
+            iconSrc={iconSrc}
+            iconTitle={iconTitle}
+            themeClasses={jumbotronIconStyles}
+          />
+        )}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export { Jumbotron };
