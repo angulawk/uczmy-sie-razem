@@ -2,6 +2,7 @@ import { TSVGIcon } from "@app/types/svg";
 import { IThemeClasses } from "@app/types/theme";
 
 export enum IconName {
+  About = "about",
   Human = "human",
   Weather = "weather",
   Job = "job",
@@ -12,7 +13,11 @@ export enum IconName {
   Youtube = "youtube",
   VolumeOn = "volume-on",
   VolumeOff = "volume-off",
-  Students = "students"
+  Students = "students",
+  Category = "category",
+  Listening = "listening",
+  Phrases = "phrases",
+  Print = "print"
 }
 
 export interface IIconProps {
