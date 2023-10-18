@@ -1,6 +1,5 @@
 export enum IconTitle {
   Main = "Grupa studentów przeglądająca stronę do nauki hiszpańskiego",
-  About = "Opis strony Uczmy się razem, uwzględniający cel strony do nauki hipszańskiego",
   Human = "Słownictwo związane z człowiekiem po hiszpańsku",
   Weather = "Słownictwo związane z pogodą po hiszpańsku",
   Profession = "Słownictwo związane z zawodami po hiszpańsku",

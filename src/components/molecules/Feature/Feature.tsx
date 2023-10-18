@@ -24,7 +24,11 @@ const Feature: React.FC<IFeatureProps> = ({
     <span
       className={`${convertObjectValuesToString(
         featureImageWrapperDefaultThemeClasses
-      )} ${index % 2 === 0 ? "order-2 justify-start" : "order-1 justify-end"}`}
+      )} ${
+        index && index % 2 === 0
+          ? "order-2 justify-start"
+          : "order-1 justify-end"
+      }`}
     >
       <Icon
         iconSrc={iconSrc}
@@ -35,7 +39,9 @@ const Feature: React.FC<IFeatureProps> = ({
     <div
       className={`${convertObjectValuesToString(
         featureContentDefaultThemeClasses
-      )} ${index % 2 === 0 ? "order-1 text-right" : "order-2 text-left"}`}
+      )} ${
+        index && index % 2 === 0 ? "order-1 text-right" : "order-2 text-left"
+      }`}
     >
       <h3
         className={convertObjectValuesToString(featureTitleDefaultThemeClasses)}

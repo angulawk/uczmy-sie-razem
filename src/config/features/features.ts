@@ -1,6 +1,6 @@
 import { IconName } from "@app/components/atoms/Icon/@types/Icon";
+import { IFeatureProps } from "@app/components/molecules/Feature/@types/Feature";
 import { IconTitle } from "@app/config/iconTitles";
-import { IFeaturesProps } from "@app/components/molecules/AboutUs/@types/AboutUs";
 
 enum FeaturesDescriptions {
   Category = "Na naszej stronie słownictwo pogrupowane jest w kategorie, dzięki czemu łatwo odnajdziesz interesujące Cię słownictwo z danego działu.",
@@ -16,7 +16,7 @@ enum FeaturesTitles {
   Print = "Print"
 }
 
-export const features: IFeaturesProps[] = [
+export const features: IFeatureProps[] = [
   {
     description: FeaturesDescriptions.Category,
     title: FeaturesTitles.Category,

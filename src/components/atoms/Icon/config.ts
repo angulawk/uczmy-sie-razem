@@ -1,4 +1,3 @@
-import About from "@app/../public/icons/about.svg";
 import Human from "@app/../public/icons/human.svg";
 import Weather from "@app/../public/icons/weather.svg";
 import Job from "@app/../public/icons/job.svg";
@@ -21,7 +20,6 @@ import {
 } from "@app/components/atoms/Icon/@types/Icon";
 
 const iconComponents: TIconComponents = {
-  [IconName.About]: About,
   [IconName.Human]: Human,
   [IconName.Weather]: Weather,
   [IconName.Job]: Job,

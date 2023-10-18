@@ -1,6 +1,5 @@
 export enum Path {
   Root = "/",
-  About = "/about",
   Contact = "/contact",
   CategoriesHuman = "/categories/human",
   CategoriesWeather = "/categories/weather",

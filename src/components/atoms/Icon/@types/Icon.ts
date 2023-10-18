@@ -2,7 +2,6 @@ import { TSVGIcon } from "@app/types/svg";
 import { IThemeClasses } from "@app/types/theme";
 
 export enum IconName {
-  About = "about",
   Human = "human",
   Weather = "weather",
   Job = "job",

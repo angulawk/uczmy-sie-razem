@@ -5,5 +5,5 @@ export interface IFeatureProps {
   description: string;
   iconSrc: IIconProps["iconSrc"];
   iconTitle: IIconProps["iconTitle"];
-  index: number;
+  index?: number;
 }
