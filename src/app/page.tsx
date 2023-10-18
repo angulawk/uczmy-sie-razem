@@ -14,12 +14,14 @@ const Home: React.FC = () => (
       iconSrc={IconName.Students}
       iconTitle={IconTitle.Main}
     />
+
+    <Categories categories={mainCategories} title="Główne kategorie" />
+
     <AboutUs
       features={features}
-      title="O nas"
+      title="Co znajdziesz na stronie?"
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     />
-    <Categories categories={mainCategories} title="Główne kategorie" />
   </>
 );
 

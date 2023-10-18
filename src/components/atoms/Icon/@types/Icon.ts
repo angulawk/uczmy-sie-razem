@@ -23,12 +23,10 @@ export enum IconName {
 export interface IIconProps {
   iconSrc: IconName;
   iconTitle: string;
-  themeClasses?:
-    | Pick<
-        IThemeClasses,
-        "mediaQuery" | "height" | "overflow" | "width" | "order"
-      >
-    | string;
+  themeClasses?: Pick<
+    IThemeClasses,
+    "mediaQuery" | "height" | "overflow" | "width" | "order"
+  >;
 }
 
 export type TIconComponents = Record<IIconProps["iconSrc"], TSVGIcon>;

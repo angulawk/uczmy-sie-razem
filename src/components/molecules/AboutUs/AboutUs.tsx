@@ -2,18 +2,29 @@ import { Title } from "@app/components/atoms/Title/Title";
 import { convertObjectValuesToString } from "@app/helpers/objects/convertObjectValuesToString";
 import { IAboutUsProps } from "@app/components/molecules/AboutUs/@types/AboutUs";
 import {
+  aboutUsSectionDescriptionDefaultThemeClasses,
   aboutUsWrapperDefaultThemeClasses,
   aboutUsImageDefaultThemeClasses,
   aboutUsTitleDefaultThemeClasses,
   aboutUsDescriptionDefaultThemeClasses,
   aboutUsContentDefaultThemeClasses,
-  aboutUsContainerDefaultThemeClasses
+  aboutUsContainerDefaultThemeClasses,
+  aboutUsImageWrapperDefaultThemeClasses
 } from "@app/components/molecules/AboutUs/styles";
 import { Icon } from "@app/components/atoms/Icon/Icon";
 
-const AboutUs: React.FC<IAboutUsProps> = ({ features, title }) => (
+const AboutUs: React.FC<IAboutUsProps> = ({ description, features, title }) => (
   <>
     <Title>{title}</Title>
+    {description && (
+      <div
+        className={convertObjectValuesToString(
+          aboutUsSectionDescriptionDefaultThemeClasses
+        )}
+      >
+        {description}
+      </div>
+    )}
 
     <div
       className={convertObjectValuesToString(
@@ -27,13 +38,19 @@ const AboutUs: React.FC<IAboutUsProps> = ({ features, title }) => (
           )}
           key={title}
         >
-          <Icon
-            iconSrc={iconSrc}
-            iconTitle={iconTitle}
-            themeClasses={`${convertObjectValuesToString(
-              aboutUsImageDefaultThemeClasses
-            )} ${index % 2 === 0 ? "order-2" : "order-1"}`}
-          />
+          <span
+            className={`${convertObjectValuesToString(
+              aboutUsImageWrapperDefaultThemeClasses
+            )} ${
+              index % 2 === 0 ? "order-2 justify-start" : "order-1 justify-end"
+            }`}
+          >
+            <Icon
+              iconSrc={iconSrc}
+              iconTitle={iconTitle}
+              themeClasses={aboutUsImageDefaultThemeClasses}
+            />
+          </span>
           <div
             className={`${convertObjectValuesToString(
               aboutUsContentDefaultThemeClasses
