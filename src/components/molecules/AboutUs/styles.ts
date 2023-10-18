@@ -1,5 +1,10 @@
 import { IThemeClasses } from "@app/types/theme";
 
+export const aboutUsMainTitleDefaultThemeClasses: IThemeClasses = {
+  fontSize: "text-24",
+  lineHeight: "leading-40"
+};
+
 export const aboutUsSectionDescriptionDefaultThemeClasses: IThemeClasses = {
   fontSize: "text-24"
 };

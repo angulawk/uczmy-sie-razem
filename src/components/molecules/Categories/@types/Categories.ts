@@ -10,5 +10,5 @@ export interface ICategoryProps {
 
 export interface ICategoriesProps {
   categories: ICategoryProps[];
-  title?: string;
+  title: string;
 }

@@ -1,14 +1,6 @@
-import { IIconProps } from "@app/components/atoms/Icon/@types/Icon";
-
-export interface IFeaturesProps {
-  title: string;
-  description: string;
-  iconSrc: IIconProps["iconSrc"];
-  iconTitle: IIconProps["iconTitle"];
-}
+import { IFeatureProps } from "@app/components/molecules/Feature/@types/Feature";
 
 export interface IAboutUsProps {
-  description?: string;
-  features: IFeaturesProps[];
+  features: IFeatureProps[];
   title: string;
 }

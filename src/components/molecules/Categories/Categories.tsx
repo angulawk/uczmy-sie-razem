@@ -6,7 +6,7 @@ import { categoriesDefaultThemeClasses } from "@app/components/molecules/Categor
 
 const Categories: React.FC<ICategoriesProps> = ({ categories, title }) => (
   <>
-    {title && <Title>{title}</Title>}
+    <Title>{title}</Title>
 
     <div className={convertObjectValuesToString(categoriesDefaultThemeClasses)}>
       {categories.map(({ title, path, src, iconTitle }) => (
