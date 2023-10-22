@@ -2,7 +2,6 @@ import { Variant } from "@app/components/molecules/Jumbotron/@types/Jumbotron";
 import { IThemeClasses } from "@app/types/theme";
 
 export const jumbotronWrapperDefaultThemeClasses: IThemeClasses = {
-  backgroundColor: "bg-gray100",
   position: "relative",
   width: "w-full",
   marginX: "mx-auto",

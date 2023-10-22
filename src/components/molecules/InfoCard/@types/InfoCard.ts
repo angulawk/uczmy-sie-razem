@@ -1,9 +1,9 @@
 import { IIconProps } from "@app/components/atoms/Icon/@types/Icon";
 
-export interface IFeatureProps {
+export interface IInfoCardProps {
   title: string;
   description: string;
   iconSrc: IIconProps["iconSrc"];
   iconTitle: IIconProps["iconTitle"];
-  index?: number;
+  isEven?: boolean;
 }
