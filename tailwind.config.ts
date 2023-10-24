@@ -52,8 +52,9 @@ const tailwindConfig = {
       }
     },
     borderRadius: {
-      sm: "4px",
-      md: "8px",
+      xsm: "4px",
+      sm: "8px",
+      md: "20px",
       lg: "50%"
     },
     borderWidth: {
@@ -81,6 +82,9 @@ const tailwindConfig = {
       //Blue
       blue400: "#5D767C",
 
+      //Pink
+      pink100: "#fee5e5",
+
       //none
       none: "none",
 
@@ -88,8 +92,7 @@ const tailwindConfig = {
       gray100: "#f7eef5",
       gray200: "#f2e4ef",
       gray300: "#EDE5EB",
-      gray400: "#b3b3b3",
-      gray500: "#fee5e5"
+      gray400: "#b3b3b3"
     },
     fontFamily: {
       barlow: ["var(--font-barlow)", "sans-serif"]

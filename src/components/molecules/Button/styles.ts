@@ -38,7 +38,7 @@ export const buttonDefaultThemeClasses: IThemeClasses = {
   fontSize: "text-18",
   paddingX: "px-24",
   paddingY: "py-8",
-  borderRadius: "rounded-sm",
+  borderRadius: "rounded-xsm",
   transitionDuration: "duration-fast",
   transition: "transition-all",
   transitionTiming: "ease-in-out",

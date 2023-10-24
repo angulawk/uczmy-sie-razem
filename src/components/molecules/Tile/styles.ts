@@ -17,7 +17,7 @@ export const tileDefaultThemeClasses: IThemeClasses = {
   marginBottom: "mb-20",
   padding: "p-16",
   textTransform: "uppercase",
-  borderRadius: "rounded-md",
+  borderRadius: "rounded-sm",
   cursor: "cursor-pointer"
 };
 

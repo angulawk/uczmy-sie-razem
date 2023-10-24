@@ -14,8 +14,8 @@ const RootLayout: React.FC<IRootLayoutProps> = ({ children }) => (
       <PageWrapper>
         <PageTemplate>
           <Header links={navLinks} />
+          {children}
         </PageTemplate>
-        {children}
 
         <Footer
           navLinks={navLinks}

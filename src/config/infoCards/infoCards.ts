@@ -4,9 +4,9 @@ import { IconTitle } from "@app/config/iconTitles";
 
 enum InfoCardDescription {
   Category = "Na naszej stronie słownictwo pogrupowane jest w kategorie, dzięki czemu łatwo odnajdziesz interesujące Cię słownictwo z danego działu.",
-  Sound = "Obok kazdego zdania oraz słowa znajduje się ikona dźwięku. Po jej kliknięciu usłyszysz w jaki sposób nalezy poprawnie wypowiadać wybrane słowo i zdanie.",
-  Sentence = "Pod kazdym słowem dodane jest zdanie które pomoze zrozumieć Ci kontekst uzycia wybranego słowa.",
-  Print = "Korzystając z przycisku drukuj, masz mozliwosć wydrukowania słownictwa z wybranego działu"
+  Sound = "Obok każdego zdania oraz słowa znajduje się ikona dźwięku. Po jej kliknięciu usłyszysz w jaki sposób należy poprawnie wypowiadać wybrane słowo i zdanie.",
+  Sentence = "Pod każdym słowem dodane jest zdanie, które pomoże zrozumieć Ci kontekst użycia wybranego słowa.",
+  Print = "Korzystając z przycisku drukuj, masz możliwość wydrukowania słownictwa z wybranego działu"
 }
 
 enum InfoCardTitle {

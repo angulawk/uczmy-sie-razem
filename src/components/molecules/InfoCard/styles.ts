@@ -5,7 +5,11 @@ export const infoCardDefaultThemeClasses: IThemeClasses = {
   alignItems: "items-center",
   justifyContent: "justify-between",
   gap: "gap-56",
-  mediaQuery: ["screenMaxMd:flex-col"]
+  paddingX: "px-56",
+  paddingY: "py-32",
+  backgroundColor: "bg-pink100",
+  borderRadius: "rounded-md",
+  mediaQuery: ["screenMaxMd:flex-col", "screenMaxMd:gap-24"]
 };
 
 export const infoCardImageWrapperDefaultThemeClasses: IThemeClasses = {
@@ -15,7 +19,7 @@ export const infoCardImageWrapperDefaultThemeClasses: IThemeClasses = {
 };
 
 export const infoCardImageDefaultThemeClasses: IThemeClasses = {
-  maxHeight: "max-h-320",
+  maxHeight: "max-h-240",
   height: "h-full",
   mediaQuery: ["screenMaxMd:h-200"]
 };

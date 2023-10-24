@@ -9,7 +9,7 @@ export enum IconTitle {
   Instagram = "Link do Instagrama strony ze słownictwem z hiszpańskiego",
   Youtube = "Link do YouTube strony ze słownictwem z hiszpańskiego",
   Category = "Słownictwo pogrupowane w kategorie",
-  Listening = "Mozliwosć wysłuchania zdania i słowa",
-  Phrases = "Zdania z uzyciem wybranego słowa",
-  Print = "Mozliwosc wydrukowania słownictwa w wybranej kategorii"
+  Listening = "Możliwość wysłuchania zdania i słowa",
+  Phrases = "Zdania z użyciem wybranego słowa",
+  Print = "Możliwość wydrukowania słownictwa w wybranej kategorii"
 }
