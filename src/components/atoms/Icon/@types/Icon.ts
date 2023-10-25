@@ -12,7 +12,11 @@ export enum IconName {
   Youtube = "youtube",
   VolumeOn = "volume-on",
   VolumeOff = "volume-off",
-  Students = "students"
+  Students = "students",
+  Category = "category",
+  Listening = "listening",
+  Phrases = "phrases",
+  Print = "print"
 }
 
 export interface IIconProps {
@@ -20,7 +24,7 @@ export interface IIconProps {
   iconTitle: string;
   themeClasses?: Pick<
     IThemeClasses,
-    "mediaQuery" | "height" | "overflow" | "width"
+    "mediaQuery" | "height" | "overflow" | "width" | "order"
   >;
 }
 

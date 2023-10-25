@@ -8,10 +8,6 @@ export const navLinks: ILinkProps[] = [
     title: Title.Home
   },
   {
-    path: Path.About,
-    title: Title.About
-  },
-  {
     path: Path.Contact,
     title: Title.Contact
   }

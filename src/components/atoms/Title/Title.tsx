@@ -18,7 +18,7 @@ const Title: React.FC<ITitleProps> = ({
   };
 
   return (
-    <h1 className={convertObjectValuesToString(titleClasses)}>{children}</h1>
+    <h2 className={convertObjectValuesToString(titleClasses)}>{children}</h2>
   );
 };
 

@@ -9,6 +9,10 @@ import Youtube from "@app/../public/icons/youtube.svg";
 import VolumeOn from "@app/../public/icons/volume-on.svg";
 import VolumeOff from "@app/../public/icons/volume-off.svg";
 import Students from "@app/../public/icons/students.svg";
+import Category from "@app/../public/icons/category.svg";
+import Listening from "@app/../public/icons/listening.svg";
+import Phrases from "@app/../public/icons/phrases.svg";
+import Print from "@app/../public/icons/print.svg";
 
 import {
   IconName,
@@ -26,7 +30,11 @@ const iconComponents: TIconComponents = {
   [IconName.Youtube]: Youtube,
   [IconName.VolumeOn]: VolumeOn,
   [IconName.VolumeOff]: VolumeOff,
-  [IconName.Students]: Students
+  [IconName.Students]: Students,
+  [IconName.Category]: Category,
+  [IconName.Listening]: Listening,
+  [IconName.Phrases]: Phrases,
+  [IconName.Print]: Print
 };
 
 export { iconComponents };

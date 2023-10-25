@@ -14,6 +14,5 @@ export const pageTemplateDefaultThemeClasses: IThemeClasses = {
     "print:max-w-full"
   ],
   marginX: "mx-auto",
-  marginBottom: "mb-48",
   width: "w-full"
 };

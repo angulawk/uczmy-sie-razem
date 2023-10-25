@@ -8,7 +8,7 @@ export const hamburgerLineDefaultStyles: IThemeClasses = {
   position: "absolute",
   display: "block",
   height: "h-2",
-  borderRadius: "rounded-md",
+  borderRadius: "rounded-sm",
   opacity: "opacity-100",
   transform: "transform",
   transition: "transition-all",

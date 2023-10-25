@@ -25,13 +25,13 @@ const PageDescription: React.FC<IPageDescriptionProps> = ({
           pageDescriptionWrapperThemeClasses
         )}
       >
-        <h2
+        <h1
           className={convertObjectValuesToString(
             pageDescriptionTitleThemeClasses
           )}
         >
           {title}
-        </h2>
+        </h1>
         {description && (
           <p
             className={convertObjectValuesToString(

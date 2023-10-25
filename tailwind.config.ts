@@ -16,7 +16,7 @@ const spacing = {
   32: "3.2rem",
   36: "3.6rem",
   40: "4rem",
-  45: "4.5rem",
+  44: "4.4rem",
   48: "4.8rem",
   56: "5.6rem",
   60: "6rem",
@@ -52,8 +52,9 @@ const tailwindConfig = {
       }
     },
     borderRadius: {
-      sm: "4px",
-      md: "8px",
+      xsm: "4px",
+      sm: "8px",
+      md: "20px",
       lg: "50%"
     },
     borderWidth: {
@@ -80,6 +81,9 @@ const tailwindConfig = {
 
       //Blue
       blue400: "#5D767C",
+
+      //Pink
+      pink100: "#fee5e5",
 
       //none
       none: "none",
